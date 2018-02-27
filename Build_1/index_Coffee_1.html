@@ -1,0 +1,227 @@
+
+<html>
+<head>
+<title>CAPSTONE</title>
+<link type="text/css" rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+<body style="background-color: white;">
+	
+
+  <div id="navbar"">
+		<a href="index_intro_page.html"><h1 class="navCoffee">HOME</h1></a>
+		<a href="index_Coffee_1.html"><h1 class="navCoffee">EXERCISES</h1></a>
+		<a href="index_NeglectedDyslexic.html"><h1 class="navCoffee">NEGLECTED DYSLEXIC</h1></a>
+		<a href="index_EmpoweredDyslexic.html"><h1 class="navCoffee">EMPOWERED DYSLEXIC</h1></a>
+		<a href="index_About.html"><h1 class="navCoffee">ABOUT</h1></a>
+		<a href="index_References.html"><h1 class="navCoffee">REFERENCES</h1></a>
+		<h1 class="navCoffeex">
+			<div id="xthree"></div>
+			<div id="xfour"></div>
+		</h1>
+	</div>
+
+	<div id="navbar2">
+		<div class="decodetext">
+        	<h1 id="text" class="navCoffee"><span>MENU</span></h1>
+      	</div>  
+	</div>
+
+	<div class="movebarCoffee"
+  data-600="height:217px;"
+  data-720="height:300px;"
+  data-900="height:1000px;"></div>
+  
+
+  <div class="arrowdown3" 
+    data-0="display:inline-block;"
+    data-720="display:none;"></div>
+  <div class="arrowdown4" 
+    data-0="display:inline-block;"
+    data-720="display:none;"></div>
+
+
+  <h1 class="pageindicator">COFFEE BREAK</h1>
+
+  <div class="CoffeeBreak">
+
+    <p class="title">LETTER MIRRORING<br>
+      <span class="description">Letter rotation is most common with d/p and b/q.</span></p>
+    <div class="dyslexicletters"> 
+      <p class="mirror">d</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <p class="mirror">p</p>
+    </div>  
+
+    <div class="LetterRotationStick"
+      data-0="position:absolute;margin-top: 650px;"
+      data-709="position:absolute;margin-top: 650px;"
+      data-710="position:fixed; margin-top:0px; top:95px;">
+      <p class="title">LETTER ROTATION<br>
+        <span class="description">Letter rotation is most common with d/p and b/q.</span></p>
+      <div class="dyslexicletters"> 
+        <p class="rotate">d</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <p class="rotate">b</p>
+      </div>  
+    </div>
+  </div>
+  
+  <a href="index_Exercise_1.html"><button class="ExerciseButton"
+  data-0="display:none;"
+  data-710="display:inline-block">EXERCISE 01</button></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="grid2"></div>
+  <div class="centerline"></div>
+	
+<!-- 	<div class="grid"></div>
+ -->
+  
+
+
+  
+
+	</body>
+
+<script type="text/javascript">
+// menu letter switching_____________________________________________________________________________________________________________
+$(window).ready(function(e){
+
+$(window).on("keyup", function(e){
+  var newspan=$("<span>"+e.key+"</span>");
+  $("div.typeinhere").append(newspan);
+  console.log(pickLetterFor);
+  newspan.addClass("switch");
+  setInterval(function(){
+    newspan.html(pickLetterFor(e.key));
+  }, 250);
+  
+});
+
+function randompar(){
+  // var paragraph=document.getElementById("text").innerHTML;
+  // var index = Math.floor(Math.random() * paragraph.length);
+  // var Letter = paragraph.charAt(index);
+  var thiscopy=sourcetext.clone();
+  thiscopy.children("span").each(function(){
+    var span=jQuery(this).text();
+    for (var i = 0; i <= 2; i++) {
+      var index = Math.floor(Math.random() * span.length);
+      var Letter = span.charAt(index);
+
+      span=(span.substr(0, index) + pickLetterFor(Letter) + span.substr(index+1, span.length));
+    }
+    $(this).text(span);
+  })
+  jQuery("#text").html(thiscopy.html());
+}
+function random(Letterset){
+  return Letterset.charAt(Math.floor(Math.random() * Letterset.length));
+}
+var spacingloop = setInterval(randomlettspac, 700);
+function randomlettspac(){
+  jQuery('#text span').each(function(){
+    var span=jQuery(this);
+    span.css("letter-spacing", ((Math.random() * 0.2)-0.1)+ "em");
+  })
+  // console.log(randomlettspac)
+}
+
+function pickLetterFor(Letter){
+  if(Letter.toLowerCase()==="a") return random("ea");
+  else if(Letter.toLowerCase()==="b") return random("db");
+  else if(Letter.toLowerCase()==="c") return random("oce");
+  else if(Letter.toLowerCase()==="d") return random("bd");
+  else if(Letter.toLowerCase()==="e") return random("ceos");
+  else if(Letter.toLowerCase()==="f") return random("tfl");
+  else if(Letter.toLowerCase()==="g") return random("ygj");
+  else if(Letter.toLowerCase()==="h") return random("nhupu");
+  else if(Letter.toLowerCase()==="i") return random("jil");
+  else if(Letter.toLowerCase()==="j") return random("ijl");
+  else if(Letter.toLowerCase()==="k") return random("hky");
+  else if(Letter.toLowerCase()==="l") return random("ijl");
+  else if(Letter.toLowerCase()==="m") return random("nmhuw");
+  else if(Letter.toLowerCase()==="n") return random("unhm");
+  else if(Letter.toLowerCase()==="o") return random("eocs");
+  else if(Letter.toLowerCase()==="p") return random("qp");
+  else if(Letter.toLowerCase()==="q") return random("pq");
+  else if(Letter.toLowerCase()==="r") return random("nrci");
+  else if(Letter.toLowerCase()==="s") return random("cseo");
+  else if(Letter.toLowerCase()==="t") return random("ltfh");
+  else if(Letter.toLowerCase()==="u") return random("vuhnw");
+  else if(Letter.toLowerCase()==="v") return random("yuwv");
+  else if(Letter.toLowerCase()==="w") return random("mwvu");
+  else if(Letter.toLowerCase()==="x") return random("yx");
+  else if(Letter.toLowerCase()==="y") return random("xy");
+  else if(Letter.toLowerCase()==="z") return random("z");
+  else if(Letter.toLowerCase()===" ") return random(" ");
+  else return random(" ");
+}
+
+  var sourcetext=jQuery("#text").clone();
+  setInterval(randompar,200);
+  setInterval(randomlettspac,1800);
+});
+
+// navbar hide and show_____________________________________________________________________________________________________________
+
+$(window).ready(function(){
+	$( "#navbar" ).hide();
+});	
+
+$( "#text" ).click(function() {
+  			$( "#text" ).addClass("hidemenu");
+  			$( "#navbar" ).show();
+});
+
+
+$( "h1.navCoffeex" ).click(function() {
+  			$( "#text" ).removeClass("hidemenu");
+  			$( "#navbar" ).hide();
+});
+
+
+//scroller indicator _____________________________________________________________________________________________________________
+
+$(document).ready(function(){
+
+    $(window).resize(function(e){
+        console.log(e);                   
+    });
+
+    $(window).scroll(function (event) {
+        var sc = $(window).scrollTop();
+        console.log(sc);
+    });
+
+});
+
+//start button white middle bar expands _____________________________________________________________________________________________________________
+
+// $( ".startbutton" ).click(function() {
+//   $( ".centerline" ).css( {"width": "100%","left":"0%"});
+  
+  
+
+</script>
+<script type="text/javascript">
+  var s = skrollr.init();
+  </script>
+</body>
+</html>

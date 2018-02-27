@@ -1,0 +1,836 @@
+
+html {
+  height: 100%;
+}
+
+body {
+ 	background-color: #2957a1;
+ 	padding: 0px;
+ 	margin: 0px;
+  height:1200px;
+  width:100%;
+}
+
+#background {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: #d77468;
+    z-index: -1;
+}
+
+div.grid{
+	height: 100%;
+	width:100%;
+	padding: 0px;
+	margin: 0px;
+	background-color: none;
+	background-size: 20px 12px, 10% 20px;
+	background-image:
+    -webkit-linear-gradient(rgba(255,255,255,0.1) 2px, transparent 2px),
+    -webkit-linear-gradient(0, rgba(255,255,255,0.1) 2px, transparent 2px);
+  background-image:
+    -moz-linear-gradient(rgba(255,255,255,0.1) 2px, transparent 2px),
+    -moz-linear-gradient(0, rgba(255,255,255,0.1) 2px, transparent 2px);
+  z-index: 10;
+}
+div.grid2{
+  height: 100%;
+  width:100%;
+  padding: 0px;
+  margin: 0px;
+  background-color: none;
+  background-size: 20px 12px, 10% 20px;
+  background-image:
+    -webkit-linear-gradient(rgba(216,116,104,0.1) 2px, transparent 2px),
+    -webkit-linear-gradient(0, rgba(216,116,104,0.1) 2px, transparent 2px);
+  background-image:
+    -moz-linear-gradient(rgba(216,116,104,0.1) 2px, transparent 2px),
+    -moz-linear-gradient(0, rgba(216,116,104,0.1) 2px, transparent 2px);
+  z-index: 10;
+  /*display: none;*/
+}
+
+div#navbar{
+	padding-bottom: 100px;
+	position:fixed;
+  right: 0;
+  float:right;
+  width:930px;
+  z-index: 101;
+  display: none;
+
+}
+div#navbar2{
+	padding-bottom: 100px;
+	position:fixed;
+  right: 0;
+  float:right;
+  width:65px;
+  z-index: 100;
+
+}
+
+h1.nav{
+	font-size: 10px;
+	padding-top: 17px;
+  margin-right: 8%;
+  float: left;
+  position: static;
+  color:white;
+  text-transform: uppercase;
+  letter-spacing: .75px;
+}
+
+h1.nav:hover{
+	border-bottom: 5px solid #ff9889;
+}
+
+h1.navx{
+	font-size: 10px;
+	padding-top: 17px;
+  float: left;
+  position: static;
+  height:20px;
+  width:20px;
+
+}
+
+
+h1.navCoffee{
+  font-size: 10px;
+  padding-top: 17px;
+  margin-right: 8%;
+  float: left;
+  position: static;
+  color:rgba(216,116,104,1);
+  text-transform: uppercase;
+  letter-spacing: .75px;
+}
+
+h1.navCoffee:hover{
+  border-bottom: 5px solid #2957a1;
+}
+
+h1.navCoffeex{
+  font-size: 10px;
+  padding-top: 17px;
+  float: left;
+  position: static;
+  height:20px;
+  width:20px;
+
+}
+
+div#xone{
+	position: absolute;
+	height: 12px;
+	width: 5px;
+	transform: rotate(45deg);
+	background-color: white;
+}
+
+div#xtwo{
+	position: absolute;
+	height: 12px;
+	width: 5px;
+	transform: rotate(-45deg);
+	background-color: white;
+}
+
+h1.navx:hover #xtwo{
+	background-color: #ff9889;
+}
+
+h1.navx:hover #xone{
+	background-color: #ff9889;
+}
+
+div#xthree{
+  position: absolute;
+  height: 12px;
+  width: 5px;
+  transform: rotate(45deg);
+  background-color: rgba(216,116,104,1);
+}
+
+div#xfour{
+  position: absolute;
+  height: 12px;
+  width: 5px;
+  transform: rotate(-45deg);
+  background-color: rgba(216,116,104,1);
+}
+
+h1.navCoffeex:hover #xthree{
+  background-color: #2957a1;
+}
+
+h1.navCoffeex:hover #xfour{
+  background-color: #2957a1;
+}
+
+
+.togglenav{
+	display: inline;
+
+}
+.hidemenu{
+	display: none;
+}
+
+div.movebar{
+  height:217px;
+  width: 5px;
+  background-color: white;
+  position: fixed;
+  margin-left: 70px;
+  margin-top: 97px;
+}
+
+div.movebarCoffee{
+  height:217px;
+  width: 5px;
+  background-color: #2957a1;
+  position: fixed;
+  margin-left: 70px;
+  margin-top: 97px;
+}
+
+div.arrowdown{
+  height:15px;
+  width: 5px;
+  background-color: white;
+  position: fixed;
+  margin-left: 74px;
+  transform: rotate(45deg);
+  bottom: 20px;
+  float:left;
+}
+
+div.arrowdown2{
+  height:15px;
+  width: 5px;
+  background-color: white;
+  position: fixed;
+  margin-left: 67px;
+  transform: rotate(-45deg);
+  bottom: 20px;
+  float:left;
+}
+
+div.arrowdown3{
+  height:15px;
+  width: 5px;
+  background-color: #2957a1;
+  position: fixed;
+  margin-left: 74px;
+  transform: rotate(45deg);
+  bottom: 20px;
+  float:left;
+}
+
+div.arrowdown4{
+  height:15px;
+  width: 5px;
+  background-color: #2957a1;
+  position: fixed;
+  margin-left: 67px;
+  transform: rotate(-45deg);
+  bottom: 20px;
+  float:left;
+}
+
+h1, h2, p{
+  font-family: 'Lato', sans-serif;
+}
+
+h1#neglectedtitle{
+  font-size: 50px;
+  position: absolute;
+  text-transform: uppercase;
+  color:white;
+  font-weight: bold;
+  margin-top: 95px;
+  margin-left: 100px;
+  letter-spacing: 17px;
+}
+
+h1#dyslexictitle{
+  font-size: 122px;
+  line-height: 110px;
+  position: absolute;
+  text-transform: uppercase;
+  color:white;
+  font-weight: normal;
+  margin-top: 175px;
+  margin-left: 93px;
+  letter-spacing: 17px;
+}
+
+div.IntroToExperience{
+  position: absolute;
+  color:white;
+  margin-top: 890px;
+  margin-left: 100px;
+  display: inline-block;
+}
+div.IntroToExperience p.title{
+  position: absolute;
+  letter-spacing: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  margin:0px;
+  width: max-content;
+
+}
+
+div.IntroToExperience span.description{
+  position: relative;
+  line-height: 24px;
+  font-size: 15px;
+  margin-top: 40px;
+  letter-spacing: 0px;
+  font-weight: normal;
+
+}
+
+
+button.startbutton{
+  position: fixed;
+  color:white;
+  font-size: 15px;
+  letter-spacing: 2.5px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bolder;
+  margin-left: 100px;
+  bottom: 20px;
+  float:left;
+  background-color: none;
+  border:none;
+  background: none;
+}
+
+div.centerlineINTRO{
+  height:100%;
+  width:0px;
+  position:fixed;
+  background-color: white;
+  transition: all .75s ease-in-out;
+  left: 50%;
+  margin-left: -2.5px;
+  z-index: 100;
+}
+div.centerlineSECONDARYFACT{
+  height:50%;
+  width:0px;
+  position:fixed;
+  background-color: white;
+  transition: all .75s ease-in-out;
+  left: 50%;
+  margin-left: -2.5px;
+  z-index: 100;
+  padding:0px;
+}
+
+span.SecondaryFact, span.SecondaryFact strong, span.SecondaryFact sup{
+  position: relative;
+  line-height: 55px;
+  font-size: 40px;
+  margin-top: 40px;
+  letter-spacing: 0px;
+  font-family: 'Lato', sans-serif;
+  color: #2957a1;
+  display: none;
+}
+span.SecondaryFact sup{
+  font-size: 15px;
+  line-height: 50px;
+  vertical-align: baseline;
+}
+
+button.NextToCoffeeBreak{
+  position: fixed;
+  color:rgba(216,116,104,1);
+  font-size: 15px;
+  letter-spacing: 2.5px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bolder;
+  background-color: none;
+  border:none;
+  background: none;
+  display: none;
+
+}
+
+div.SecondaryFactContainer{
+  margin: auto;
+  display: table;
+  position: relative;
+}
+
+h1.pageindicator{
+  font-size: 10px;
+  padding-top: 17px;
+  margin-left:100px;
+  float: left;
+  position: static;
+  color:rgba(216,116,104,1);
+  text-transform: uppercase;
+  border-bottom: 5px solid rgba(216,116,104,1);
+  letter-spacing: .75px;
+/*  display: none;
+*/  position: fixed;
+z-index: 99;
+}
+
+
+div.CoffeeBreak{
+  position: absolute;
+  color:#2957a1;
+  margin-top: 95px;
+  margin-left: 100px;
+  display: inline-block;
+/*  display: none;
+*/}
+div.CoffeeBreak p.title{
+  position: absolute;
+  letter-spacing: 5px;
+  font-size: 80px;
+  font-weight: bold;
+  margin:0px;
+  width: max-content;
+
+}
+
+div.CoffeeBreak span.description{
+  position: relative;
+  line-height: 50px;
+  font-size: 50px;
+  margin-top: 40px;
+  letter-spacing: 0px;
+  font-weight: normal;
+
+}
+
+
+
+
+.rotate{
+  display: inline-block;
+  font-size:250px;
+  transform-origin: center center;
+  animation-name: rotate;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: relative;
+}
+
+@keyframes rotate{
+  0% {
+    transform: rotateZ(0deg); }
+  50% {
+    transform: rotateZ(180deg); }
+  100%{
+    transform: rotateZ(0deg); }  
+}
+
+.dyslexicletters{
+  width:max-content;
+  margin-left: 20px;
+}
+
+
+.mirror{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: mirror;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: relative;
+  font-size:250px;
+}
+
+@keyframes mirror{
+  0% {
+    transform: rotateY(0deg); }
+  50% {
+    transform: rotateY(180deg); }
+  100%{
+    transform: rotateY(360deg); }  
+}  
+
+div.LetterRotationStick{
+  /*margin-top: 700px;*/
+}
+
+button.ExerciseButton{
+  position: fixed;
+  color:#2957a1;
+  font-size: 15px;
+  letter-spacing: 2.5px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bolder;
+  margin-left: 100px;
+  bottom: 20px;
+  float:left;
+  border:none;
+  background:rgba(216,116,104,1) ;
+}
+
+.NormalExercise{
+/*  display: inline-block;
+*/  margin: 0;
+  height: 0px;
+}
+
+.NormalExerciseHeading{
+  position: absolute;
+  color:white;
+  font-size: 75px;
+  margin-left: 75px;
+  float:left;
+  border:none;
+  font-family: adobe-caslon-pro, serif;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 95px;
+}
+
+.NormalExerciseDescription{
+  font-family: adobe-caslon-pro, serif;
+  font-style: normal;
+  font-weight: normal;
+  position: absolute;
+  color:white;
+  font-size: 33px;
+  margin-left: 75px;
+  float:left;
+  border:none;
+  margin-top: 250px;
+  width:50%;
+}
+
+.NormalExerciseOptions{
+  font-family: adobe-caslon-pro, serif;
+  font-style: normal;
+  font-weight: normal;
+  position: absolute;
+  color:white;
+  font-size: 33px;
+  margin-left:75px;
+  float:left;
+  border:none;
+  margin-top: 450px;
+}
+
+.DyslexicExercise{
+/*  display: inline-block;
+*/  margin: 0;
+  height: 0px;
+}
+
+.DyslexicExerciseHeading{
+  position: absolute;
+  color:white;
+  font-size: 75px;
+  margin-left: 50%;
+  padding-left:75px;
+  float:left;
+  border:none;
+  font-family: adobe-caslon-pro, serif;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 95px;
+  top:0px;
+}
+
+.DyslexicExerciseDescription{
+  font-family: adobe-caslon-pro, serif;
+  font-style: normal;
+  font-weight: normal;
+  position: absolute;
+  color:white;
+  font-size: 33px;
+  margin-left: 50%;
+  padding-left:75px;
+  float:left;
+  border:none;
+  margin-top: 250px;
+}
+
+.DyslexicExerciseOptions{
+  font-family: adobe-caslon-pro, serif;
+  font-style: normal;
+  font-weight: normal;
+  position: absolute;
+  color:white;
+  font-size: 33px;
+  margin-left: 50%;
+  padding-left:75px;
+  float:left;
+  border:none;
+  margin-top: 450px;
+}
+
+table{
+  position:absolute;
+  border: none;
+
+}
+
+th, td {
+    border: none;
+    position: relative;
+    padding-right: 70px;
+}
+
+
+
+div.coverDyslexic{
+  height: 100%;
+  width:50%;
+  position: absolute;
+  float: right;
+  right: 0px;
+  top:0px;
+  opacity: .5;
+  background-color:rgba(216,116,104,1);
+  z-index: 90;
+}
+
+div.coverNormal{
+  height: 100%;
+  width:50%;
+  position: absolute;
+  float: right;
+  left: 0px;
+  top:0px;
+  opacity: .5;
+  background-color:#2957a1;
+  z-index: 90;
+
+}
+
+
+h1.SecondaryFactx{
+  font-size: 10px;
+  padding-top: 17px;
+  float: left;
+  position: absolute;
+  height:20px;
+  width:20px;
+  display: none;
+  top:10px;
+  right:10px;
+
+}
+
+h1.SecondaryFactx:hover #xtwo{
+  background-color: #ff9889;
+}
+
+h1.SecondaryFactx:hover #xone{
+  background-color: #ff9889;
+}
+
+h1.SecondaryFactx div#xone{
+  background-color:rgba(216,116,104,1);
+  
+}
+
+h1.SecondaryFactx div#xtwo{
+  background-color:rgba(216,116,104,1);
+}
+
+
+p#alphabet{
+  font-size:250px;
+  margin-top: 200px;
+/*  letter-spacing: .175em;
+*//*  text-transform: uppercase;
+*/}
+
+span.month:hover{
+  font-weight: bolder;
+}
+
+
+sup{
+  font-size: 15px;
+  line-height: 50px;
+  vertical-align: baseline;
+}
+
+span.speak:hover{
+  font-weight: bolder;
+}
+span.NormPronunc:hover{
+  font-weight: bolder;
+}
+
+p#movedash{
+  font-size:250px;
+  margin-top: 300px;
+}
+
+
+span#SpaceBtwLet{
+  animation-name: spacingchange;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes spacingchange {
+    10%   {letter-spacing: 0;}
+    40%  {letter-spacing: 25px;}
+    60%  {letter-spacing: 25px;}
+    90% {letter-spacing: 0;}
+}
+
+span#yes:hover{
+  font-weight: bolder;
+}
+
+span#no:hover{
+  font-weight: bolder;
+}
+
+#noprompt{
+  display: none;
+}
+
+#noprompt2{
+  display: none;
+}
+
+#NormalAnsw:hover{
+  font-weight: bolder;
+}
+
+span#letS{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: flip;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: absolute;
+
+}
+
+@keyframes flip{
+  0% {
+    margin-left: 90px; }
+  50%{
+    margin-left: 319px; }
+  100%{
+    margin-left: 90px; } 
+}     
+span#letW{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: flip2;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: absolute;
+}
+@keyframes flip2{
+  0% {
+    margin-left: 315px; }
+  50%{
+    margin-left: 0px; }  
+  100%{
+    margin-left: 315px; } 
+}  
+span#letA{
+  position: absolute;
+  margin-left: 195px;
+}
+
+span.blurry{
+  filter: blur(5px);
+  transition: .5s ease-in-out;
+}
+span.blurry:hover{
+  filter: blur(0px);
+  transition: .5s ease-in-out;
+}
+
+span.threeD{
+  animation-name: threeD;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  
+}
+@keyframes threeD{
+  0% {text-shadow: 0px -0px rgb(180, 180, 180);}
+  40% {text-shadow: 
+    1px -1px rgb(180, 180, 180),
+    2px -2px rgb(180, 180, 180),
+    3px -3px rgb(180, 180, 180),
+    4px -4px rgb(180, 180, 180),
+    5px -5px rgb(180, 180, 180),
+    6px -6px rgb(180, 180, 180),
+    7px -7px rgb(180, 180, 180),
+    8px -8px rgb(180, 180, 180),
+    9px -9px rgb(180, 180, 180),
+    10px -10px rgb(180, 180, 180),
+    11px -11px rgb(180, 180, 180);}
+  60% {text-shadow: 
+    1px -1px rgb(180, 180, 180),
+    2px -2px rgb(180, 180, 180),
+    3px -3px rgb(180, 180, 180),
+    4px -4px rgb(180, 180, 180),
+    5px -5px rgb(180, 180, 180),
+    6px -6px rgb(180, 180, 180),
+    7px -7px rgb(180, 180, 180),
+    8px -8px rgb(180, 180, 180),
+    9px -9px rgb(180, 180, 180),
+    10px -10px rgb(180, 180, 180),
+    11px -11px rgb(180, 180, 180);}
+
+  100% {text-shadow: 0px -0px rgb(180, 180, 180);}
+}  
+
+span.statistics{
+  color:rgba(216,116,104,1);
+  font-weight: bolder;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
