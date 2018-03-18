@@ -1,0 +1,206 @@
+
+<html>
+<head>
+<title>CAPSTONE</title>
+<link type="text/css" rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+<body>
+	<div id="navbar"">
+    <a href="index_intro_page.html"><h1 class="nav">HOME</h1></a>
+    <a href="index_Coffee_1.html"><h1 class="nav">EXERCISES</h1></a>
+    <a href="index_NeglectedDyslexic.html"><h1 class="nav">NEGLECTED DYSLEXIC</h1></a>
+    <a href="index_EmpoweredDyslexic.html"><h1 class="nav">EMPOWERED DYSLEXIC</h1></a>
+    <a href="index_About.html"><h1 class="nav">ABOUT</h1></a>
+    <a href="index_References.html"><h1 class="nav">REFERENCES</h1></a>
+    <h1 class="navx">
+      <div id="xone"></div>
+      <div id="xtwo"></div>
+    </h1>
+  </div>
+
+	<div id="navbar2">
+		<div class="decodetext">
+        	<h1 id="text" class="nav"><span>MENU</span></h1>
+      	</div>  
+	</div>
+
+	<div class="movebar"
+  data-00="height:217px;"
+  data-280="height:656.35px"></div>
+  
+
+  <div class="arrowdown" 
+    data-0="display:inline-block;"
+    data-270="display:none;"></div>
+  <div class="arrowdown2" 
+    data-0="display:inline-block;"
+    data-270="display:none;"></div>
+
+
+
+  <div class="IntroToExperience" style="margin-top: 100px; position: fixed;">
+
+    <p class="title">ABOUT<br><br>
+    <span class="description">BLAHHHHHHHHHHHHH<br>BLAHHHHHHHH<br>BLAH.<br></span></p>
+      
+    
+
+  </div>
+  
+
+
+
+  <a href="index_References.html"><button class="startbutton"
+  data-270="display:none"
+  data-279="display:inline-block">REFERENCES</button></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="grid2"></div> -->
+  <div class="centerline"></div>
+
+  <div class="gridFull"></div>
+	
+<!-- 	<div class="grid"></div>
+ -->
+  
+
+
+  
+
+	</body>
+
+<script type="text/javascript">
+// menu letter switching_____________________________________________________________________________________________________________
+$(window).ready(function(e){
+
+function randompar(){
+  var thiscopy=sourcetext.clone();
+  thiscopy.children("span").each(function(){
+    var span=jQuery(this).text();
+    for (var i = 0; i <= 2; i++) {
+      var index = Math.floor(Math.random() * span.length);
+      var Letter = span.charAt(index);
+      span=(span.substr(0, index) + pickLetterFor(Letter) + span.substr(index+1, span.length));
+      }
+    $(this).text(span);
+  })
+  jQuery("#text").html(thiscopy.html());
+}
+
+function random(Letterset){
+  return Letterset.charAt(Math.floor(Math.random() * Letterset.length));
+}
+
+function randomlettspac(){
+  jQuery('#text span').each(function(){
+    var span=jQuery(this);
+    span.css("letter-spacing", ((Math.random() * 0.2)-0.1)+ "em");
+  })
+  // console.log(randomlettspac)
+}
+
+
+function pickLetterFor(Letter){
+  if(Letter.toLowerCase()==="a") return random("ea");
+  else if(Letter.toLowerCase()==="b") return random("db");
+  else if(Letter.toLowerCase()==="c") return random("oce");
+  else if(Letter.toLowerCase()==="d") return random("bd");
+  else if(Letter.toLowerCase()==="e") return random("ceo");
+  else if(Letter.toLowerCase()==="f") return random("tfl");
+  else if(Letter.toLowerCase()==="g") return random("ygj");
+  else if(Letter.toLowerCase()==="h") return random("nhupu");
+  else if(Letter.toLowerCase()==="i") return random("jil");
+  else if(Letter.toLowerCase()==="j") return random("ijl");
+  else if(Letter.toLowerCase()==="k") return random("hky");
+  else if(Letter.toLowerCase()==="l") return random("ijl");
+  else if(Letter.toLowerCase()==="m") return random("nmhuwv");
+  else if(Letter.toLowerCase()==="n") return random("unhmv");
+  else if(Letter.toLowerCase()==="o") return random("eoc");
+  else if(Letter.toLowerCase()==="p") return random("qp");
+  else if(Letter.toLowerCase()==="q") return random("pq");
+  else if(Letter.toLowerCase()==="r") return random("nrci");
+  else if(Letter.toLowerCase()==="s") return random("scr");
+  else if(Letter.toLowerCase()==="t") return random("ltfh");
+  else if(Letter.toLowerCase()==="u") return random("vuhnw");
+  else if(Letter.toLowerCase()==="v") return random("yuwv");
+  else if(Letter.toLowerCase()==="w") return random("mwvu");
+  else if(Letter.toLowerCase()==="x") return random("yxz");
+  else if(Letter.toLowerCase()==="y") return random("xyz");
+  else if(Letter.toLowerCase()==="z") return random("zx");
+  else if(Letter.toLowerCase()===" ") return random(" ");
+  else return random(" ");
+}
+
+
+  var sourcetext=jQuery("#text").clone();
+
+
+  setInterval(randompar,800);
+  setInterval(randomlettspac,650);
+});
+
+
+// navbar hide and show_____________________________________________________________________________________________________________
+
+$(window).ready(function(){
+	$( "#navbar" ).hide();
+});	
+
+$( "#text" ).click(function() {
+  			$( "#text" ).addClass("hidemenu");
+  			$( "#navbar" ).show();
+});
+
+
+$( "h1.navCoffeex" ).click(function() {
+  			$( "#text" ).removeClass("hidemenu");
+  			$( "#navbar" ).hide();
+});
+
+
+//scroller indicator _____________________________________________________________________________________________________________
+
+$(document).ready(function(){
+
+    $(window).resize(function(e){
+        console.log(e);                   
+    });
+
+    $(window).scroll(function (event) {
+        var sc = $(window).scrollTop();
+        console.log(sc);
+    });
+
+});
+
+//start button white middle bar expands _____________________________________________________________________________________________________________
+
+// $( ".startbutton" ).click(function() {
+//   $( ".centerline" ).css( {"width": "100%","left":"0%"});
+  
+  
+
+</script>
+<script type="text/javascript">
+  var s = skrollr.init();
+  </script>
+</body>
+</html>
