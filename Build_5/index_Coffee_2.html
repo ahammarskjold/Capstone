@@ -1,0 +1,434 @@
+
+<html>
+<head>
+<title>CAPSTONE</title>
+<link type="text/css" rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+<body style="background-color: #d77468;">
+  <div id="navbar"">
+    <a href="index_intro_page.html"><h1 class="navOrange">HOME</h1></a>
+    <a href="index_Coffee_1.html"><h1 class="navOrange">EXERCISES</h1></a>
+    <a href="index_NeglectedDyslexic.html"><h1 class="navOrange">NEGLECTED DYSLEXIC</h1></a>
+    <a href="index_EmpoweredDyslexic.html"><h1 class="navOrange">EMPOWERED DYSLEXIC</h1></a>
+    <a href="index_About.html"><h1 class="navOrange">ABOUT</h1></a>
+    <a href="index_References.html"><h1 class="navOrange">REFERENCES</h1></a>
+    <h1 class="navx">
+      <div id="xOrngone"></div>
+      <div id="xOrngtwo"></div>
+    </h1>
+  </div>
+
+  <div id="navbar2">
+    <div class="decodetext">
+          <h1 id="text" class="navOrange"><span>MENU</span></h1>
+        </div>  
+  </div>
+
+  <div class="movebarCoffee"
+  data-790="height:217px;"
+  data-1070="height:656.35px;"></div>
+
+  <div class="autoscroll"></div>
+  <div class="arrowdown" 
+    data-0="display:inline-block;"
+    data-1060="display:none;"></div>
+  <div class="arrowdown2" 
+    data-0="display:inline-block;"
+    data-1060="display:none;"></div>
+
+
+  <h1 class="pageindicator">DYSLEXIC PERCEPTION</h1>
+
+  <div class="CoffeeBreak">
+
+    <p class="title">LETTER DIFFERENTIATION<br>
+      <span class="description">Dyslexic individuals have difficulty differentiating<br>between similar looking letter-forms.</span><br>
+      <span class="specifics"
+      data-788="position:absolute;top: 1146px; width:1200px;"
+      data-789="position:fixed;top: 456px;">When reading or writing they may substitute a letter with one that has a similar shape.<a href="http://www.brightstar-learning.com/dyslexia/reading-and-spelling-with-dyslexia/" target="blank"><sup> J</sup></a></span>
+  	</p>
+    <div class="dyslexicletters"
+    data-789="position:absolute;margin-top: 700px;"
+      data-790="position:fixed;margin-top: -90px;"> 
+      <p id="alphabet">
+          <span class="alphabetspace" id="a">a</span>
+          <span class="alphabetspace" id="b">b</span>
+          <span class="alphabetspace" id="c">c</span>
+          <span class="alphabetspace" id="d">d</span>
+          <span class="alphabetspace" id="e">e</span>
+          <span class="alphabetspace" id="f">f</span>
+          <span class="alphabetspace" id="g">g</span>
+          <span class="alphabetspace" id="h">h</span>
+          <span class="alphabetspace" id="i">i</span><br>
+          <span class="alphabetspace" id="j">j</span>
+          <span class="alphabetspace" id="k">k</span>
+          <span class="alphabetspace" id="l">l</span>
+          <span class="alphabetspace" id="m">m</span>
+          <span class="alphabetspace" id="n">n</span>
+          <span class="alphabetspace" id="o">o</span>
+          <span class="alphabetspace" id="p">p</span>
+          <span class="alphabetspace" id="q">q</span>
+          <span class="alphabetspace" id="r">r</span><br>
+          <span class="alphabetspace" id="s">s</span>
+          <span class="alphabetspace" id="t">t</span>
+          <span class="alphabetspace" id="u">u</span>
+          <span class="alphabetspace" id="v">v</span>
+          <span class="alphabetspace" id="w">w</span>
+          <span class="alphabetspace" id="x">x</span>
+          <span class="alphabetspace" id="y">y</span>
+          <span class="alphabetspace" id="z">z</span>
+        </p>
+    </div>  
+
+  </div>
+  
+  <a href="index_Exercise_2.html"><button class="ExerciseButton"
+  data-0="display:none;"
+  data-1060="display:inline-block">EXERCISE 02</button></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="grid2"></div>
+  <div class="centerline"></div>
+  
+<!--  <div class="grid"></div>
+ -->
+  
+
+
+  
+
+  </body>
+
+<script type="text/javascript">
+// menu letter switching_____________________________________________________________________________________________________________
+$(window).ready(function(e){
+
+function randompar(){
+  var thiscopy=sourcetext.clone();
+  thiscopy.children("span").each(function(){
+    var span=jQuery(this).text();
+    for (var i = 0; i <= 2; i++) {
+      var index = Math.floor(Math.random() * span.length);
+      var Letter = span.charAt(index);
+      span=(span.substr(0, index) + pickLetterFor(Letter) + span.substr(index+1, span.length));
+      }
+    $(this).text(span);
+  })
+  jQuery("#text").html(thiscopy.html());
+}
+
+function random(Letterset){
+  return Letterset.charAt(Math.floor(Math.random() * Letterset.length));
+}
+
+function randomlettspac(){
+  jQuery('#text span').each(function(){
+    var span=jQuery(this);
+    span.css("letter-spacing", ((Math.random() * 0.2)-0.1)+ "em");
+  })
+  // console.log(randomlettspac)
+}
+
+
+function pickLetterFor(Letter){
+  if(Letter.toLowerCase()==="a") return random("ea");
+  else if(Letter.toLowerCase()==="b") return random("db");
+  else if(Letter.toLowerCase()==="c") return random("oce");
+  else if(Letter.toLowerCase()==="d") return random("bd");
+  else if(Letter.toLowerCase()==="e") return random("ceo");
+  else if(Letter.toLowerCase()==="f") return random("tfl");
+  else if(Letter.toLowerCase()==="g") return random("ygj");
+  else if(Letter.toLowerCase()==="h") return random("nhupu");
+  else if(Letter.toLowerCase()==="i") return random("jil");
+  else if(Letter.toLowerCase()==="j") return random("ijl");
+  else if(Letter.toLowerCase()==="k") return random("hky");
+  else if(Letter.toLowerCase()==="l") return random("ijl");
+  else if(Letter.toLowerCase()==="m") return random("nmhuwv");
+  else if(Letter.toLowerCase()==="n") return random("unhmv");
+  else if(Letter.toLowerCase()==="o") return random("eoc");
+  else if(Letter.toLowerCase()==="p") return random("qp");
+  else if(Letter.toLowerCase()==="q") return random("pq");
+  else if(Letter.toLowerCase()==="r") return random("nrci");
+  else if(Letter.toLowerCase()==="s") return random("scr");
+  else if(Letter.toLowerCase()==="t") return random("ltfh");
+  else if(Letter.toLowerCase()==="u") return random("vuhnw");
+  else if(Letter.toLowerCase()==="v") return random("yuwv");
+  else if(Letter.toLowerCase()==="w") return random("mwvu");
+  else if(Letter.toLowerCase()==="x") return random("yxz");
+  else if(Letter.toLowerCase()==="y") return random("xyz");
+  else if(Letter.toLowerCase()==="z") return random("zx");
+  else if(Letter.toLowerCase()===" ") return random(" ");
+  else return random(" ");
+}
+
+
+  var sourcetext=jQuery("#text").clone();
+
+
+  setInterval(randompar,800);
+  setInterval(randomlettspac,650);
+});
+
+
+// menu letter switching and switching dyslexic mechanic letters too _____________________________________________________________________________________________________________
+// $(window).ready(function(e){
+
+// function randompar(){
+//   var thiscopy=sourcetext.clone();
+//   thiscopy.children("span").each(function(){
+//     var span=jQuery(this).text();
+//     for (var i = 0; i <= 2; i++) {
+//       var index = Math.floor(Math.random() * span.length);
+//       var Letter = span.charAt(index);
+
+//       span=(span.substr(0, index) + pickLetterFor(Letter) + span.substr(index+1, span.length));
+//     }
+//     $(this).text(span);
+//   })
+//   jQuery("#text").html(thiscopy.html());
+// }
+
+// // function alphabet(){
+// //   var span=jQuery(this).text();
+// //   var Letter = span;
+// //   jQuery("span.alphabetspace").each(function(){
+// //     (this).innerHTML(pickLetterFor(Letter));
+// //   })
+// // }
+
+// function alphabet(){
+//   var thiscopy=alphabettext.clone();
+//   thiscopy.children("span").each(function(){
+//       var span=jQuery(this).text();
+//       var Letter = span;
+//       span=(pickLetterFor(Letter));
+//       $(this).text(span);
+//   })
+//   jQuery("#alphabet").html(thiscopy.html());
+//   }
+  
+
+
+
+// function random(Letterset){
+//   return Letterset.charAt(Math.floor(Math.random() * Letterset.length));
+// }
+
+// function randomlettspac(){
+//   jQuery('#text span').each(function(){
+//     var span=jQuery(this);
+//     span.css("letter-spacing", ((Math.random() * 0.2)-0.1)+ "em");
+//   })
+//   // console.log(randomlettspac)
+// }
+
+// function pickLetterFor(Letter){
+//   if(Letter.toLowerCase()==="a") return random("ea");
+//   else if(Letter.toLowerCase()==="b") return random("db");
+//   else if(Letter.toLowerCase()==="c") return random("oce");
+//   else if(Letter.toLowerCase()==="d") return random("bd");
+//   else if(Letter.toLowerCase()==="e") return random("ceos");
+//   else if(Letter.toLowerCase()==="f") return random("tfl");
+//   else if(Letter.toLowerCase()==="g") return random("ygj");
+//   else if(Letter.toLowerCase()==="h") return random("nhupu");
+//   else if(Letter.toLowerCase()==="i") return random("jil");
+//   else if(Letter.toLowerCase()==="j") return random("ijl");
+//   else if(Letter.toLowerCase()==="k") return random("hky");
+//   else if(Letter.toLowerCase()==="l") return random("ijl");
+//   else if(Letter.toLowerCase()==="m") return random("nmhuw");
+//   else if(Letter.toLowerCase()==="n") return random("unhm");
+//   else if(Letter.toLowerCase()==="o") return random("eocs");
+//   else if(Letter.toLowerCase()==="p") return random("qp");
+//   else if(Letter.toLowerCase()==="q") return random("pq");
+//   else if(Letter.toLowerCase()==="r") return random("nrci");
+//   else if(Letter.toLowerCase()==="s") return random("cseo");
+//   else if(Letter.toLowerCase()==="t") return random("ltfh");
+//   else if(Letter.toLowerCase()==="u") return random("vuhnw");
+//   else if(Letter.toLowerCase()==="v") return random("yuwv");
+//   else if(Letter.toLowerCase()==="w") return random("mwvu");
+//   else if(Letter.toLowerCase()==="x") return random("yx");
+//   else if(Letter.toLowerCase()==="y") return random("xy");
+//   else if(Letter.toLowerCase()==="z") return random("z");
+//   else if(Letter.toLowerCase()===" ") return random(" ");
+//   else return random(" ");
+// }
+
+
+//   var sourcetext=jQuery("#text").clone();
+//   var alphabettext=jQuery("#alphabet").clone();
+//   setInterval(randompar,600);
+//   setInterval(alphabet,650);
+//   setInterval(randomlettspac,650);
+// });
+
+
+
+
+// navbar hide and show_____________________________________________________________________________________________________________
+
+$(window).ready(function(){
+  $( "#navbar" ).hide();
+}); 
+
+$( "#text" ).click(function() {
+        $( "#text" ).addClass("hidemenu");
+        $( "#navbar" ).show();
+});
+
+
+$( "h1.navx" ).click(function() {
+        $( "#text" ).removeClass("hidemenu");
+        $( "#navbar" ).hide();
+});
+
+
+//scroller indicator _____________________________________________________________________________________________________________
+
+$(document).ready(function(){
+
+    $(window).resize(function(e){
+        console.log(e);                   
+    });
+
+    $(window).scroll(function (event) {
+        var sc = $(window).scrollTop();
+        console.log(sc);
+    });
+
+});
+
+//start button white middle bar expands _____________________________________________________________________________________________________________
+
+// $( ".startbutton" ).click(function() {
+//   $( ".centerline" ).css( {"width": "100%","left":"0%"});
+
+
+//switching letters_____________________________________________________________________________________________________________
+  
+var arrayA = ["<span>a</span>","e"]
+var arrayB = ["<span>b</span>","d"]
+var arrayC = ["<span>c</span>","e","o"]
+var arrayD = ["<span>d</span>","b"]
+var arrayE = ["<span>e</span>","c","o"]
+var arrayF = ["<span>f</span>","t","l"]
+var arrayG = ["<span>g</span>","y","j"]
+var arrayH = ["<span>h</span>","n","u","p"]
+var arrayI = ["<span>i</span>","j","l"]
+var arrayJ = ["<span>j</span>","i","l"]
+var arrayK = ["<span>k</span>","h","y"]
+var arrayL = ["<span>l</span>","i","j"]
+var arrayM = ["<span>m</span>","n","h","u","w","v"]
+var arrayN = ["<span>n</span>","u","h","m","v"]
+var arrayO = ["<span>o</span>","e","c"]
+var arrayP = ["<span>p</span>","q"]
+var arrayQ = ["<span>q</span>","p"]
+var arrayR = ["<span>r</span>","n","c","i"]
+var arrayS = ["<span>s</span>","c","r"]
+var arrayT = ["<span>t</span>","l","f","h"]
+var arrayU = ["<span>u</span>","v","h","n","w"]
+var arrayV = ["<span>v</span>","y","u","w"]
+var arrayW = ["<span>w</span>","m","v","u"]
+var arrayX = ["<span>x</span>","y","z"]
+var arrayY = ["<span>y</span>","x","z"]
+var arrayZ = ["<span>z</span>","x"]
+
+
+
+
+function swapWords() {
+  setTimeout(function() {
+    const AIndex = Math.floor(Math.random() * arrayA.length);
+    document.getElementById('a').innerHTML = arrayA[AIndex];
+    const BIndex = Math.floor(Math.random() * arrayB.length);
+    document.getElementById('b').innerHTML = arrayB[BIndex];
+    const CIndex = Math.floor(Math.random() * arrayC.length);
+    document.getElementById('c').innerHTML = arrayC[CIndex];
+    const DIndex = Math.floor(Math.random() * arrayD.length);
+    document.getElementById('d').innerHTML = arrayD[DIndex];
+    const EIndex = Math.floor(Math.random() * arrayE.length);
+    document.getElementById('e').innerHTML = arrayE[EIndex];
+    const FIndex = Math.floor(Math.random() * arrayF.length);
+    document.getElementById('f').innerHTML = arrayF[FIndex];
+    const GIndex = Math.floor(Math.random() * arrayG.length);
+    document.getElementById('g').innerHTML = arrayG[GIndex];
+    const HIndex = Math.floor(Math.random() * arrayH.length);
+    document.getElementById('h').innerHTML = arrayH[HIndex];
+    const IIndex = Math.floor(Math.random() * arrayI.length);
+    document.getElementById('i').innerHTML = arrayI[IIndex];
+    const JIndex = Math.floor(Math.random() * arrayJ.length);
+    document.getElementById('j').innerHTML = arrayJ[JIndex];
+    const KIndex = Math.floor(Math.random() * arrayK.length);
+    document.getElementById('k').innerHTML = arrayK[KIndex];
+    const LIndex = Math.floor(Math.random() * arrayL.length);
+    document.getElementById('l').innerHTML = arrayL[LIndex];
+    const MIndex = Math.floor(Math.random() * arrayM.length);
+    document.getElementById('m').innerHTML = arrayM[MIndex];
+    const NIndex = Math.floor(Math.random() * arrayN.length);
+    document.getElementById('n').innerHTML = arrayN[NIndex];
+    const OIndex = Math.floor(Math.random() * arrayO.length);
+    document.getElementById('o').innerHTML = arrayO[OIndex];
+    const PIndex = Math.floor(Math.random() * arrayP.length);
+    document.getElementById('p').innerHTML = arrayP[PIndex];
+    const QIndex = Math.floor(Math.random() * arrayQ.length);
+    document.getElementById('q').innerHTML = arrayQ[QIndex];
+    const RIndex = Math.floor(Math.random() * arrayR.length);
+    document.getElementById('r').innerHTML = arrayR[RIndex];
+    const SIndex = Math.floor(Math.random() * arrayS.length);
+    document.getElementById('s').innerHTML = arrayS[SIndex];
+    const TIndex = Math.floor(Math.random() * arrayT.length);
+    document.getElementById('t').innerHTML = arrayT[TIndex];
+    const UIndex = Math.floor(Math.random() * arrayU.length);
+    document.getElementById('u').innerHTML = arrayU[UIndex];
+    const VIndex = Math.floor(Math.random() * arrayV.length);
+    document.getElementById('v').innerHTML = arrayV[VIndex];
+    const WIndex = Math.floor(Math.random() * arrayW.length);
+    document.getElementById('w').innerHTML = arrayW[WIndex];
+    const XIndex = Math.floor(Math.random() * arrayX.length);
+    document.getElementById('x').innerHTML = arrayX[XIndex];
+    const YIndex = Math.floor(Math.random() * arrayY.length);
+    document.getElementById('y').innerHTML = arrayY[YIndex];
+    const ZIndex = Math.floor(Math.random() * arrayZ.length);
+    document.getElementById('z').innerHTML = arrayZ[ZIndex];
+    
+    swapWords();
+  }, 900);
+  //give it a range instead of 900
+  //or make an array of times-and the time interval chooses from that time array
+  //pause it after a certain amount of time then reinitiate-can be randomized
+}
+
+swapWords()
+
+
+//click on arrow to auto scroll to bottom _____________________________________________________________________________________________________________
+
+
+$(".autoscroll").click(function()  // When arrow is clicked
+    {
+         $("html, body").animate({ scrollTop: $(document).height() }, 1500);
+
+    });
+</script>
+<script type="text/javascript">
+  var s = skrollr.init();
+  </script>
+</body>
+</html>
