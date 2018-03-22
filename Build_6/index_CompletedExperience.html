@@ -14,6 +14,7 @@
     <a href="index_Coffee_1.html"><h1 class="nav">EXERCISES</h1></a>
     <a href="index_NeglectedDyslexic.html"><h1 class="nav">NEGLECTED DYSLEXIC</h1></a>
     <a href="index_EmpoweredDyslexic.html"><h1 class="nav">EMPOWERED DYSLEXIC</h1></a>
+    <a href="index_TakeAction.html"><h1 class="nav">TAKE ACTION</h1></a>
     <a href="index_About.html"><h1 class="nav">ABOUT</h1></a>
     <a href="index_References.html"><h1 class="nav">REFERENCES</h1></a>
     <h1 class="navx">
@@ -142,13 +143,13 @@ function random(Letterset){
   return Letterset.charAt(Math.floor(Math.random() * Letterset.length));
 }
 
-function randomlettspac(){
-  jQuery('#text span').each(function(){
-    var span=jQuery(this);
-    span.css("letter-spacing", ((Math.random() * 0.2)-0.1)+ "em");
-  })
-  // console.log(randomlettspac)
-}
+// function randomlettspac(){
+//   jQuery('#text span').each(function(){
+//     var span=jQuery(this);
+//     span.css("letter-spacing", ((Math.random() * 0.2)-0.1)+ "em");
+//   })
+//   // console.log(randomlettspac)
+// }
 
 
 function pickLetterFor(Letter){
@@ -187,7 +188,7 @@ function pickLetterFor(Letter){
 
 
   setInterval(randompar,800);
-  setInterval(randomlettspac,650);
+  // setInterval(randomlettspac,650);
 });
 
 
@@ -203,7 +204,7 @@ $( "#text" ).click(function() {
 });
 
 
-$( "h1.navCoffeex" ).click(function() {
+$( "h1.navx" ).click(function() {
   			$( "#text" ).removeClass("hidemenu");
   			$( "#navbar" ).hide();
 });

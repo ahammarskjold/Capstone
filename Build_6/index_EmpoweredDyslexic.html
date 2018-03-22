@@ -14,6 +14,7 @@
     <a href="index_Coffee_1.html"><h1 class="nav">EXERCISES</h1></a>
     <a href="index_NeglectedDyslexic.html"><h1 class="nav">NEGLECTED DYSLEXIC</h1></a>
     <a href="index_EmpoweredDyslexic.html"><h1 class="nav">EMPOWERED DYSLEXIC</h1></a>
+    <a href="index_TakeAction.html"><h1 class="nav">TAKE ACTION</h1></a>
     <a href="index_About.html"><h1 class="nav">ABOUT</h1></a>
     <a href="index_References.html"><h1 class="nav">REFERENCES</h1></a>
     <h1 class="navx">
@@ -45,8 +46,8 @@
 
   <div class="BluePage">
 
-    <p class="congrats">WHAT HAPPENS WHEN DYSLEXIC <br>CHILDREN ARE <span style="font-weight: normal;font-style: italic;">EMPOWERED?</span><br><br>
-    <span class="description">They can look at a situation and identify seemingly disparate pieces of information and blend <br>those into a narrative or tapestry that most people can’t see. This translates into an exceptional <br>level of success in four major vocational paths: entrepreneurship, engineering, architecture, <br>and the arts. <a href="https://www.youtube.com/watch?v=_dPyzFFcG7A" target="blank"><sup>A</sup></a><br><br>Successful men and women with dyslexia (e.g. doctors, lawyers, educationalists, filmmakers, <br>computer programmers, writers, administrators) were able to attain prestigious careers whilst <br>battling with literacy problems. They pursued passionate interests, subjects they were happy to <br>read about and thus engage with, developing persistence in the face of setbacks and empathy <br>for others facing similar struggles. They were aware that mentors can serve as important <br>role models and support systems in difficult times.<a href="https://www.omicsonline.org/open-access/the-schools-role-in-creating-successful-and-unsuccessful-dyslexics-2161-0487-1000238.php?aid=69181&view=mobile" target="blank"><sup> F</sup></a><br><br><br><br><br>
+    <p class="congrats">WHAT HAPPENS WHEN DYSLEXIC <br>CHILDREN ARE <span style="font-weight: normal;font-style: italic;">EMPOWERED?</span><br>
+    <span class="description"><br>They can look at a situation and identify seemingly disparate pieces of information and blend <br>those into a narrative or tapestry that most people can’t see. This translates into an exceptional <br>level of success in four major vocational paths: entrepreneurship, engineering, architecture, <br>and the arts. <a href="https://www.youtube.com/watch?v=_dPyzFFcG7A" target="blank"><sup>A</sup></a><br><br>Successful men and women with dyslexia (e.g. doctors, lawyers, educationalists, filmmakers, <br>computer programmers, writers, administrators) were able to attain prestigious careers whilst <br>battling with literacy problems. They pursued passionate interests, subjects they were happy to <br>read about and thus engage with, developing persistence in the face of setbacks and empathy <br>for others facing similar struggles. They were aware that mentors can serve as important <br>role models and support systems in difficult times.<a href="https://www.omicsonline.org/open-access/the-schools-role-in-creating-successful-and-unsuccessful-dyslexics-2161-0487-1000238.php?aid=69181&view=mobile" target="blank"><sup> F</sup></a><br><br><br><br><br>
       <span class="description"
       data-00="position:fixed; top:60px; left:100px;">
 
@@ -139,23 +140,23 @@ window.onload = function() {
 // menu letter switching_____________________________________________________________________________________________________________
 $(window).ready(function(e){
 
-function randompar(){
-  var thiscopy=sourcetext.clone();
-  thiscopy.children("span").each(function(){
-    var span=jQuery(this).text();
-    for (var i = 0; i <= 2; i++) {
-      var index = Math.floor(Math.random() * span.length);
-      var Letter = span.charAt(index);
-      span=(span.substr(0, index) + pickLetterFor(Letter) + span.substr(index+1, span.length));
-      }
-    $(this).text(span);
-  })
-  jQuery("#text").html(thiscopy.html());
-}
+// function randompar(){
+//   var thiscopy=sourcetext.clone();
+//   thiscopy.children("span").each(function(){
+//     var span=jQuery(this).text();
+//     for (var i = 0; i <= 2; i++) {
+//       var index = Math.floor(Math.random() * span.length);
+//       var Letter = span.charAt(index);
+//       span=(span.substr(0, index) + pickLetterFor(Letter) + span.substr(index+1, span.length));
+//       }
+//     $(this).text(span);
+//   })
+//   jQuery("#text").html(thiscopy.html());
+// }
 
-function random(Letterset){
-  return Letterset.charAt(Math.floor(Math.random() * Letterset.length));
-}
+// function random(Letterset){
+//   return Letterset.charAt(Math.floor(Math.random() * Letterset.length));
+// }
 
 function randomlettspac(){
   jQuery('#text span').each(function(){
@@ -166,42 +167,42 @@ function randomlettspac(){
 }
 
 
-function pickLetterFor(Letter){
-  if(Letter.toLowerCase()==="a") return random("ea");
-  else if(Letter.toLowerCase()==="b") return random("db");
-  else if(Letter.toLowerCase()==="c") return random("oce");
-  else if(Letter.toLowerCase()==="d") return random("bd");
-  else if(Letter.toLowerCase()==="e") return random("ceo");
-  else if(Letter.toLowerCase()==="f") return random("tfl");
-  else if(Letter.toLowerCase()==="g") return random("ygj");
-  else if(Letter.toLowerCase()==="h") return random("nhupu");
-  else if(Letter.toLowerCase()==="i") return random("jil");
-  else if(Letter.toLowerCase()==="j") return random("ijl");
-  else if(Letter.toLowerCase()==="k") return random("hky");
-  else if(Letter.toLowerCase()==="l") return random("ijl");
-  else if(Letter.toLowerCase()==="m") return random("nmhuwv");
-  else if(Letter.toLowerCase()==="n") return random("unhmv");
-  else if(Letter.toLowerCase()==="o") return random("eoc");
-  else if(Letter.toLowerCase()==="p") return random("qp");
-  else if(Letter.toLowerCase()==="q") return random("pq");
-  else if(Letter.toLowerCase()==="r") return random("nrci");
-  else if(Letter.toLowerCase()==="s") return random("scr");
-  else if(Letter.toLowerCase()==="t") return random("ltfh");
-  else if(Letter.toLowerCase()==="u") return random("vuhnw");
-  else if(Letter.toLowerCase()==="v") return random("yuwv");
-  else if(Letter.toLowerCase()==="w") return random("mwvu");
-  else if(Letter.toLowerCase()==="x") return random("yxz");
-  else if(Letter.toLowerCase()==="y") return random("xyz");
-  else if(Letter.toLowerCase()==="z") return random("zx");
-  else if(Letter.toLowerCase()===" ") return random(" ");
-  else return random(" ");
-}
+// function pickLetterFor(Letter){
+//   if(Letter.toLowerCase()==="a") return random("ea");
+//   else if(Letter.toLowerCase()==="b") return random("db");
+//   else if(Letter.toLowerCase()==="c") return random("oce");
+//   else if(Letter.toLowerCase()==="d") return random("bd");
+//   else if(Letter.toLowerCase()==="e") return random("ceo");
+//   else if(Letter.toLowerCase()==="f") return random("tfl");
+//   else if(Letter.toLowerCase()==="g") return random("ygj");
+//   else if(Letter.toLowerCase()==="h") return random("nhupu");
+//   else if(Letter.toLowerCase()==="i") return random("jil");
+//   else if(Letter.toLowerCase()==="j") return random("ijl");
+//   else if(Letter.toLowerCase()==="k") return random("hky");
+//   else if(Letter.toLowerCase()==="l") return random("ijl");
+//   else if(Letter.toLowerCase()==="m") return random("nmhuwv");
+//   else if(Letter.toLowerCase()==="n") return random("unhmv");
+//   else if(Letter.toLowerCase()==="o") return random("eoc");
+//   else if(Letter.toLowerCase()==="p") return random("qp");
+//   else if(Letter.toLowerCase()==="q") return random("pq");
+//   else if(Letter.toLowerCase()==="r") return random("nrci");
+//   else if(Letter.toLowerCase()==="s") return random("scr");
+//   else if(Letter.toLowerCase()==="t") return random("ltfh");
+//   else if(Letter.toLowerCase()==="u") return random("vuhnw");
+//   else if(Letter.toLowerCase()==="v") return random("yuwv");
+//   else if(Letter.toLowerCase()==="w") return random("mwvu");
+//   else if(Letter.toLowerCase()==="x") return random("yxz");
+//   else if(Letter.toLowerCase()==="y") return random("xyz");
+//   else if(Letter.toLowerCase()==="z") return random("zx");
+//   else if(Letter.toLowerCase()===" ") return random(" ");
+//   else return random(" ");
+// }
 
 
-  var sourcetext=jQuery("#text").clone();
+//   var sourcetext=jQuery("#text").clone();
 
 
-  setInterval(randompar,800);
+//   setInterval(randompar,800);
   setInterval(randomlettspac,650);
 });
 
@@ -217,7 +218,7 @@ $( "#text" ).click(function() {
 });
 
 
-$( "h1.navCoffeex" ).click(function() {
+$( "h1.navx" ).click(function() {
   			$( "#text" ).removeClass("hidemenu");
   			$( "#navbar" ).hide();
 });

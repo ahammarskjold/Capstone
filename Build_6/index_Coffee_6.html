@@ -14,6 +14,7 @@
     <a href="index_Coffee_1.html"><h1 class="navOrange">EXERCISES</h1></a>
     <a href="index_NeglectedDyslexic.html"><h1 class="navOrange">NEGLECTED DYSLEXIC</h1></a>
     <a href="index_EmpoweredDyslexic.html"><h1 class="navOrange">EMPOWERED DYSLEXIC</h1></a>
+    <a href="index_TakeAction.html"><h1 class="nav">TAKE ACTION</h1></a>
     <a href="index_About.html"><h1 class="navOrange">ABOUT</h1></a>
     <a href="index_References.html"><h1 class="navOrange">REFERENCES</h1></a>
     <h1 class="navx">
@@ -24,7 +25,7 @@
 
 	<div id="navbar2">
 		<div class="decodetext">
-        	<h1 id="text" class="navOrange"><span>MENU</span></h1>
+        	<h1 id="text" class="navOrange"><span id="A">M</span><span id="B">E</span><span id="C">N</span><span id="D">U</span></h1>
       	</div>  
 	</div>
 
@@ -116,73 +117,73 @@ window.onload = function() {
 
 
 // menu letter switching_____________________________________________________________________________________________________________
-$(window).ready(function(e){
+// $(window).ready(function(e){
 
-function randompar(){
-  var thiscopy=sourcetext.clone();
-  thiscopy.children("span").each(function(){
-    var span=jQuery(this).text();
-    for (var i = 0; i <= 2; i++) {
-      var index = Math.floor(Math.random() * span.length);
-      var Letter = span.charAt(index);
-      span=(span.substr(0, index) + pickLetterFor(Letter) + span.substr(index+1, span.length));
-      }
-    $(this).text(span);
-  })
-  jQuery("#text").html(thiscopy.html());
-}
+// function randompar(){
+//   var thiscopy=sourcetext.clone();
+//   thiscopy.children("span").each(function(){
+//     var span=jQuery(this).text();
+//     for (var i = 0; i <= 2; i++) {
+//       var index = Math.floor(Math.random() * span.length);
+//       var Letter = span.charAt(index);
+//       span=(span.substr(0, index) + pickLetterFor(Letter) + span.substr(index+1, span.length));
+//       }
+//     $(this).text(span);
+//   })
+//   jQuery("#text").html(thiscopy.html());
+// }
 
-function random(Letterset){
-  return Letterset.charAt(Math.floor(Math.random() * Letterset.length));
-}
+// function random(Letterset){
+//   return Letterset.charAt(Math.floor(Math.random() * Letterset.length));
+// }
 
-function randomlettspac(){
-  jQuery('#text span').each(function(){
-    var span=jQuery(this);
-    span.css("letter-spacing", ((Math.random() * 0.2)-0.1)+ "em");
-  })
-  // console.log(randomlettspac)
-}
-
-
-function pickLetterFor(Letter){
-  if(Letter.toLowerCase()==="a") return random("ea");
-  else if(Letter.toLowerCase()==="b") return random("db");
-  else if(Letter.toLowerCase()==="c") return random("oce");
-  else if(Letter.toLowerCase()==="d") return random("bd");
-  else if(Letter.toLowerCase()==="e") return random("ceo");
-  else if(Letter.toLowerCase()==="f") return random("tfl");
-  else if(Letter.toLowerCase()==="g") return random("ygj");
-  else if(Letter.toLowerCase()==="h") return random("nhupu");
-  else if(Letter.toLowerCase()==="i") return random("jil");
-  else if(Letter.toLowerCase()==="j") return random("ijl");
-  else if(Letter.toLowerCase()==="k") return random("hky");
-  else if(Letter.toLowerCase()==="l") return random("ijl");
-  else if(Letter.toLowerCase()==="m") return random("nmhuwv");
-  else if(Letter.toLowerCase()==="n") return random("unhmv");
-  else if(Letter.toLowerCase()==="o") return random("eoc");
-  else if(Letter.toLowerCase()==="p") return random("qp");
-  else if(Letter.toLowerCase()==="q") return random("pq");
-  else if(Letter.toLowerCase()==="r") return random("nrci");
-  else if(Letter.toLowerCase()==="s") return random("scr");
-  else if(Letter.toLowerCase()==="t") return random("ltfh");
-  else if(Letter.toLowerCase()==="u") return random("vuhnw");
-  else if(Letter.toLowerCase()==="v") return random("yuwv");
-  else if(Letter.toLowerCase()==="w") return random("mwvu");
-  else if(Letter.toLowerCase()==="x") return random("yxz");
-  else if(Letter.toLowerCase()==="y") return random("xyz");
-  else if(Letter.toLowerCase()==="z") return random("zx");
-  else if(Letter.toLowerCase()===" ") return random(" ");
-  else return random(" ");
-}
+// function randomlettspac(){
+//   jQuery('#text span').each(function(){
+//     var span=jQuery(this);
+//     span.css("letter-spacing", ((Math.random() * 0.2)-0.1)+ "em");
+//   })
+//   // console.log(randomlettspac)
+// }
 
 
-  var sourcetext=jQuery("#text").clone();
+// function pickLetterFor(Letter){
+//   if(Letter.toLowerCase()==="a") return random("ea");
+//   else if(Letter.toLowerCase()==="b") return random("db");
+//   else if(Letter.toLowerCase()==="c") return random("oce");
+//   else if(Letter.toLowerCase()==="d") return random("bd");
+//   else if(Letter.toLowerCase()==="e") return random("ceo");
+//   else if(Letter.toLowerCase()==="f") return random("tfl");
+//   else if(Letter.toLowerCase()==="g") return random("ygj");
+//   else if(Letter.toLowerCase()==="h") return random("nhupu");
+//   else if(Letter.toLowerCase()==="i") return random("jil");
+//   else if(Letter.toLowerCase()==="j") return random("ijl");
+//   else if(Letter.toLowerCase()==="k") return random("hky");
+//   else if(Letter.toLowerCase()==="l") return random("ijl");
+//   else if(Letter.toLowerCase()==="m") return random("nmhuwv");
+//   else if(Letter.toLowerCase()==="n") return random("unhmv");
+//   else if(Letter.toLowerCase()==="o") return random("eoc");
+//   else if(Letter.toLowerCase()==="p") return random("qp");
+//   else if(Letter.toLowerCase()==="q") return random("pq");
+//   else if(Letter.toLowerCase()==="r") return random("nrci");
+//   else if(Letter.toLowerCase()==="s") return random("scr");
+//   else if(Letter.toLowerCase()==="t") return random("ltfh");
+//   else if(Letter.toLowerCase()==="u") return random("vuhnw");
+//   else if(Letter.toLowerCase()==="v") return random("yuwv");
+//   else if(Letter.toLowerCase()==="w") return random("mwvu");
+//   else if(Letter.toLowerCase()==="x") return random("yxz");
+//   else if(Letter.toLowerCase()==="y") return random("xyz");
+//   else if(Letter.toLowerCase()==="z") return random("zx");
+//   else if(Letter.toLowerCase()===" ") return random(" ");
+//   else return random(" ");
+// }
 
 
-  setInterval(randompar,800);
-  setInterval(randomlettspac,650);
-});
+//   var sourcetext=jQuery("#text").clone();
+
+
+//   setInterval(randompar,800);
+//   setInterval(randomlettspac,650);
+// });
 
 
 // navbar hide and show_____________________________________________________________________________________________________________
@@ -254,6 +255,25 @@ $( ".ExerciseButton" ).click(function() {
 }
 
 
+// nav / menu rotate effect_____________________________________________________________________________________________________________
+
+
+function rotate() {
+  setTimeout(function() {
+     $("div.decodetext h1#text.navOrange span#A").addClass ("rotateMenuA");
+  }, 196);
+  setTimeout(function() {
+     $("div.decodetext h1#text.navOrange span#B").addClass ("rotateMenuB");
+  }, 978);
+  setTimeout(function() {
+     $("div.decodetext h1#text.navOrange span#C").addClass ("rotateMenuC");
+  }, 434);
+  setTimeout(function() {
+     $("div.decodetext h1#text.navOrange span#D").addClass ("rotateMenuD");
+  }, 757);
+}
+
+rotate()
 </script>
 <script type="text/javascript">
   var s = skrollr.init();

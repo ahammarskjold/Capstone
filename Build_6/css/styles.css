@@ -1,8 +1,8 @@
 /*font-family: 'Montserrat', sans-serif;
 font-family: 'Nunito', sans-serif;
-font-family: 'Muli', sans-serif;*/
+font-family: 'Muli', sans-serif;
 font-family: 'Varela Round', sans-serif;
-
+*/
 
 html {
   height: 100%;
@@ -98,7 +98,7 @@ div#navbar{
 	position:fixed;
   right: 0;
   float:right;
-  width:930px;
+  width:875px;
   z-index: 101;
   display: none;
 
@@ -116,7 +116,7 @@ div#navbar2{
 h1.nav{
 	font-size: 10px;
 	padding-top: 17px;
-  margin-right: 8%;
+  margin-right: 5%;
   float: left;
   position: static;
   color:white;
@@ -128,7 +128,7 @@ h1.nav{
 h1.navOrange{
   font-size: 10px;
   padding-top: 17px;
-  margin-right: 8%;
+  margin-right: 5%;
   float: left;
   position: static;
   color:white;
@@ -170,7 +170,7 @@ h1.navx{
 h1.navCoffee{
   font-size: 10px;
   padding-top: 17px;
-  margin-right: 8%;
+  margin-right: 5%;
   float: left;
   position: static;
   color:rgb(41, 87, 161);
@@ -292,7 +292,7 @@ div.movebar{
   left: 70px;
   top: 97px;
   margin-left: 0px;
-  z-index: 100;
+  /*z-index: 100;*/
 
 }
 
@@ -732,6 +732,64 @@ div.CoffeeBreak span.specifics sup{
 }
 
 
+.rotateMenuA{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: rotateMenu;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.rotateMenuB{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: rotateMenu;
+  animation-duration: 1700ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.rotateMenuC{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: rotateMenu;
+  animation-duration: 4000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.rotateMenuD{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: rotateMenu;
+  animation-duration: 2000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+    
+@keyframes rotateMenu{
+  0% {
+    transform: rotateZ(0deg);} 
+  10% {
+    transform: rotateZ(0deg);}
+  30%{
+    transform: rotateZ(180deg);}
+  70%{
+    transform: rotateZ(180deg);}
+ 
+  90%{
+    transform: rotateZ(0deg);} 
+  100%{
+    transform: rotateZ(0deg);} 
+}
+
+
 
 .dyslexicletters{
 /*  width:max-content;
@@ -776,6 +834,33 @@ div.CoffeeBreak span.specifics sup{
   75.1%{
     color:white;
   }  
+  90%{
+    transform: rotateY(0deg);} 
+  100%{
+    transform: rotateY(0deg);} 
+}  
+
+.mirrorMenu{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: mirrorMenu;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+
+@keyframes mirrorMenu{
+  0% {
+    transform: rotateY(0deg);
+    } 
+  10% {
+    transform: rotateY(0deg);}
+  30%{
+    transform: rotateY(180deg);}
+  70%{
+    transform: rotateY(180deg);}
   90%{
     transform: rotateY(0deg);} 
   100%{
@@ -1258,7 +1343,20 @@ span.blurry{
 span.blurry:hover{
   filter: blur(0px);
   transition: .5s ease-in-out;
+}
 
+span.blurryMenu{
+  filter: blur(3px);
+  transition: .25s ease-in-out;
+}
+h1#text.navOrange:hover span.blurryMenu{
+  filter: blur(0px);
+  transition: .25s ease-in-out;
+}
+
+h1#text.navCoffee:hover span.blurryMenu{
+  filter: blur(0px);
+  transition: .25s ease-in-out;
 }
 
 span.threeD{
@@ -1297,6 +1395,104 @@ span.threeD{
     11px -11px rgb(41, 87, 161);}
 
   100% {text-shadow: 0px -0px rgb(41, 87, 161);}
+}  
+
+span.threeDMenu{
+  animation-name: threeDMenu;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  
+}
+@keyframes threeDMenu{
+  0% {text-shadow: 0px -0px rgb(41, 87, 161);}
+  40% {text-shadow: 
+    1px -1px rgb(41, 87, 161),
+    1.5px -1.5px rgb(41, 87, 161),
+    2px -2px rgb(41, 87, 161),
+    2.5px -2.5px rgb(41, 87, 161);}
+  60% {text-shadow: 
+    1px -1px rgb(41, 87, 161),
+    1.5px -1.5px rgb(41, 87, 161),
+    2px -2px rgb(41, 87, 161),
+    2.5px -2.5px rgb(41, 87, 161);}
+
+  100% {text-shadow: 0px -0px rgb(41, 87, 161);}
+}  
+
+
+span.threeDMenuEx{
+  animation-name: threeDMenuEx;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  
+}
+@keyframes threeDMenuEx{
+  0% {text-shadow: 0px -0px white;}
+  40% {text-shadow: 
+    1px -1px white,
+    1.5px -1.5px white,
+    2px -2px white,
+    2.5px -2.5px white;}
+  60% {text-shadow: 
+    1px -1px white,
+    1.5px -1.5px white,
+    2px -2px white,
+    2.5px -2.5px white;}
+
+  100% {text-shadow: 0px -0px white;}
+}  
+
+span.threeDMenuEx2{
+  animation-name: threeDMenuEx2;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  
+}
+@keyframes threeDMenuEx2{
+  0% {text-shadow: 0px -0px rgb(41, 87, 161);}
+  40% {text-shadow: 
+    1px -1px rgb(41, 87, 161),
+    1.5px -1.5px rgb(41, 87, 161),
+    2px -2px rgb(41, 87, 161),
+    2.5px -2.5px rgb(41, 87, 161);}
+  60% {text-shadow: 
+    1px -1px rgb(41, 87, 161),
+    1.5px -1.5px rgb(41, 87, 161),
+    2px -2px rgb(41, 87, 161),
+    2.5px -2.5px rgb(41, 87, 161);}
+
+  100% {text-shadow: 0px -0px rgb(41, 87, 161);}
+}  
+
+
+span.threeDMenuNeg{
+  animation-name: threeDMenuNeg;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  
+}
+@keyframes threeDMenuNeg{
+  0% {text-shadow: 0px -0px rgba(216,116,104,1);}
+  40% {text-shadow: 
+    1px -1px rgba(216,116,104,1),
+    1.5px -1.5px rgba(216,116,104,1),
+    2px -2px rgba(216,116,104,1),
+    2.5px -2.5px rgba(216,116,104,1);}
+  60% {text-shadow: 
+    1px -1px rgba(216,116,104,1),
+    1.5px -1.5px rgba(216,116,104,1),
+    2px -2px rgba(216,116,104,1),
+    2.5px -2.5px rgba(216,116,104,1);}
+
+  100% {text-shadow: 0px -0px rgba(216,116,104,1);}
 }  
 
 span.statistics{
@@ -1505,5 +1701,7 @@ h4{
   -webkit-animation-name: bounce;
   animation-name: bounce;
 }
-
+ div.IntroToExperience span.description a.actionLinks:hover{
+  color:rgba(216,116,104,1);
+ }
 

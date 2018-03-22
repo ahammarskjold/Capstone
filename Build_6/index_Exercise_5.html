@@ -17,6 +17,7 @@
     <a href="index_Coffee_1.html"><h1 class="navCoffee">EXERCISES</h1></a>
     <a href="index_NeglectedDyslexic.html"><h1 class="navCoffee">NEGLECTED DYSLEXIC</h1></a>
     <a href="index_EmpoweredDyslexic.html"><h1 class="navCoffee">EMPOWERED DYSLEXIC</h1></a>
+    <a href="index_TakeAction.html"><h1 class="navCoffee">TAKE ACTION</h1></a>
     <a href="index_About.html"><h1 class="navCoffee">ABOUT</h1></a>
     <a href="index_References.html"><h1 class="navCoffee">REFERENCES</h1></a>
     <h1 class="navCoffeex">
@@ -45,7 +46,7 @@
     data-550="display:none;"></div>
 <h1 class="pageindicatorBluePage">05 CONTEXT COMPREHENSION</h1>
 
-  <div class="NormalExercise" style="width:70%; margin-right: 30px;">
+  <div class="NormalExercise" style="width:65%; margin-right: 30px;">
     <span class="NormalExerciseHeading">How long will it take you <br>to understand?</span>
     <span class="NormalExerciseDescription" style="width:400px;"><br><br><br><br><br><br><br><br><br>Offsetting his strength was a noticeable lack of intelligence <br>or wisdom. Once, when the temperature was very high, he pulled his bow out and threatened to shoot at the sun. This, coupled with strong emotions in one so powerful, frequently got Heracles in trouble.<a href="https://www.greekmythology.com/Myths/Heroes/Heracles/heracles.html" target="blank"><sup> H</sup></a></span>
 </span><br><br><br><br>
@@ -276,13 +277,13 @@ function random(Letterset){
   return Letterset.charAt(Math.floor(Math.random() * Letterset.length));
 }
 
-function randomlettspac(){
-  jQuery('#text span').each(function(){
-    var span=jQuery(this);
-    span.css("letter-spacing", ((Math.random() * 0.2)-0.1)+ "em");
-  })
-  // console.log(randomlettspac)
-}
+// function randomlettspac(){
+//   jQuery('#text span').each(function(){
+//     var span=jQuery(this);
+//     span.css("letter-spacing", ((Math.random() * 0.2)-0.1)+ "em");
+//   })
+//   // console.log(randomlettspac)
+// }
 
 
 function pickLetterFor(Letter){
@@ -321,7 +322,7 @@ function pickLetterFor(Letter){
 
 
   setInterval(randompar,800);
-  setInterval(randomlettspac,650);
+  // setInterval(randomlettspac,650);
 });
 
 // navbar hide and show _____________________________________________________________________________________________________________
@@ -444,8 +445,11 @@ function DAnswer(){
         $( "div.DyslexicGrid div" ).css("background-color","#ffcb8d");
         $( "h1.navCoffee" ).css("color","rgba(216,116,104,1)");
         $( "h1.pageindicatorBluePage" ).css({"border-bottom":"5px solid white","color":"white"});
-        $("h1.navCoffee").hover(function() {
+        $("h1.navCoffee").mouseover(function() {
           $(this).css("border-bottom","5px solid rgba(216,116,104,1)")
+        });
+        $("h1.navCoffee").mouseout(function() {
+          $(this).css("border-bottom","none")
         });
         $( "div#xthree" ).css("background-color","rgba(216,116,104,1)");
         $( "div#xfour" ).css("background-color","rgba(216,116,104,1)");
