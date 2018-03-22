@@ -368,9 +368,25 @@ $(document).ready(function(){
 $(window).ready(function(){
 
   $( "div.NormalExercise" ).hide();
+  $( "div.DyslexicExercise" ).hide();
+  $( "div.DyslexicGrid" ).hide();
+  $( "h1#text" ).hide();
+  $( "h1.pageindicatorBluePage" ).hide();
+  $( "div.arrowdown3" ).hide();
+  $( "div.arrowdown4" ).hide();
+  setTimeout(function() {
+          $("div.DyslexicExercise").fadeIn();
+          $( "div.DyslexicGrid" ).fadeIn();
+          $( "h1#text" ).fadeIn();
+          $( "h1.pageindicatorBluePage" ).fadeIn();
+          $( "div.arrowdown3" ).fadeIn();
+          $( "div.arrowdown4" ).fadeIn();
+          $("div.grid").fadeIn(function () { 
+            $(this).addClass('fadeingrid');
+          });  
+  }, 500);
+   
 }); 
-
-
 
 
 //time tracker for Dyslexic exercise _____________________________________________________________________________________________________________
@@ -558,13 +574,13 @@ $( "h1.SecondaryFactx" ).click(function() {
         $("#cat").css({"color":"rgba(216,116,104,1)","font-weight":"normal"});
         $('html, body').animate({scrollTop: '0px'}, 1000);
         setTimeout(function(){
-          $( "div.DyslexicExercise" ).fadeIn();
-          $( "div.DyslexicExercise" ).css("margin-right","25%");
+          // $( "div.DyslexicExercise" ).fadeIn();
+          // $( "div.DyslexicExercise" ).css("margin-right","25%");
           $( "div.grid" ).css({"width":"25%","margin-left":"75%"});
           $( "div#background" ).css("width","25%");
           $( "div.centerlineSTATIC" ).css("left","75%");
           $( "div.DyslexicGrid" ).css({"margin-left":"0%","width":"75%","background-color":"transparent"});
-          $( "div.DyslexicExercise" ).css("margin-left","0%");
+          // $( "div.DyslexicExercise" ).css("margin-left","0%");
           $( "div.NormalExercise" ).hide();
       },1000); 
         setTimeout(function(){

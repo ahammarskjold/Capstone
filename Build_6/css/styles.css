@@ -22,8 +22,8 @@ body {
     left: 0px;
     width: 50%;
     height: 100%;
-    background-color: white;
-    z-index: -1;
+/*    background-color: rgba(216,116,104,.8);
+*/    z-index: -1;
     transition: all 1s ease-in-out;
 }
 
@@ -35,13 +35,18 @@ div.grid{
 	margin: 0px;
 	background-color: rgba(216,116,104,.8);
 	background-size: 20px 12px, 10% 20px;
-	background-image:
-    -webkit-linear-gradient(rgba(41,87,161,0.1) 2px, transparent 2px);
-  background-image:
-    -moz-linear-gradient(rgba(41,87,161,0.1) 2px, transparent 2px);
+	
   z-index: 5;
   transition: all 1s ease-in-out;
 }
+
+.fadeingrid{
+  background-image:
+    -webkit-linear-gradient(rgba(41,87,161,0.1) 2px, transparent 2px);
+  background-image:
+    -moz-linear-gradient(rgba(41,87,161,0.1) 2px, transparent 2px);
+}
+
 div.DyslexicGrid{
   height: 100%;
   width:50%;

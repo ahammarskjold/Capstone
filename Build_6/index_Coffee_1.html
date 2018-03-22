@@ -44,7 +44,7 @@
     data-1010="display:none;"></div>
 
 
-  <h1 class="pageindicator">DYSLEXIC PERCEPTION</h1>
+  <h1 class="pageindicator">DYSLEXIC PERCEPTION 01</h1>
 
   <div class="CoffeeBreak">
 
@@ -256,14 +256,15 @@ $( ".ExerciseButton" ).click(function() {
        $( ".ExerciseButton" ).css( "transition", ".5s ease-in-out");
       setTimeout( function() { 
         $( ".centerlineCoffeeWhite" ).css( {"width": "5px","left":"75%"});
-        $( ".ExerciseButton" ).css( {"bottom": "734px","color":"rgb(41, 87, 161)","border-bottom":"5px solid rgb(41, 87, 161)","border-top":"none","border-right":"none","border-left":"none","margin-left":"75px","margin-top":"0.67em","padding":"0px","padding-bottom":"5px"});
-        document.getElementById("excBtn").innerHTML = "01 RHYMING";
+        $( ".ExerciseButton" ).css( {"color":"ghostwhite","border-bottom":"5px solid ghostwhite","border-top":"none","border-right":"none","border-left":"none"});
+        $( ".ExerciseButton" ).fadeOut();
+        // document.getElementById("excBtn").innerHTML = "01 RHYMING";
         
       }, 750 );
 });
 
   function delay (URL) {
-    setTimeout( function() { window.location = URL }, 1875 );
+    setTimeout( function() { window.location = URL }, 750 );
 }
 
 
