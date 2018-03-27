@@ -7,6 +7,7 @@ font-family: 'Varela Round', sans-serif;
 html {
   height: 100%;
   background-color: ghostwhite;
+  user-select: none;
 }
 
 body {
@@ -434,8 +435,9 @@ button.startbutton{
   background-color: none;
   border:5px solid white;
   background: none;
-  letter-spacing: .75px;
-  font-size: 10px;
+  letter-spacing: 1px;
+  font-size: 12px;
+  padding: 5px 10px 5px;
 }
 
 button.startbutton:hover{
@@ -551,8 +553,8 @@ span.SecondaryFact strong{
 button.NextToCoffeeBreak{
   position: fixed;
   color:rgba(216,116,104,1);
-  font-size: 15px;
-  letter-spacing: 2.5px;
+  font-size: 12px;
+  letter-spacing: 1px;
   font-family: 'Lato', sans-serif;
   font-weight: bolder;
   background-color: none;
@@ -561,6 +563,7 @@ button.NextToCoffeeBreak{
   display: none;
   margin-top: 40px;
   margin-bottom: 30px;
+  padding: 5px 10px 5px;
 
 }
 
@@ -888,7 +891,7 @@ button.ExerciseButton{
   /*font-size: 15px;
   letter-spacing: 2.5px;*/
   letter-spacing: .75px;
-  font-size: 10px;
+  font-size: 12px;
   font-family: 'Lato', sans-serif;
   font-weight: bold;
   margin-left: 100px;
@@ -897,6 +900,7 @@ button.ExerciseButton{
   background: none;
   border:5px solid white;
   z-index: 102;
+  padding: 5px 10px 5px;
 
 
   /*background:rgba(216,116,104,1) ;*/
@@ -1709,4 +1713,158 @@ h4{
  div.IntroToExperience span.description a.actionLinks:hover{
   color:rgba(216,116,104,1);
  }
+
+span#timeReading{
+  font-size: 30px;
+}
+
+
+div.textscroll{
+  height:15px;
+  width: 5px;
+  position: fixed;
+  margin-left: 57px;
+  bottom: 45px;
+  float:left;
+  color:white;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+
+div#extrahelp{
+  position: fixed;
+  margin-left: 78%;
+  bottom: 20px;
+  width:20%;
+  color:rgb(41, 87, 161);
+  z-index: 100;
+}
+
+div#help{
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  width: 20px;
+  color:rgb(41, 87, 161);
+
+}
+
+div#help:hover{
+  color:white;
+  cursor: pointer;
+}
+
+div#help2{
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  width: 20px;
+  color:white;
+  margin-left: 88%;
+
+}
+div#help2:hover{
+  color:rgba(216,116,104,1);
+  cursor: pointer;
+}
+
+
+div#helpanswer{
+  margin-bottom: 48px;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+div#xfive{
+  position: absolute;
+  height: 20px;
+  width: 5px;
+  transform: rotate(45deg);
+  background-color: rgb(41, 87, 161);
+  bottom:1px;
+}
+
+div#xsix{
+  position: absolute;
+  height: 20px;
+  width: 5px;
+  transform: rotate(-45deg);
+  background-color: rgb(41, 87, 161);
+  bottom:1px;
+
+}
+
+div#xseven{
+  position: absolute;
+  height: 20px;
+  width: 5px;
+  transform: rotate(45deg);
+  background-color: white;
+  bottom:1px;
+}
+
+div#xeight{
+  position: absolute;
+  height: 20px;
+  width: 5px;
+  transform: rotate(-45deg);
+  background-color: white;
+  bottom:1px;
+
+}
+
+
+div.questionX{
+  position: fixed;
+  bottom: 20px;
+  float:right;
+  color:rgb(41, 87, 161);
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-weight: bold;
+
+}
+
+div.questionX:hover #xfive{
+  background-color: white;
+}
+
+div.questionX:hover #xsix{
+  background-color: white;
+}
+
+div.questionX:hover #xseven{
+  background-color: rgba(216,116,104,1);
+}
+
+div.questionX:hover #xeight{
+  background-color: rgba(216,116,104,1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

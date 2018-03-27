@@ -44,6 +44,13 @@
   <div class="arrowdown4" 
     data-0="display:inline-block;"
     data-550="display:none;"></div>
+
+<div id="extrahelp">
+  <div id="help">?</div>
+  <div id="help2">?</div>
+  <div id="helpanswer" style="display: none;">Indicate when you have understood the passage by clicking on yes.</div>
+</div>
+
 <h1 class="pageindicatorBluePage">05 CONTEXT COMPREHENSION</h1>
 
   <div class="NormalExercise" style="width:65%; margin-right: 30px;">
@@ -220,6 +227,41 @@
 
 
 <script type="text/javascript">
+//help button toggle help description _____________________________________________________________________________________________________________
+
+function rightHelp(){
+    $("#help").click(function(){
+    var helpanswer = document.getElementById("helpanswer");
+    var help = document.getElementById("help");
+    if (helpanswer.style.display == 'none')
+         helpanswer.style.display = 'block';
+      else
+         helpanswer.style.display = 'none';
+
+      if (helpanswer.style.display == 'none')
+         help.innerHTML="?"
+      else
+         help.innerHTML="<div class=questionX> <div id=xfive></div><div id=xsix></div></div>";
+  });
+};    
+rightHelp();
+function leftHelp(){
+    $("#help2").click(function(){
+    var helpanswer = document.getElementById("helpanswer");
+    var help = document.getElementById("help2");
+    if (helpanswer.style.display == 'none')
+         helpanswer.style.display = 'block';
+      else
+         helpanswer.style.display = 'none';
+
+      if (helpanswer.style.display == 'none')
+         help.innerHTML="?"
+      else
+         help.innerHTML="<div class=questionX> <div id=xseven></div><div id=xeight></div></div>";
+  });
+};    
+leftHelp();
+
 //stop arrow bounce when scroll occurs _____________________________________________________________________________________________________________
 
 window.onload = function() {
@@ -369,6 +411,8 @@ $(window).ready(function(){
   $( "h1.pageindicatorBluePage" ).hide();
   $( "div.arrowdown3" ).hide();
   $( "div.arrowdown4" ).hide();
+    $( "#extrahelp" ).hide();
+  $( "#help2" ).hide();
   setTimeout(function() {
           $("div.DyslexicExercise").fadeIn();
           $( "div.DyslexicGrid" ).fadeIn();
@@ -379,6 +423,7 @@ $(window).ready(function(){
           $("div.grid").fadeIn(function () { 
             $(this).addClass('fadeingrid');
           });  
+          $( "#extrahelp" ).fadeIn();
   }, 500);
    
 }); 
@@ -480,7 +525,9 @@ function DAnswer(){
         });
         $( "div.arrowdown3" ).css({"background-color":"white","z-index":"20"});
         $( "div.arrowdown4" ).css({"background-color":"white","z-index":"20"});
-       
+       $( "#extrahelp" ).css({"margin-left":"3%","color":"white"});
+        $( "#help2" ).show();
+        $( "#help" ).hide();
 
 
       }, 1500);
@@ -512,6 +559,7 @@ $(function(){
       clearTimeout(Nt);
       setTimeout(function() {
          $( "div.NormalExercise" ).fadeOut();
+         $( "#help2" ).fadeOut();
       }, 1000);
       setTimeout(function() {
         $( "div.grid" ).css({"width":"50%","margin-left":"50%","background-color":"rgba(216,116,104,.8)"});
@@ -624,7 +672,7 @@ function goaway2(){
 var array = ["in","on","the","an","that","is","as","of","a","with","got","if","so"]
 var array2 = ["How","Who"]
 var array3 = ["take","kate"]
-
+//this changes dyslexic excercise paragraph
 function swapWords() {
   setTimeout(function() {
     const word2Index = Math.floor(Math.random() * array.length);
@@ -664,10 +712,11 @@ function swapWords() {
     swapWords();
   }, 1500);
 }
+//1500
 
 swapWords()
 
-
+//this changes dyslexic excercise heading
 function swapWordsB() {
   setTimeout(function() {
     const word1Index = Math.floor(Math.random() * array2.length);

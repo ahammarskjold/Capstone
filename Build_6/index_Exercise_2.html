@@ -45,6 +45,12 @@
   <div class="arrowdown4" 
     data-0="display:inline-block;"
     data-550="display:none;"></div>
+
+<div id="extrahelp">
+	<div id="help">?</div>
+	<div id="help2">?</div>
+	<div id="helpanswer" style="display: none;">Find and click on the correct answer to continue. Wrong choices will be indicated by a strike through.</div>
+</div>
 <h1 class="pageindicatorBluePage">02 SEQUENCING</h1>
 
 <div class="NormalExercise" style="width:70%;">
@@ -52,28 +58,38 @@
   <div
     data-500="margin-left:1100px;"
 	data-599="margin-left:-15px;">
-	  <table class="NormalExerciseOptions" style="top:200px;">
+	  <table class="NormalExerciseOptions" style="top:136px;">
 	      <tr>
-	        <td><span class="month" id="MA" onclick="strikethroughA()">&nbsp;January&nbsp;</span></td>
-	        <td><span class="month" id="MB" onclick="strikethroughB()">&nbsp;February&nbsp;</span></td>
-	        <td><span class="month" id="MC" onclick="strikethroughC()">&nbsp;March&nbsp;</span></td>
+	        <td><span class="month" id="MA" onclick="strikethroughA()">&nbsp;1. January&nbsp;</span></td>
+	        <td><span class="month" id="MG" onclick="strikethroughG()">&nbsp;7. July&nbsp;</span></td>
 	      </tr>
         <tr>
-          <td><span class="month" id="MD" onclick="strikethroughD()">&nbsp;April&nbsp;</span></td>
-          <td><span class="month" id="ME" onclick="strikethroughE()">&nbsp;May&nbsp;</span></td>
-          <td><span class="month" id="MF" onclick="strikethroughF()">&nbsp;June&nbsp;</span></td>
+        	<td><span class="month" id="MB" onclick="strikethroughB()">&nbsp;2. February&nbsp;</span></td>
+          	<td><span class="month" id="NormalAnsw">&nbsp;8. August&nbsp;</span></td>
         </tr>
 	      <tr>
-	        <td><span class="month" id="MG" onclick="strikethroughG()">&nbsp;July&nbsp;</span></td>
-	        <td><span class="month" id="NormalAnsw">&nbsp;August&nbsp;</span></td>
-	        <td><span class="month" id="MH" onclick="strikethroughH()">&nbsp;September&nbsp;</span></td>
+	      	<td><span class="month" id="MC" onclick="strikethroughC()">&nbsp;3. March&nbsp;</span></td>
+	      	<td><span class="month" id="MH" onclick="strikethroughH()">&nbsp;9. September&nbsp;</span></td>
 	      </tr>
         <tr>
-          <td><span class="month" id="MI" onclick="strikethroughI()">&nbsp;October&nbsp;</span></td>
-          <td><span class="month" id="MJ" onclick="strikethroughJ()">&nbsp;November&nbsp;</span></td>
-          <td><span class="month" id="MK" onclick="strikethroughK()">&nbsp;December&nbsp;</span></td>
+        	<td><span class="month" id="MD" onclick="strikethroughD()">&nbsp;4. April&nbsp;</span></td>
+        	<td><span class="month" id="MI" onclick="strikethroughI()">&nbsp;10. October&nbsp;</span></td>
+        </tr>
+        <tr>
+        	<td><span class="month" id="ME" onclick="strikethroughE()">&nbsp;5. May&nbsp;</span></td>
+        	<td><span class="month" id="MJ" onclick="strikethroughJ()">&nbsp;11. November&nbsp;</span></td>
+        </tr>
+        <tr>
+        	<td><span class="month" id="MF" onclick="strikethroughF()">&nbsp;6. June&nbsp;</span></td>
+        	<td><span class="month" id="MK" onclick="strikethroughK()">&nbsp;12. December&nbsp;</span></td>
         </tr>
 	    </table>
+
+
+
+
+
+
 	</div>    
   </div>
 
@@ -84,7 +100,7 @@
   <div
     data-400="margin-left:-1200px;"
 	data-599="margin-left:-15px;">
-	  <table class="DyslexicExerciseOptions" style="top:200px;">
+	  <table class="DyslexicExerciseOptions" style="top:195px;">
 	      <tr class="dyslexicReorder">
 	        <td><span class="month" id="M1" onclick="strikethrough1()">&nbsp;January&nbsp;</span></td>
 	        <td><span class="month" id="M2" onclick="strikethrough2()">&nbsp;May&nbsp;</span></td>
@@ -97,13 +113,13 @@
 	      </tr>
         <tr class="dyslexicReorder">
           <td><span class="month" id="M7" onclick="strikethrough7()">&nbsp;April&nbsp;</span></td>
-          <td><span class="month" id="M8" onclick="strikethroug8()">&nbsp;December&nbsp;</span></td>
+          <td><span class="month" id="M8" onclick="strikethrough8()">&nbsp;December&nbsp;</span></td>
           <td id="DyslexicAnsw"  onclick="DAnswer()"><span class="month">&nbsp;August&nbsp;</span></td>
         </tr>
         <tr class="dyslexicReorder">
           <td><span class="month" id="M9" onclick="strikethrough9()">&nbsp;March&nbsp;</span></td>
           <td><span class="month" id="M10" onclick="strikethrough10()">&nbsp;July&nbsp;</span></td>
-          <td><span class="month" id="M"11 onclick="strikethrough11()">&nbsp;November&nbsp;</span></td>
+          <td><span class="month" id="M11" onclick="strikethrough11()">&nbsp;November&nbsp;</span></td>
         </tr>
 	    </table>
     </div>
@@ -253,6 +269,42 @@
 
 
 <script type="text/javascript">
+//help button toggle help description _____________________________________________________________________________________________________________
+
+function rightHelp(){
+    $("#help").click(function(){
+		var helpanswer = document.getElementById("helpanswer");
+		var help = document.getElementById("help");
+		if (helpanswer.style.display == 'none')
+	       helpanswer.style.display = 'block';
+	    else
+	       helpanswer.style.display = 'none';
+
+	   	if (helpanswer.style.display == 'none')
+	       help.innerHTML="?"
+	    else
+	       help.innerHTML="<div class=questionX> <div id=xfive></div><div id=xsix></div></div>";
+	});
+};    
+rightHelp();
+function leftHelp(){
+    $("#help2").click(function(){
+		var helpanswer = document.getElementById("helpanswer");
+		var help = document.getElementById("help2");
+		if (helpanswer.style.display == 'none')
+	       helpanswer.style.display = 'block';
+	    else
+	       helpanswer.style.display = 'none';
+
+	   	if (helpanswer.style.display == 'none')
+	       help.innerHTML="?"
+	    else
+	       help.innerHTML="<div class=questionX> <div id=xseven></div><div id=xeight></div></div>";
+	});
+};    
+leftHelp();
+
+
 //stop arrow bounce when scroll occurs _____________________________________________________________________________________________________________
 
 window.onload = function() {
@@ -290,7 +342,7 @@ window.onload = function() {
 
 
 // menu letter switching_____________________________________________________________________________________________________________
-// $(window).ready(function(e){
+$(window).ready(function(e){
 
 // function randompar(){
 //   var thiscopy=sourcetext.clone();
@@ -306,23 +358,23 @@ window.onload = function() {
 //   jQuery("#text").html(thiscopy.html());
 // }
 
-// function HeaderLetSwitch(){
-//   var thiscopy=Headtext.clone();
-//   thiscopy.children("span").each(function(){
-//     var span=jQuery(this).text();
-//     for (var i = 0; i <= 2; i++) {
-//       var index = Math.floor(Math.random() * span.length);
-//       var Letter = span.charAt(index);
-//       span=(span.substr(0, index) + pickLetterFor(Letter) + span.substr(index+1, span.length));
-//       }
-//     $(this).text(span);
-//   })
-//   jQuery("#HeadingSwitchLet").html(thiscopy.html());
-// }
+function HeaderLetSwitch(){
+  var thiscopy=Headtext.clone();
+  thiscopy.children("span").each(function(){
+    var span=jQuery(this).text();
+    for (var i = 0; i <= 2; i++) {
+      var index = Math.floor(Math.random() * span.length);
+      var Letter = span.charAt(index);
+      span=(span.substr(0, index) + pickLetterFor(Letter) + span.substr(index+1, span.length));
+      }
+    $(this).text(span);
+  })
+  jQuery("#HeadingSwitchLet").html(thiscopy.html());
+}
 
-// function random(Letterset){
-//   return Letterset.charAt(Math.floor(Math.random() * Letterset.length));
-// }
+function random(Letterset){
+  return Letterset.charAt(Math.floor(Math.random() * Letterset.length));
+}
 
 // function randomlettspac(){
 //   jQuery('#text span').each(function(){
@@ -333,52 +385,52 @@ window.onload = function() {
 // }
 
 
-// function pickLetterFor(Letter){
-//   if(Letter.toLowerCase()==="a") return random("ea");
-//   else if(Letter.toLowerCase()==="b") return random("db");
-//   else if(Letter.toLowerCase()==="c") return random("oce");
-//   else if(Letter.toLowerCase()==="d") return random("bd");
-//   else if(Letter.toLowerCase()==="e") return random("ceo");
-//   else if(Letter.toLowerCase()==="f") return random("tfl");
-//   else if(Letter.toLowerCase()==="g") return random("ygj");
-//   else if(Letter.toLowerCase()==="h") return random("nhupu");
-//   else if(Letter.toLowerCase()==="i") return random("jil");
-//   else if(Letter.toLowerCase()==="j") return random("ijl");
-//   else if(Letter.toLowerCase()==="k") return random("hky");
-//   else if(Letter.toLowerCase()==="l") return random("ijl");
-//   else if(Letter.toLowerCase()==="m") return random("nmhuwv");
-//   else if(Letter.toLowerCase()==="n") return random("unhmv");
-//   else if(Letter.toLowerCase()==="o") return random("eoc");
-//   else if(Letter.toLowerCase()==="p") return random("qp");
-//   else if(Letter.toLowerCase()==="q") return random("pq");
-//   else if(Letter.toLowerCase()==="r") return random("nrci");
-//   else if(Letter.toLowerCase()==="s") return random("scr");
-//   else if(Letter.toLowerCase()==="t") return random("ltfh");
-//   else if(Letter.toLowerCase()==="u") return random("vuhnw");
-//   else if(Letter.toLowerCase()==="v") return random("yuwv");
-//   else if(Letter.toUpperCase()==="W") return random("MWVU");
-//   else if(Letter.toLowerCase()==="x") return random("yxz");
-//   else if(Letter.toLowerCase()==="y") return random("xyz");
-//   else if(Letter.toLowerCase()==="z") return random("zx");
-//   else if(Letter.toLowerCase()==="8") return random("86853");
-//   else if(Letter.toLowerCase()==="?") return random("?!");
-//   else if(Letter.toLowerCase()===" ") return random(" ");
-//   else return random(" ");
+function pickLetterFor(Letter){
+  if(Letter.toLowerCase()==="a") return random("ea");
+  else if(Letter.toLowerCase()==="b") return random("db");
+  else if(Letter.toLowerCase()==="c") return random("oce");
+  else if(Letter.toLowerCase()==="d") return random("bd");
+  else if(Letter.toLowerCase()==="e") return random("ceo");
+  else if(Letter.toLowerCase()==="f") return random("tfl");
+  else if(Letter.toLowerCase()==="g") return random("ygj");
+  else if(Letter.toLowerCase()==="h") return random("nhupu");
+  else if(Letter.toLowerCase()==="i") return random("jil");
+  else if(Letter.toLowerCase()==="j") return random("ijl");
+  else if(Letter.toLowerCase()==="k") return random("hky");
+  else if(Letter.toLowerCase()==="l") return random("ijl");
+  else if(Letter.toLowerCase()==="m") return random("nmhuwv");
+  else if(Letter.toLowerCase()==="n") return random("unhmv");
+  else if(Letter.toLowerCase()==="o") return random("eoc");
+  else if(Letter.toLowerCase()==="p") return random("qp");
+  else if(Letter.toLowerCase()==="q") return random("pq");
+  else if(Letter.toLowerCase()==="r") return random("nrci");
+  else if(Letter.toLowerCase()==="s") return random("scr");
+  else if(Letter.toLowerCase()==="t") return random("ltfh");
+  else if(Letter.toLowerCase()==="u") return random("vuhnw");
+  else if(Letter.toLowerCase()==="v") return random("yuwv");
+  else if(Letter.toUpperCase()==="W") return random("MWVU");
+  else if(Letter.toLowerCase()==="x") return random("yxz");
+  else if(Letter.toLowerCase()==="y") return random("xyz");
+  else if(Letter.toLowerCase()==="z") return random("zx");
+  else if(Letter.toLowerCase()==="8") return random("86853");
+  else if(Letter.toLowerCase()==="?") return random("?!");
+  else if(Letter.toLowerCase()===" ") return random(" ");
+  else return random(" ");
 
 
-// }
+}
 
   
-//   var sourcetext=jQuery("#text").clone();
-//   var Headtext=jQuery("#HeadingSwitchLet").clone();
+  // var sourcetext=jQuery("#text").clone();
+  var Headtext=jQuery("#HeadingSwitchLet").clone();
 
 
-//   setInterval(randompar,800);
-//   setInterval(randomlettspac,650);
-//   setInterval(HeaderLetSwitch,700);
+  // setInterval(randompar,800);
+  // setInterval(randomlettspac,650);
+  setInterval(HeaderLetSwitch,700);
 
 
-// });
+});
 
 
 
@@ -427,6 +479,11 @@ $(window).ready(function(){
   $( "h1.pageindicatorBluePage" ).hide();
   $( "div.arrowdown3" ).hide();
   $( "div.arrowdown4" ).hide();
+  $( "#extrahelp" ).hide();
+  $( "#help2" ).hide();
+
+
+
   setTimeout(function() {
           $("div.DyslexicExercise").fadeIn();
           $( "div.DyslexicGrid" ).fadeIn();
@@ -437,6 +494,7 @@ $(window).ready(function(){
           $("div.grid").fadeIn(function () { 
             $(this).addClass('fadeingrid');
           });  
+          $( "#extrahelp" ).fadeIn();
   }, 500);
    
 }); 
@@ -478,8 +536,11 @@ function DAnswer(){
         });
         $( "div.arrowdown3" ).css({"background-color":"white","z-index":"20"});
         $( "div.arrowdown4" ).css({"background-color":"white","z-index":"20"});
-       
 
+        $( "#extrahelp" ).css({"margin-left":"3%","color":"white"});
+        $( "#help2" ).show();
+        $( "#help" ).hide();
+        
 
       }, 1500);
       setTimeout(function() {
@@ -523,6 +584,7 @@ $(function(){
       $("#NormalAnsw").css({"color":"rgba(216,116,104,1)","font-weight":"bold"});
       setTimeout(function() {
          $( "div.NormalExercise" ).fadeOut();
+         $( "#help2" ).fadeOut();
       }, 1000);
       setTimeout(function() {
         $( "div.grid" ).css({"width":"50%","margin-left":"50%","background-color":"rgba(216,116,104,.8)"});
@@ -712,6 +774,9 @@ function strikethroughJ() {
 function strikethroughK() {
   $("#MK").css( {"text-decoration-line":"line-through","text-decoration-color": "rgba(216,116,104,1)"});
 }
+
+
+
 </script>
 <script type="text/javascript">
   var s = skrollr.init();

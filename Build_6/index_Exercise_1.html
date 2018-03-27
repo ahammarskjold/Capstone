@@ -48,6 +48,11 @@
     <div class="arrowdown4" 
       data-0="display:inline-block;"
       data-550="display:none;"></div>
+<div id="extrahelp">
+  <div id="help">?</div>
+  <div id="help2">?</div>
+  <div id="helpanswer" style="display: none;">Find and click on the correct answer to continue. Wrong choices will be indicated by a strike through.</div>
+</div>
 
 <h1 class="pageindicatorBluePage">01 RHYMING</h1>
 
@@ -259,6 +264,42 @@
 
 
 <script type="text/javascript">
+//help button toggle help description _____________________________________________________________________________________________________________
+
+function rightHelp(){
+    $("#help").click(function(){
+    var helpanswer = document.getElementById("helpanswer");
+    var help = document.getElementById("help");
+    if (helpanswer.style.display == 'none')
+         helpanswer.style.display = 'block';
+      else
+         helpanswer.style.display = 'none';
+
+      if (helpanswer.style.display == 'none')
+         help.innerHTML="?"
+      else
+         help.innerHTML="<div class=questionX> <div id=xfive></div><div id=xsix></div></div>";
+  });
+};    
+rightHelp();
+function leftHelp(){
+    $("#help2").click(function(){
+    var helpanswer = document.getElementById("helpanswer");
+    var help = document.getElementById("help2");
+    if (helpanswer.style.display == 'none')
+         helpanswer.style.display = 'block';
+      else
+         helpanswer.style.display = 'none';
+
+      if (helpanswer.style.display == 'none')
+         help.innerHTML="?"
+      else
+         help.innerHTML="<div class=questionX> <div id=xseven></div><div id=xeight></div></div>";
+  });
+};    
+leftHelp();
+
+
 //stop arrow bounce when scroll occurs _____________________________________________________________________________________________________________
 
 window.onload = function() {
@@ -952,6 +993,8 @@ $(window).ready(function(){
   $( "h1.pageindicatorBluePage" ).hide();
   $( "div.arrowdown3" ).hide();
   $( "div.arrowdown4" ).hide();
+  $( "#extrahelp" ).hide();
+  $( "#help2" ).hide();
   setTimeout(function() {
           $("div.DyslexicExercise").fadeIn();
           $( "div.DyslexicGrid" ).fadeIn();
@@ -962,6 +1005,7 @@ $(window).ready(function(){
           $("div.grid").fadeIn(function () { 
             $(this).addClass('fadeingrid');
           });  
+          $( "#extrahelp" ).fadeIn();
   }, 500);
    
 }); 
@@ -969,7 +1013,7 @@ $(window).ready(function(){
 
 
 
-//clicking on Dyslexic answer and getting secondary fact _____________________________________________________________________________________________________________
+//clicking on Dyslexic answer _____________________________________________________________________________________________________________
 
 $(function(){
     var hasBeenTrigged = false;
@@ -1030,7 +1074,9 @@ $(function(){
         });
         $( "div.arrowdown3" ).css({"background-color":"white","z-index":"20"});
         $( "div.arrowdown4" ).css({"background-color":"white","z-index":"20"});
-       
+        $( "#extrahelp" ).css({"margin-left":"3%","color":"white"});
+        $( "#help2" ).show();
+        $( "#help" ).hide();
 
 
       }, 1500);
@@ -1124,13 +1170,14 @@ $(function(){
 
 
 
-//clicking on Normal answer _____________________________________________________________________________________________________________
+//clicking on Normal answer and getting secondary fact _____________________________________________________________________________________________________________
 
 $(function(){
     $("#cat").click(function(){
       $("#cat").css({"color":"rgba(216,116,104,1)","font-weight":"bold"});
       setTimeout(function() {
          $( "div.NormalExercise" ).fadeOut();
+         $( "#help2" ).fadeOut();
       }, 1000);
       setTimeout(function() {
         $( "div.grid" ).css({"width":"50%","margin-left":"50%","background-color":"rgba(216,116,104,.8)"});
@@ -1228,9 +1275,6 @@ $(window).ready(function(e){
   var possibleD3="dbpq";
   var possibleB="dbpq";
   var possibleB2="dbpq";
-  // var possibleP="pqdb";
-  // var possibleP2="pqdb";
-  // var possibleP3="pqdb";
   var counter = 0;
   
   var elemD = document.getElementById("changeTextD");
@@ -1243,14 +1287,8 @@ $(window).ready(function(e){
   setInterval(changeWord, 500);
   var elemB2 = document.getElementById("changeTextB2");
   setInterval(changeWord, 500);
-  // var elemP = document.getElementById("changeTextP");
-  // setInterval(changeWord, 500);
-  // var elemP2 = document.getElementById("changeTextP2");
-  // setInterval(changeWord, 500);
-  // var elemP3 = document.getElementById("changeTextP3");
-  // setInterval(changeWord, 500);
-  
 
+  
 
   function changeWord() {
     elemD.innerHTML = text[counter];
@@ -1278,21 +1316,6 @@ $(window).ready(function(e){
     for (var i = 0; i < 5; i++)
       text += possibleB2.charAt(Math.floor(Math.random() * possibleB2.length));
 
-    // elemP.innerHTML = text[counter];
-    // counter++;
-    // for (var i = 0; i < 5; i++)
-    //   text += possibleP.charAt(Math.floor(Math.random() * possibleP.length));
-
-    // elemP2.innerHTML = text[counter];
-    // counter++;
-    // for (var i = 0; i < 5; i++)
-    //   text += possibleP2.charAt(Math.floor(Math.random() * possibleP2.length));
-
-    // elemP3.innerHTML = text[counter];
-    // counter++;
-    // for (var i = 0; i < 5; i++)
-    //   text += possibleP3.charAt(Math.floor(Math.random() * possibleP3.length));
-
     return text;
     if (counter >= text.length) {
       counter = 0;}
@@ -1300,10 +1323,6 @@ $(window).ready(function(e){
   }
   
 });
-
-
-
-
 
 
 
@@ -1434,9 +1453,6 @@ $(window).ready(function(e){
   var text = "";
   var counter = 0;
   var possibleN="nu";
-  // var possibleN2="nu";
-  // var possibleU="un";
-  // var possibleU2="un";
 
 
   var elemN = document.getElementById("changeTextN");
@@ -1455,22 +1471,6 @@ $(window).ready(function(e){
     for (var i = 0; i < 5; i++)
       text += possibleN.charAt(Math.floor(Math.random() * possibleN.length));
 
-    // elemN2.innerHTML = text[counter];
-    // counter++;
-    // for (var i = 0; i < 5; i++)
-    //   text += possibleN2.charAt(Math.floor(Math.random() * possibleN2.length));
-
-    // elemU.innerHTML = text[counter];
-    // counter++;
-    // for (var i = 0; i < 5; i++)
-    //   text += possibleU.charAt(Math.floor(Math.random() * possibleU.length));
-
-    // elemU2.innerHTML = text[counter];
-    // counter++;
-    // for (var i = 0; i < 5; i++)
-    //   text += possibleU2.charAt(Math.floor(Math.random() * possibleU2.length));
-
-    
     return text;
     if (counter >= text.length) {
       counter = 0;}
