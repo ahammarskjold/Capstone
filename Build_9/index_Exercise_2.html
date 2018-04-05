@@ -1,0 +1,669 @@
+
+<html>
+<head>
+<title>CAPSTONE</title>
+<link type="text/css" rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+<!-- <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
+ --><link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+
+</head>
+<body>
+ 
+	<div id="navbar"">
+    <a href="index_intro_page.html"><h1 class="navCoffee">HOME</h1></a>
+    <a href="index_Coffee_1.html"><h1 class="navCoffee">EXERCISES</h1></a>
+    <a href="index_NeglectedDyslexic.html"><h1 class="navCoffee">NEGLECTED DYSLEXIC</h1></a>
+    <a href="index_EmpoweredDyslexic.html"><h1 class="navCoffee">EMPOWERED DYSLEXIC</h1></a>
+    <a href="index_TakeAction.html"><h1 class="navCoffee">TAKE ACTION</h1></a>
+    <a href="index_About.html"><h1 class="navCoffee">ABOUT</h1></a>
+    <a href="index_References.html"><h1 class="navCoffee">REFERENCES</h1></a>
+    <h1 class="navCoffeex">
+      <div id="xthree"></div>
+      <div id="xfour"></div>
+    </h1>
+  </div>
+
+	<div id="navbar2">
+		<div class="decodetext">
+        	<h1 id="text" style="display:none;" class="navCoffee"><span class="threeDMenuEx">MENU</span></h1>
+      	</div>  
+	</div>
+
+	<!-- <div class="movebar"
+  data-600="height:217px;"
+  data-720="height:300px;"
+  data-900="height:1000px;"></div> -->
+  
+<!--   <div class="autoscroll"></div>
+  <div class="arrowdown3" 
+    data-0="display:inline-block;"
+    data-550="display:none;"></div>
+  <div class="arrowdown4" 
+    data-0="display:inline-block;"
+    data-550="display:none;"></div> -->
+
+<div id="extrahelp" style="display:none;">
+	<div id="help" style="display: none;">?</div>
+	<div id="help2">?</div>
+	<div id="helpanswer" style="display: none;">Find and click on the correct answer to continue. Wrong choices will be indicated by a strike through.</div>
+</div>
+<h1 class="pageindicatorBluePage" style="display:none;">02 SEQUENCING</h1>
+
+<div class="NormalExercise" style="width:70%;display: none;">
+  <span class="NormalExerciseHeading">What is the 8th month?</span><br><br>
+  <div
+   >
+      <ul class="NormalExerciseOptions">
+          <li><span class="month" id="MA" onclick="strikethroughA()">January</span></li>
+          <li><span class="month" id="MB" onclick="strikethroughB()">February</span></li>
+          <li><span class="month" id="MC" onclick="strikethroughC()">March</span></li>
+          <li><span class="month" id="MD" onclick="strikethroughD()">April</span></li>
+          <li><span class="month" id="ME" onclick="strikethroughE()">May</span></li>
+          <li><span class="month" id="MF" onclick="strikethroughF()">June</span></li>
+      </ul>
+      <ul class="NormalExerciseOptions" style="margin-left: 100px;">
+          <li><span class="month" id="MG" onclick="strikethroughG()">July</span></li>
+          <li><span class="month" id="NormalAnsw">August</span></li>
+          <li><span class="month" id="MH" onclick="strikethroughH()">September</span></li>
+          <li><span class="month" id="MI" onclick="strikethroughI()">October</span></li>
+          <li><span class="month" id="MJ" onclick="strikethroughJ()">November</span></li>
+          <li><span class="month" id="MK" onclick="strikethroughK()">December</span></li>
+      </ul>
+	</div>    
+</div>
+
+  <div class="DyslexicExercise" style="display: none;">
+  <span class="DyslexicExerciseHeading">
+    <span>What is the 6th month?</span>
+  </span><br><br>
+  <div class="DyslexicExerciseOptions">
+	  <!-- <table class="DyslexicExerciseOptions" style="top:195px;"> -->
+        <ul class="dyslexicReorder1">
+            <li><span class="month" id="M1" onclick="strikethrough1()">January</span></li>
+            <li><span class="month" id="M4" onclick="strikethrough4()">February</span></li>
+            <li><span class="month" id="M9" onclick="strikethrough9()">March</span></li>
+            <li><span class="month" id="M7" onclick="strikethrough7()">April</span></li>
+            <li><span class="month" id="M2" onclick="strikethrough2()">May</span></li>
+            <li id="DyslexicAnsw"><span class="month">June</span></li>
+        </ul>
+        <ul class="dyslexicReorder2" style="margin-left: 100px;">
+            <li><span class="month" id="M10" onclick="strikethrough10()">July</span></li>
+            <li><span class="month" id="M5" onclick="strikethrough5()">August</span></li>
+            <li><span class="month" id="M3" onclick="strikethrough3()">September</span></li>
+            <li><span class="month" id="M6" onclick="strikethrough6()">October</span></li>
+            <li><span class="month" id="M11" onclick="strikethrough11()">November</span></li>
+            <li><span class="month" id="M8" onclick="strikethrough8()">December</span></li>
+        </ul>
+    </div>
+</div>
+  
+
+
+
+
+<!-- <a href="javascript:delay('index_Coffee_1.html')"><button class="startbutton"
+  data-0="display:none;"
+  data-720="display:inline-block">START</button></a>
+
+
+ -->
+
+
+
+
+  <!-- <div class="grid2"></div> -->
+<div class="centerlineSTATIC" style="left:75%;background-color: rgb(255,114,0);"></div>
+  <div class="centerlineSECONDARYFACT">
+    <div class="SecondaryFactContainer">
+        <h1 class="SecondaryFactx">
+          <div id="xone"></div>
+          <div id="xtwo"></div>
+        </h1>
+        <span class="SecondaryFact"><strong>SEQUENCING</strong>Dyslexic people have a hard time sequencing. They often must recite the months in order <br>to determine which month is associated with which number.</span>
+        <a href="javascript:delay('index_Coffee_3.html')"><button class="NextToCoffeeBreak">NEXT</button></a>
+    </div>
+  </div>
+	
+	<div class="grid" style="margin-left: 0%;width:75%; height: 100%;"></div>
+	<div class="DyslexicGrid"  style="width:25%;margin-left: 75%;">
+		<div style="margin-top: 0px;"></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div style="margin-top: 22px;"></div>
+		<div></div>
+		<div style="margin-top: 34px;"></div>
+		<div></div>
+		<div></div>
+		<div style="margin-top: 22px;"></div>
+		<div></div>
+		<div style="margin-top: 22px;"></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div style="margin-top: 22px;"></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div style="margin-top: 22px;"></div>
+		<div style="margin-top: 46px;"></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div style="margin-top: 22px;"></div>
+		<div></div>
+		<div></div>
+		<div style="margin-top: 34px;"></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div style="margin-top: 46px;"></div>
+		<div style="margin-top: 22px;"></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		
+	</div>
+
+  
+<!--   <div id="background" style="width:75%;"></div> -->
+
+
+
+</body>
+
+
+<script type="text/javascript">
+//help button toggle help description _____________________________________________________________________________________________________________
+
+function rightHelp(){
+    $("#help").click(function(){
+		var helpanswer = document.getElementById("helpanswer");
+		var help = document.getElementById("help");
+		if (helpanswer.style.display == 'none')
+	       helpanswer.style.display = 'block';
+	    else
+	       helpanswer.style.display = 'none';
+
+	   	if (helpanswer.style.display == 'none')
+	       help.innerHTML="?"
+	    else
+	       help.innerHTML="<div class=questionX> <div id=xseven></div><div id=xeight></div></div>";
+	});
+};    
+rightHelp();
+function leftHelp(){
+    $("#help2").click(function(){
+		var helpanswer = document.getElementById("helpanswer");
+		var help = document.getElementById("help2");
+		if (helpanswer.style.display == 'none')
+	       helpanswer.style.display = 'block';
+	    else
+	       helpanswer.style.display = 'none';
+
+	   	if (helpanswer.style.display == 'none')
+	       help.innerHTML="?"
+	    else
+	       help.innerHTML="<div class=questionX> <div id=xfive></div><div id=xsix></div></div>";
+	});
+};    
+leftHelp();
+
+
+//stop arrow bounce when scroll occurs _____________________________________________________________________________________________________________
+
+// window.onload = function() {
+//  setTimeout (function () {
+//   scrollTo(0,0);
+//  }, 0); //100ms for example
+//  setTimeout(function() {
+//             jQuery('.arrowdown3').addClass("animated");
+//             jQuery('.arrowdown3').addClass("bounce");
+//             jQuery('.arrowdown4').addClass("animated");
+//             jQuery('.arrowdown4').addClass("bounce");
+//       }, 3000);
+// }
+
+
+//     $(window).scroll(function() {
+
+//       if ($(window).scrollTop() > 0) {
+//           jQuery('.arrowdown3').removeClass("animated");
+//             jQuery('.arrowdown3').removeClass("bounce");
+//             jQuery('.arrowdown4').removeClass("animated");
+//             jQuery('.arrowdown4').removeClass("bounce");
+//         }  
+//       else if
+//         ($(window).scrollTop() === 0) { // this refers to window
+//             setTimeout(function() {
+//               jQuery('.arrowdown3').addClass("animated");
+//               jQuery('.arrowdown3').addClass("bounce");
+//               jQuery('.arrowdown4').addClass("animated");
+//               jQuery('.arrowdown4').addClass("bounce");
+//             }, 3000);
+//         }   
+      
+//     });
+
+
+
+
+// navbar hide and show _____________________________________________________________________________________________________________
+
+$(window).ready(function(){
+	$( "#navbar" ).hide();
+});	
+
+$( "#text" ).click(function() {
+  			$( "#text" ).hide();
+  			$( "#navbar" ).show();
+});
+
+
+$( "h1.navCoffeex" ).click(function() {
+  			$( "#text" ).show();
+  			$( "#navbar" ).hide();
+});
+
+
+//scroller indicator _____________________________________________________________________________________________________________
+
+$(document).ready(function(){
+
+    $(window).resize(function(e){
+        console.log(e);                   
+    });
+
+    $(window).scroll(function (event) {
+        var sc = $(window).scrollTop();
+        console.log(sc);
+    });
+
+});
+
+
+//hide dyslexic side _____________________________________________________________________________________________________________
+$(window).ready(function(){
+
+
+
+  setTimeout(function() {
+          $("div.NormalExercise").fadeIn();
+          // $( "div.DyslexicGrid" ).fadeIn();
+          $( "div.DyslexicGrid div" ).fadeIn();
+          $( "h1#text" ).fadeIn();
+          $( "h1.pageindicatorBluePage" ).fadeIn();
+          // $( "div.arrowdown3" ).fadeIn();
+          // $( "div.arrowdown4" ).fadeIn();
+          $("div.grid").fadeIn(function () { 
+            $(this).addClass('fadeingrid');
+          });  
+          $( "#extrahelp" ).fadeIn();
+          $( "#help" ).fadeIn();
+  }, 500);
+   
+}); 
+
+
+//clicking on Normal answer _____________________________________________________________________________________________________________
+
+$(function(){
+    $("#NormalAnsw").click(function(){
+      $("#NormalAnsw").css({"color":"rgb(255,114,0)","font-weight":"bold"});
+      setTimeout(function() {
+         $( "div.NormalExercise" ).fadeOut();
+         $( " h1.navCoffee span" ).removeClass("threeDMenuEx");
+         $( " h1.navCoffee span" ).addClass("threeDMenuEx2");
+         $( "#help" ).fadeOut();
+      }, 1000);
+      setTimeout(function() {
+        $( "div.grid" ).css({"width":"25%","margin-left":"0%","background-color":"rgb(255,114,0)"});
+        $( "div.centerlineSTATIC" ).css("left","25%");
+        $( "div.DyslexicGrid" ).css({"margin-left":"25%","width":"75%","background-color":"transparent"});
+        $( "div.DyslexicExercise" ).css("margin-left","25%");
+        $( "div.DyslexicGrid div" ).css("background-color","rgb(255,114,0)");
+        $( "h1.navCoffee" ).css("color","rgb(0,47,123)");
+        $( "h1.pageindicatorBluePage" ).css({"border-bottom":"5px solid rgb(0,47,123)","color":"rgb(0,47,123)"});
+        $("h1.navCoffee").mouseover(function() {
+          $(this).css("border-bottom","5px solid rgb(0,47,123)")
+        });
+        $("h1.navCoffee").mouseout(function() {
+          $(this).css("border-bottom","none")
+        });
+        // $( "div#xthree" ).css("background-color","rgb(0,47,123)");
+        // $( "div#xfour" ).css("background-color","rgb(0,47,123)");
+        $("h1.navCoffeex").mouseover(function() {
+          $("div#xthree").css("background-color","rgb(255,114,0)");
+          $("div#xfour").css("background-color","rgb(255,114,0)");
+        });
+        $("h1.navCoffeex").mouseout(function() {
+          $("div#xthree").css("background-color","rgb(0,47,123)");
+          $("div#xfour").css("background-color","rgb(0,47,123)");
+        });
+        $( "div.arrowdown3" ).css({"background-color":"white","z-index":"20"});
+        $( "div.arrowdown4" ).css({"background-color":"white","z-index":"20"});
+
+        $( "#extrahelp" ).css({"margin-left":"3%","color":"rgb(0,47,123)"});
+        $("#helpanswer").css("display","none");
+        $("div.centerlineSTATIC").css("background-color","rgb(0,47,123)");
+        
+        
+
+      }, 1500);
+      setTimeout(function() {
+         $( "div.DyslexicExercise" ).fadeIn();
+         $( "#help2" ).fadeIn();
+      }, 3000);
+
+
+      // reorder dyslexic answer options _____________________________________________________________________________________________________________
+      setTimeout(function() {
+          function reorder1(){
+          var ul = document.querySelector('ul.dyslexicReorder1');
+          for (var i = ul.children.length; i >= 0; i--) {
+              ul.appendChild(ul.children[Math.random() * i | 0]);
+          }
+          };
+
+          function reorder2(){
+          var ul = document.querySelector('ul.dyslexicReorder2');
+          for (var i = ul.children.length; i >= 0; i--) {
+              ul.appendChild(ul.children[Math.random() * i | 0]);
+          }
+          };
+
+          (function loop() {
+            var rand = Math.floor(Math.random() * (4000 - 1500));
+            setTimeout(function() {
+                    reorder1();
+                    reorder2();
+                    loop();  
+            }, rand);
+            console.log(rand);
+        }());
+
+          // var reorderloop1 = setInterval(reorder1, 1700);
+          // var reorderloop2 = setInterval(reorder2, 1700);
+
+      }, 3000);
+
+
+
+  
+    });
+});
+
+
+
+
+
+
+
+//clicking on Dyslexic answer and getting secondary fact _____________________________________________________________________________________________________________
+
+$(function(){
+    $("#DyslexicAnsw").click(function(){
+      $("#DyslexicAnsw").css({"color":"rgb(0,47,123)","font-weight":"bold"});
+      setTimeout(function() {
+         $( "div.DyslexicExercise" ).fadeOut();
+         $( "#help2" ).fadeOut();
+         $("#helpanswer").fadeOut();
+      }, 1000);
+      setTimeout(function() {
+        $( "div.grid" ).css({"width":"50%","margin-left":"0%","background-color":"rgb(0,47,123)"});
+        $( "div.centerlineSTATIC" ).css("left","50%");
+        $( "div.DyslexicGrid" ).css({"margin-left":"50%","width":"50%","background-color":"rgb(255,114,0)"});
+        $( "div.DyslexicGrid div" ).css("background-color","white");
+        $(".fadeingrid").css("background-image","-webkit-linear-gradient(rgba(255,255,255,.1) 2px, transparent 2px)");
+        $("h1.pageindicatorBluePage").css({"color":"white","border-bottom": "5px solid white"})
+                 $( "h1.navCoffee" ).css("color","white");
+
+          $("h1.navCoffee").mouseover(function() {
+            $(this).css("border-bottom","5px solid white")
+          });
+          $("h1.navCoffee").mouseout(function() {
+            $(this).css("border-bottom","none")
+          });
+          $( "div#xthree" ).css("background-color","white");
+          $( "div#xfour" ).css("background-color","white");
+          $("h1.navCoffeex").mouseover(function() {
+            $("div#xthree").css("background-color","rgb(0,47,123)");
+            $("div#xfour").css("background-color","rgb(0,47,123)");
+          });
+          $("h1.navCoffeex").mouseout(function() {
+            $("div#xthree").css("background-color","white");
+            $("div#xfour").css("background-color","white");
+          });
+          $( " h1.navCoffee span" ).removeClass("threeDMenuEx2");
+          $( " h1.navCoffee span" ).addClass("threeDMenuEx3");
+          $("div.centerlineSTATIC").css("background-color","white");
+         
+      }, 1500);
+ 
+      setTimeout(function() {
+         $( ".centerlineSECONDARYFACT" ).css( {"width": "50%","left":"25%","height":"49%","top":"25.5%","bottom":"25.5%"});
+      },3000);
+        setTimeout(function(){
+        $( "div.SecondaryFactContainer").fadeIn();
+          $( "span.SecondaryFact strong").fadeIn().css( "display","block");
+          $( "span.SecondaryFact").fadeIn().css( "display","block");
+          $( "span.SecondaryFact sup").fadeIn().css( "display","inline");
+      },4000);    
+      setTimeout(function(){
+          $( "h1.SecondaryFactx").fadeIn().css( "display","block");
+          $( "button.NextToCoffeeBreak").fadeIn().css( "display","block");
+      },4300);    
+ });
+  });
+
+
+      //  setTimeout(function() {
+      //   $( ".centerlineSECONDARYFACT" ).css( {"width": "60%","left":"20%","height":"50%","top":"25%","bottom":"25%"});
+      // },3000);
+
+
+
+$( "h1.SecondaryFactx" ).click(function() {
+        
+        $( ".centerlineSECONDARYFACT" ).css( {"width": "0%","left":"50%"});
+        $( "span.SecondaryFact").css( "display","none");
+        $( "span.SecondaryFact strong").css( "display","none");
+        $( "span.SecondaryFact sup").css( "display","none");
+        $( "h1.SecondaryFactx").css( "display","none");
+        $( "button.NextToCoffeeBreak").css( "display","none");
+         $("h1.navCoffee").css("color","rgb(255,114,0)")
+        $("h1.navCoffee").mouseover(function() {
+            $(this).css("border-bottom","5px solid rgb(255,114,0)")
+          });
+          $("h1.navCoffee").mouseout(function() {
+            $(this).css("border-bottom","none")
+          });
+        $( " h1.navCoffee span" ).removeClass("threeDMenuEx3");
+         $( " h1.navCoffee span" ).addClass("threeDMenuEx");
+        $('html, body').animate({scrollTop: '0px'}, 1000);
+        setTimeout(function(){
+          // $( "div.DyslexicExercise" ).fadeIn();
+          // $( "div.DyslexicExercise" ).css("margin-right","25%");
+          $( "div.grid" ).css({"width":"75%","margin-left":"0%","background-color":"transparent"});
+          $(".fadeingrid").css("background-image","-webkit-linear-gradient(rgba(41, 87, 161,.1) 2px, transparent 2px)");
+          // $( "div#background" ).css("width","25%");
+          $( "div.centerlineSTATIC" ).css("left","75%");
+          $( "div.DyslexicGrid" ).css({"margin-left":"75%","width":"25%","background-color":"rgb(0,47,123)"});
+          $("h1.pageindicatorBluePage").css({"color":"rgb(255,114,0)","border-bottom": "5px solid rgb(255,114,0)"})
+          // $( "div.DyslexicExercise" ).css("margin-left","0%");
+          // $( "div.NormalExercise" ).hide();
+          $( "#extrahelp" ).css({"margin-left":"78%","color":"white"});
+          $( "#help" ).fadeIn();
+          $( "#help2" ).hide();
+          $( "div.DyslexicGrid div" ).css({"background-color":"#ffcb8d","opacity":".1"});
+          $( ".NormalExerciseOptions li span" ).css("text-decoration-line","none");
+          $( ".NormalExerciseOptions li span#NormalAnsw" ).css({"font-weight":"normal","color":"rgb(0,47,123)"});
+           $("div.centerlineSTATIC").css("background-color","rgb(255,114,0)");
+          $(function HoverOnAnswAfterX() {
+              $("#NormalAnsw").mouseover(function(){
+                $(this).css("font-weight","bold");
+              });
+
+              $("#NormalAnsw").mouseout(function(){
+                   $(this).css("font-weight","normal"); 
+              }); 
+            });
+          $( ".DyslexicExerciseOptions li span" ).css("text-decoration-line","none");
+          $( ".DyslexicExerciseOptions li#DyslexicAnsw" ).css({"font-weight":"normal","color":"rgb(255,114,0)"});
+          $(function HoverOnAnswAfterX2() {
+              $("li#DyslexicAnsw").mouseover(function(){
+                $(this).css("font-weight","bold");
+              });
+
+              $("li#DyslexicAnsw").mouseout(function(){
+                   $(this).css("font-weight","normal"); 
+              }); 
+            });
+         
+      },1000); 
+        setTimeout(function(){
+          $( "div.NormalExercise" ).fadeIn();
+      },2000); 
+      //   setTimeout(function(){
+      //     location.reload();
+      // },2300); 
+        
+        
+});
+
+//page transition _____________________________________________________________________________________________________________
+$( "button.NextToCoffeeBreak" ).click(function() {
+  $( ".centerlineSECONDARYFACT" ).css( {"width": "0%","left":"50%","height":"100%", "top":"0%"});
+  $( "span.SecondaryFact").css( "display","none");
+  $( "span.SecondaryFact strong").css( "display","none");
+  $( "span.SecondaryFact sup").css( "display","none");
+  $( "h1.SecondaryFactx").css( "display","none");
+  $( "button.NextToCoffeeBreak").css( "display","none");
+  setTimeout(function() {
+      $( ".centerlineSECONDARYFACT" ).css( {"width": "100%","left":"0%","height":"100%", "top":"0%","background-color":"rgb(255,114,0)"});
+      }, 750);
+});
+
+function delay (URL) {
+    setTimeout( function() { window.location = URL }, 1500 );
+}
+
+
+//click on arrow to auto scroll to bottom _____________________________________________________________________________________________________________
+
+
+$(".autoscroll").click(function()  // When arrow is clicked
+    {
+         $("html, body").animate({ scrollTop: $(document).height() }, 1500);
+
+    });
+
+
+//cross out wrong answer --dyslexic _____________________________________________________________________________________________________________
+function strikethrough1() {
+  $("#M1").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(0,47,123)"});
+}
+
+function strikethrough2() {
+  $("#M2").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(0,47,123)"});
+}
+
+function strikethrough3() {
+  $("#M3").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(0,47,123)"});
+}
+
+function strikethrough4() {
+  $("#M4").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(0,47,123)"});
+}
+
+function strikethrough5() {
+  $("#M5").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(0,47,123)"});
+}
+
+function strikethrough6() {
+  $("#M6").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(0,47,123)"});
+}
+
+function strikethrough7() {
+  $("#M7").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(0,47,123)"});
+}
+
+function strikethrough8() {
+  $("#M8").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(0,47,123)"});
+}
+
+function strikethrough9() {
+  $("#M9").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(0,47,123)"});
+}
+
+function strikethrough10() {
+  $("#M10").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(0,47,123)"});
+}
+
+function strikethrough11() {
+  $("#M11").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(0,47,123)"});
+}
+
+function strikethrough12() {
+  $("#M12").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(0,47,123)"});
+}
+
+//cross out wrong answer --normal _____________________________________________________________________________________________________________
+
+function strikethroughA() {
+  $("#MA").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(255,114,0)"});
+}
+function strikethroughB() {
+  $("#MB").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(255,114,0)"});
+}
+function strikethroughC() {
+  $("#MC").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(255,114,0)"});
+}
+function strikethroughD() {
+  $("#MD").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(255,114,0)"});
+}
+function strikethroughE() {
+  $("#ME").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(255,114,0)"});
+}
+function strikethroughF() {
+  $("#MF").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(255,114,0)"});
+}
+function strikethroughG() {
+  $("#MG").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(255,114,0)"});
+}
+function strikethroughH() {
+  $("#MH").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(255,114,0)"});
+}
+function strikethroughI() {
+  $("#MI").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(255,114,0)"});
+}
+function strikethroughJ() {
+  $("#MJ").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(255,114,0)"});
+}
+function strikethroughK() {
+  $("#MK").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(255,114,0)"});
+}
+
+
+
+</script>
+<script type="text/javascript">
+  var s = skrollr.init();
+  </script>
+</body>
+</html>
