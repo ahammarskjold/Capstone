@@ -47,7 +47,7 @@
 
 <div id="extrahelp">
   <div id="help" style="display: none;">?</div>
-  <div id="help2">?</div>
+  <div id="help2" style="display: none;">?</div>
   <div id="helpanswer" style="display: none;">Read the passage and indicate when you are done by clicking on the button at the bottom of the page.</div>
 </div>
 
@@ -630,7 +630,7 @@ $( "h1.SecondaryFactx" ).click(function() {
           $( "div.DyslexicGrid" ).css({"margin-left":"75%","width":"25%","background-color":"rgb(0,47,123)"});
           $("h1.pageindicatorBluePage").css({"color":"rgb(255,114,0)","border-bottom": "5px solid rgb(255,114,0)"})
           $( "#extrahelp" ).css({"margin-left":"78%","color":"white"});
-          $( "#help" ).fadeIn();
+          // $( "#help" ).fadeIn();
           $( "#help2" ).hide();
           $( "div.DyslexicGrid div" ).css({"background-color":"#ffcb8d","opacity":".1"});
           $("div.centerlineSTATIC").css("background-color","rgb(255,114,0)");
@@ -656,6 +656,7 @@ $( "h1.SecondaryFactx" ).click(function() {
       },1000); 
         setTimeout(function(){
           $( "div.NormalExercise" ).fadeIn();
+             $( "#help" ).fadeIn();
       },2000); 
       //   setTimeout(function(){
       //     location.reload();

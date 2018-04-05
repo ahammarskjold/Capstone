@@ -50,7 +50,7 @@
       data-550="display:none;"></div> -->
 <div id="extrahelp" style="display: none;">
   <div id="help" style="display: none;">?</div>
-  <div id="help2">?</div>
+  <div id="help2" style="display: none;">?</div>
   <div id="helpanswer" style="display: none;">Find and click on the correct answer to continue. Wrong choices will be indicated by a strike through.</div>
 </div>
 
@@ -268,42 +268,6 @@ function leftHelp(){
 leftHelp();
 
 
-//stop arrow bounce when scroll occurs _____________________________________________________________________________________________________________
-
-// window.onload = function() {
-//  setTimeout (function () {
-//   scrollTo(0,0);
-//  }, 0); //100ms for example
-//  setTimeout(function() {
-//             jQuery('.arrowdown3').addClass("animated");
-//             jQuery('.arrowdown3').addClass("bounce");
-//             jQuery('.arrowdown4').addClass("animated");
-//             jQuery('.arrowdown4').addClass("bounce");
-//       }, 3000);
-// }
-
-
-//     $(window).scroll(function() {
-
-//       if ($(window).scrollTop() > 0) {
-//           jQuery('.arrowdown3').removeClass("animated");
-//             jQuery('.arrowdown3').removeClass("bounce");
-//             jQuery('.arrowdown4').removeClass("animated");
-//             jQuery('.arrowdown4').removeClass("bounce");
-//         }  
-//       else if
-//         ($(window).scrollTop() === 0) { // this refers to window
-//             setTimeout(function() {
-//               jQuery('.arrowdown3').addClass("animated");
-//               jQuery('.arrowdown3').addClass("bounce");
-//               jQuery('.arrowdown4').addClass("animated");
-//               jQuery('.arrowdown4').addClass("bounce");
-//             }, 3000);
-//         }   
-      
-//     });
-
-
 
 
 // navbar hide and show _____________________________________________________________________________________________________________
@@ -340,12 +304,6 @@ $(document).ready(function(){
 });
 
 //fill in the blank with words- normal _____________________________________________________________________________________________________________
-
-// function blankspace(){
-//   document.getElementById("replace").innerHTML = "____";
-// }
-
-
 
 
 
@@ -594,13 +552,6 @@ fatfunct();
 
 
 //fill in the blank with words- dyslexic _____________________________________________________________________________________________________________
-// function Dblankspace(){
-//   document.getElementById("Dreplace").innerHTML = "____";
-// }
-
-
-
-//ADD D BEFORE STUFF
 
 
 function Dcotfunct() {
@@ -837,11 +788,6 @@ Dclayfunct();
 
 
 
-
-
-
-
-
 //clicking secondary fact x_____________________________________________________________________________________________________________
 
 $( "h1.SecondaryFactx" ).click(function() {
@@ -874,7 +820,7 @@ $( "h1.SecondaryFactx" ).click(function() {
           // $( "div.DyslexicExercise" ).css("margin-left","0%");
           // $( "div.NormalExercise" ).hide();
           $( "#extrahelp" ).css({"margin-left":"78%","color":"white"});
-          $( "#help" ).fadeIn();
+     
           $( "#help2" ).hide();
           $( "div.DyslexicGrid div" ).css({"background-color":"#ffcb8d","opacity":".1"});
           $( ".NormalExerciseOptions td span" ).css("text-decoration-line","none");
@@ -887,7 +833,8 @@ $( "h1.SecondaryFactx" ).click(function() {
 
             $("#fed").mouseout(function(){
                     $(this).css("font-weight","normal");  
-            });  
+            }); 
+
             }
             fedfunct2();
           $( ".DyslexicExerciseOptions td span" ).css("text-decoration-line","none");
@@ -927,6 +874,8 @@ $( "h1.SecondaryFactx" ).click(function() {
       },1000); 
         setTimeout(function(){
           $( "div.NormalExercise" ).fadeIn();
+               $( "#help" ).fadeIn();
+
       },2000); 
         setTimeout(function(){
           // location.reload();
@@ -937,7 +886,7 @@ $( "h1.SecondaryFactx" ).click(function() {
 
 //clicking on Normal answer_____________________________________________________________________________________________________________
 
-$(function(){
+$(function (){
     $("#fed").click(function(){
       $("#fed").css({"color":"rgb(255,114,0)","font-weight":"bold"});
       setTimeout(function() {
@@ -980,6 +929,7 @@ $(function(){
          $( "#help2" ).fadeIn();
          
       }, 3000);
+
       $(function(){
           setTimeout(function() {
             document.getElementById("Dcap2").innerHTML = "Cat";
@@ -1062,7 +1012,7 @@ $(function(){
           });
           }, 10000);
 
-          });
+      });
     }); 
           
 });       

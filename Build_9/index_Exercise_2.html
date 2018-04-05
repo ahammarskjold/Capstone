@@ -48,7 +48,7 @@
 
 <div id="extrahelp" style="display:none;">
 	<div id="help" style="display: none;">?</div>
-	<div id="help2">?</div>
+	<div id="help2" style="display: none;">?</div>
 	<div id="helpanswer" style="display: none;">Find and click on the correct answer to continue. Wrong choices will be indicated by a strike through.</div>
 </div>
 <h1 class="pageindicatorBluePage" style="display:none;">02 SEQUENCING</h1>
@@ -508,7 +508,7 @@ $( "h1.SecondaryFactx" ).click(function() {
           // $( "div.DyslexicExercise" ).css("margin-left","0%");
           // $( "div.NormalExercise" ).hide();
           $( "#extrahelp" ).css({"margin-left":"78%","color":"white"});
-          $( "#help" ).fadeIn();
+       
           $( "#help2" ).hide();
           $( "div.DyslexicGrid div" ).css({"background-color":"#ffcb8d","opacity":".1"});
           $( ".NormalExerciseOptions li span" ).css("text-decoration-line","none");
@@ -538,6 +538,7 @@ $( "h1.SecondaryFactx" ).click(function() {
       },1000); 
         setTimeout(function(){
           $( "div.NormalExercise" ).fadeIn();
+             $( "#help" ).fadeIn();
       },2000); 
       //   setTimeout(function(){
       //     location.reload();
