@@ -1,0 +1,698 @@
+
+<html>
+<head>
+<title>CAPSTONE</title>
+<link type="text/css" rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+<!-- <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+
+</head>
+<body>
+ 
+	<div id="navbar"">
+    <a href="index_intro_page.html"><h1 class="navCoffee">HOME</h1></a>
+    <a href="index_Coffee_1.html"><h1 class="navCoffee">EXERCISES</h1></a>
+    <a href="index_NeglectedDyslexic.html"><h1 class="navCoffee">NEGLECTED DYSLEXIC</h1></a>
+    <a href="index_EmpoweredDyslexic.html"><h1 class="navCoffee">EMPOWERED DYSLEXIC</h1></a>
+    <a href="index_TakeAction.html"><h1 class="navCoffee">TAKE ACTION</h1></a>
+    <a href="index_About.html"><h1 class="navCoffee">ABOUT</h1></a>
+    <a href="index_References.html"><h1 class="navCoffee">REFERENCES</h1></a>
+    <h1 class="navCoffeex">
+      <div id="xthree"></div>
+      <div id="xfour"></div>
+    </h1>
+  </div>
+
+	<div id="navbar2">
+		<div class="decodetext">
+        	<h1 id="text"  style="display:none;" class="navCoffee"><span>MENU</span></h1>
+      	</div>  
+	</div>
+
+	<!-- <div class="movebar"
+  data-600="height:217px;"
+  data-720="height:300px;"
+  data-900="height:1000px;"></div> -->
+  
+<!--   <div class="autoscroll"></div>
+  <div class="arrowdown3" 
+    data-0="display:inline-block;"
+    data-550="display:none;"></div>
+  <div class="arrowdown4" 
+    data-0="display:inline-block;"
+    data-550="display:none;"></div> -->
+
+<div id="extrahelp" style="display:none;">
+  <div id="help" style="display: none;">?</div>
+  <div id="help2" style="display: none;">?</div>
+  <div id="helpanswer" style="display: none;">Hover to listen and click on the correct answer to continue. Wrong choices will be indicated by a strike through.</div>
+</div>
+
+<h1 class="pageindicatorBluePage" style="display:none;">03 PHONETIC DECODING</h1>
+
+  <div class="NormalExercise" style="width:70%;display: none;">
+    <span class="NormalExerciseHeading">How do you pronounce asparagus?</span><br><br>
+    <div>
+	    <div class="NormalExerciseOptions" style="margin-top: 1px;">
+	      <span class="pron7" id="NormalAnsw">as-par-a-gus</span>
+	    </div>
+	</div>    
+  </div>
+
+  <div class="DyslexicExercise" style="margin-right: 25%;display: none;">
+    <span class="DyslexicExerciseHeading">How do you pronounce <span id="dashes">arch</span><span id="dashesB">itect</span>?</span><br><br>
+    <div>
+	  <div class="DyslexicExerciseOptions" style=" width: 1000px;">
+	      
+
+    <table class="DyslexicExerciseOptions" style="top:288px;"">
+      <tr>
+        <td><span class="speak pron1" id="pronA" onclick="strikethroughA()">arch-it-ect</span></td>
+        <td><span class="speak pron2" id="pronB" onclick="strikethroughB()">ar-chit-ect</span></td>
+      </tr>
+      <tr>
+        <td><span class="speak pron3" id="pronC" onclick="strikethroughC()">a-rch-it-ect</span></td>
+        <td><span class="speak pron4" onclick="DAnswer()">ar-chi-tect</span></td>
+      </tr>
+      <tr>
+        <td><span class="speak pron5" id="pronD" onclick="strikethroughD()">arch-itect</span></td>
+        <td><span class="speak pron6" id="pronE" onclick="strikethroughE()">arc-hite-ct</span></td>
+      </tr>
+    </table>
+
+	  </div>
+	</div>  
+  
+   
+</div>
+  
+
+
+
+
+<!-- <a href="javascript:delay('index_Coffee_1.html')"><button class="startbutton"
+  data-0="display:none;"
+  data-720="display:inline-block">START</button></a>
+
+
+ -->
+
+<!-- WHAT TO DO HERE ABOUT SOUND WARNING
+ -->  <div class="centerlineSOUNDWARNING" style="left:75%; background-color:rgba(255,114,0,.8);">
+    <div class="SecondaryFactContainer" style="padding-top: 30%;padding-left: 30px;padding-right: 45px;">
+        <span class="SecondaryFact" style="margin-top: 0px; color:white; display: inline-block;"><strong style="margin-top: 0px; color:white;">Please turn on sound for this exercise.</strong></span>
+        <button id="OkToSound">Okay</button>
+<!--         <h1 class="navx" style="padding-top: 0px; margin-left:45px; position: absolute;margin-top: 0px;">
+          <div id="xone"></div>
+          <div id="xtwo"></div>
+        </h1> -->
+        
+    </div>
+  </div>
+
+
+
+  <!-- <div class="grid2"></div> -->
+<div class="centerlineSTATIC" style="left:75%;background-color: rgb(255,114,0);"></div>
+  <div class="centerlineSECONDARYFACT">
+    <div class="SecondaryFactContainer">
+        <h1 class="SecondaryFactx">
+          <div id="xone"></div>
+          <div id="xtwo"></div>
+        </h1>
+        <span class="SecondaryFact"><strong>PHONETIC DECODING</strong>Dyslexics have trouble reading unfamiliar words, often making wild guesses because they cannot sound out the word. They have no strategy for reading new words and have a hard time separating individual sounds and syllables of a word, this is called phonetic decoding.<a href="http://dyslexia.yale.edu/dyslexia/signs-of-dyslexia/" target="blank"><sup> G</sup></a></span>
+        <a href="javascript:delay('index_Coffee_4.html')"><button class="NextToCoffeeBreak">NEXT</button></a>
+    </div>
+  </div>
+	
+	<div class="grid" style="margin-left: 0%;width:75%; height: 100%;"></div>
+	<div class="DyslexicGrid"  style="width:25%;margin-left: 75%;">
+		<div style="margin-top: 0px;"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div style="margin-top: 22px;"></div>
+    <div></div>
+    <div style="margin-top: 34px;"></div>
+    <div></div>
+    <div></div>
+    <div style="margin-top: 22px;"></div>
+    <div></div>
+    <div style="margin-top: 22px;"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div style="margin-top: 22px;"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div style="margin-top: 22px;"></div>
+    <div style="margin-top: 46px;"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div style="margin-top: 22px;"></div>
+    <div></div>
+    <div></div>
+    <div style="margin-top: 34px;"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div style="margin-top: 46px;"></div>
+    <div style="margin-top: 22px;"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+  </div>
+  
+<!--   <div id="background" style="width:75%;"></div>
+ -->
+
+
+</body>
+
+
+<script type="text/javascript">
+//help button toggle help description _____________________________________________________________________________________________________________
+
+function rightHelp(){
+    $("#help").click(function(){
+    var helpanswer = document.getElementById("helpanswer");
+    var help = document.getElementById("help");
+    if (helpanswer.style.display == 'none')
+         helpanswer.style.display = 'block';
+      else
+         helpanswer.style.display = 'none';
+
+      if (helpanswer.style.display == 'none')
+         help.innerHTML="?"
+      else
+         help.innerHTML="<div class=questionX> <div id=xseven></div><div id=xeight></div></div>";
+  });
+};    
+rightHelp();
+function leftHelp(){
+    $("#help2").click(function(){
+    var helpanswer = document.getElementById("helpanswer");
+    var help = document.getElementById("help2");
+    if (helpanswer.style.display == 'none')
+         helpanswer.style.display = 'block';
+      else
+         helpanswer.style.display = 'none';
+
+      if (helpanswer.style.display == 'none')
+         help.innerHTML="?"
+      else
+         help.innerHTML="<div class=questionX> <div id=xfive></div><div id=xsix></div></div>";
+  });
+};    
+leftHelp();
+
+
+//stop arrow bounce when scroll occurs _____________________________________________________________________________________________________________
+
+// window.onload = function() {
+//  setTimeout (function () {
+//   scrollTo(0,0);
+//  }, 0); //100ms for example
+//  setTimeout(function() {
+//             jQuery('.arrowdown3').addClass("animated");
+//             jQuery('.arrowdown3').addClass("bounce");
+//             jQuery('.arrowdown4').addClass("animated");
+//             jQuery('.arrowdown4').addClass("bounce");
+//       }, 3000);
+// }
+
+
+//     $(window).scroll(function() {
+
+//       if ($(window).scrollTop() > 0) {
+//           jQuery('.arrowdown3').removeClass("animated");
+//             jQuery('.arrowdown3').removeClass("bounce");
+//             jQuery('.arrowdown4').removeClass("animated");
+//             jQuery('.arrowdown4').removeClass("bounce");
+//         }  
+//       else if
+//         ($(window).scrollTop() === 0) { // this refers to window
+//             setTimeout(function() {
+//               jQuery('.arrowdown3').addClass("animated");
+//               jQuery('.arrowdown3').addClass("bounce");
+//               jQuery('.arrowdown4').addClass("animated");
+//               jQuery('.arrowdown4').addClass("bounce");
+//             }, 3000);
+//         }   
+      
+//     });
+
+
+
+
+// menu letter switching_____________________________________________________________________________________________________________
+$(window).ready(function(e){
+
+
+function randomlettspac(){
+  jQuery('#text span').each(function(){
+    var span=jQuery(this);
+    span.css("letter-spacing", ((Math.random() * 0.2)-0.1)+ "em");
+  })
+
+}
+
+
+(function loop() {
+    var rand = Math.floor(Math.random() * (1000 - 100));
+    setTimeout(function() {
+            randomlettspac();
+            loop();  
+    }, rand);
+    console.log(rand);
+}());
+});
+
+
+// navbar hide and show _____________________________________________________________________________________________________________
+
+$(window).ready(function(){
+  $( "#navbar" ).hide();
+}); 
+
+$( "#text" ).click(function() {
+        $( "#text" ).hide();
+        $( "#navbar" ).show();
+});
+
+
+$( "h1.navCoffeex" ).click(function() {
+        $( "#text" ).show();
+        $( "#navbar" ).hide();
+});
+
+
+//scroller indicator _____________________________________________________________________________________________________________
+
+$(document).ready(function(){
+
+    $(window).resize(function(e){
+        console.log(e);                   
+    });
+
+    $(window).scroll(function (event) {
+        var sc = $(window).scrollTop();
+        console.log(sc);
+    });
+
+});
+
+
+//hide dyslexic side _____________________________________________________________________________________________________________
+$(window).ready(function(){
+
+
+  setTimeout(function() {
+          $("div.NormalExercise").fadeIn();
+          // $( "div.DyslexicGrid" ).fadeIn();
+          $( "div.DyslexicGrid div" ).fadeIn();
+          $( "h1#text" ).fadeIn();
+          $( "h1.pageindicatorBluePage" ).fadeIn();
+          // $( "div.arrowdown3" ).fadeIn();
+          // $( "div.arrowdown4" ).fadeIn();
+          $("div.grid").fadeIn(function () { 
+            $(this).addClass('fadeingrid');
+          });  
+          $( "#extrahelp" ).fadeIn();
+          $( "#help" ).fadeIn();
+  }, 500);
+   
+}); 
+
+
+//clicking on Dyslexic answer and getting secondary fact _____________________________________________________________________________________________________________
+
+function DAnswer(){
+      $(".DyslexicExerciseOptions span.pron4").css({"color":"rgb(0,47,123)","font-weight":"bold"});
+      setTimeout(function() {
+         $( "div.DyslexicExercise" ).fadeOut();
+         $( "#help2" ).fadeOut();
+         $("#helpanswer").fadeOut();
+      }, 1000);
+      setTimeout(function() {
+        $( "div.grid" ).css({"width":"50%","margin-left":"0%","background-color":"rgb(0,47,123)"});
+        $( "div.centerlineSTATIC" ).css("left","50%");
+        $( "div.DyslexicGrid" ).css({"margin-left":"50%","width":"50%","background-color":"rgb(255,114,0)"});
+        $( "div.DyslexicGrid div" ).css("background-color","white");
+        $(".fadeingrid").css("background-image","-webkit-linear-gradient(rgba(255,255,255,.1) 2px, transparent 2px)");
+        $("h1.pageindicatorBluePage").css({"color":"white","border-bottom": "5px solid white"})
+                 $( "h1.navCoffee" ).css("color","white");
+
+          $("h1.navCoffee").mouseover(function() {
+            $(this).css("border-bottom","5px solid white")
+          });
+          $("h1.navCoffee").mouseout(function() {
+            $(this).css("border-bottom","none")
+          });
+          $( "div#xthree" ).css("background-color","white");
+          $( "div#xfour" ).css("background-color","white");
+          $("h1.navCoffeex").mouseover(function() {
+            $("div#xthree").css("background-color","rgb(0,47,123)");
+            $("div#xfour").css("background-color","rgb(0,47,123)");
+          });
+          $("h1.navCoffeex").mouseout(function() {
+            $("div#xthree").css("background-color","white");
+            $("div#xfour").css("background-color","white");
+          });
+          $("div.centerlineSTATIC").css("background-color","white");
+      }, 1500);
+      setTimeout(function() {
+         $( ".centerlineSECONDARYFACT" ).css( {"width": "63%","left":"18.5%","height":"56%","top":"22%","bottom":"22%"});
+      }, 3000);
+      setTimeout(function(){
+        $( "div.SecondaryFactContainer").fadeIn();
+          $( "span.SecondaryFact strong").fadeIn().css( "display","block");
+          $( "span.SecondaryFact").fadeIn().css( "display","block");
+          $( "span.SecondaryFact sup").fadeIn().css( "display","inline");
+      },4000);    
+      setTimeout(function(){
+          $( "h1.SecondaryFactx").fadeIn().css( "display","block");
+          $( "button.NextToCoffeeBreak").fadeIn().css( "display","block");
+      },4300);    
+
+  };
+
+$( "h1.SecondaryFactx" ).click(function() {
+        
+        $( ".centerlineSECONDARYFACT" ).css( {"width": "0%","left":"50%"});
+        $( "span.SecondaryFact").css( "display","none");
+        $( "span.SecondaryFact strong").css( "display","none");
+        $( "span.SecondaryFact sup").css( "display","none");
+        $( "h1.SecondaryFactx").css( "display","none");
+        $( "button.NextToCoffeeBreak").css( "display","none");
+         $("h1.navCoffee").css("color","rgb(255,114,0)")
+        $("h1.navCoffee").mouseover(function() {
+            $(this).css("border-bottom","5px solid rgb(255,114,0)")
+          });
+          $("h1.navCoffee").mouseout(function() {
+            $(this).css("border-bottom","none")
+          });
+        // $( " h1.navCoffee span" ).removeClass("threeDMenuEx3");
+        //  $( " h1.navCoffee span" ).addClass("threeDMenuEx");
+        $('html, body').animate({scrollTop: '0px'}, 1000);
+        setTimeout(function(){
+          $( "div.grid" ).css({"width":"75%","margin-left":"0%","background-color":"transparent"});
+          $(".fadeingrid").css("background-image","-webkit-linear-gradient(rgba(41, 87, 161,.1) 2px, transparent 2px)");
+          // $( "div#background" ).css("width","25%");
+          $( "div.centerlineSTATIC" ).css("left","75%");
+          $( "div.DyslexicGrid" ).css({"margin-left":"75%","width":"25%","background-color":"rgb(0,47,123)"});
+          $("h1.pageindicatorBluePage").css({"color":"rgb(255,114,0)","border-bottom": "5px solid rgb(255,114,0)"})
+          $( "#extrahelp" ).css({"margin-left":"78%","color":"white"});
+          // $( "#help" ).fadeIn();
+          $( "#help2" ).hide();
+          $( "div.DyslexicGrid div" ).css({"background-color":"#ffcb8d","opacity":".1"});
+          $( ".NormalExerciseOptions span#NormalAnsw" ).css({"font-weight":"normal","color":"rgb(0,47,123)"});
+          $("div.centerlineSTATIC").css("background-color","rgb(255,114,0)");
+          $(function HoverOnAnswAfterX() {
+              $("#NormalAnsw").mouseover(function(){
+                $(this).css("font-weight","bold");
+              });
+
+              $("#NormalAnsw").mouseout(function(){
+                   $(this).css("font-weight","normal"); 
+              }); 
+            });
+          $( ".DyslexicExerciseOptions td span" ).css("text-decoration-line","none");
+          $( ".DyslexicExerciseOptions td span.pron4" ).css({"font-weight":"normal","color":"rgb(255,114,0)"});
+          $(function HoverOnAnswAfterX2() {
+              $("span.pron4").mouseover(function(){
+                $(this).css("font-weight","bold");
+              });
+
+              $("span.pron4").mouseout(function(){
+                   $(this).css("font-weight","normal"); 
+              }); 
+            });
+         
+      },1000); 
+        setTimeout(function(){
+          $( "div.NormalExercise" ).fadeIn();
+             $( "#help" ).fadeIn();
+      },2000); 
+      //   setTimeout(function(){
+      //     location.reload();
+      // },2300); 
+        
+        
+});
+
+
+
+//clicking on Normal answer _____________________________________________________________________________________________________________
+
+$(function(){
+    $("#NormalAnsw").click(function(){
+      $("#NormalAnsw").css({"color":"rgb(255,114,0)","font-weight":"bold"});
+      setTimeout(function() {
+         $( "div.NormalExercise" ).fadeOut();
+         $( "#help" ).fadeOut();
+      }, 1000);
+      setTimeout(function() {
+        $( "div.grid" ).css({"width":"25%","margin-left":"0%","background-color":"rgb(255,114,0)"});
+        $( "div.centerlineSTATIC" ).css("left","25%");
+        $( "div.DyslexicGrid" ).css({"margin-left":"25%","width":"75%","background-color":"transparent"});
+        $( "div.DyslexicExercise" ).css("margin-left","25%");
+        $( "div.DyslexicGrid div" ).css("background-color","rgb(255,114,0)");
+        $( "h1.navCoffee" ).css("color","rgb(0,47,123)");
+        $( "h1.pageindicatorBluePage" ).css({"border-bottom":"5px solid rgb(0,47,123)","color":"rgb(0,47,123)"});
+        $("h1.navCoffee").mouseover(function() {
+          $(this).css("border-bottom","5px solid rgb(0,47,123)")
+        });
+        $("h1.navCoffee").mouseout(function() {
+          $(this).css("border-bottom","none")
+        });
+        $("h1.navCoffeex").mouseover(function() {
+          $("div#xthree").css("background-color","rgb(255,114,0)");
+          $("div#xfour").css("background-color","rgb(255,114,0)");
+        });
+        $("h1.navCoffeex").mouseout(function() {
+          $("div#xthree").css("background-color","rgb(0,47,123)");
+          $("div#xfour").css("background-color","rgb(0,47,123)");
+        });
+        // $( "div.arrowdown3" ).css({"background-color":"white","z-index":"20"});
+        // $( "div.arrowdown4" ).css({"background-color":"white","z-index":"20"});
+
+        $( "#extrahelp" ).css({"margin-left":"3%","color":"rgb(0,47,123)"});
+        $("#helpanswer").css("display","none");
+        $("div.centerlineSTATIC").css("background-color","rgb(0,47,123)");
+      }, 1500);
+      setTimeout(function() {
+         $( "div.DyslexicExercise" ).fadeIn();
+         $( "#help2" ).fadeIn();
+      }, 3000);
+ });
+  });
+
+
+    
+
+
+//page transition _____________________________________________________________________________________________________________
+$( "button.NextToCoffeeBreak" ).click(function() {
+  $( ".centerlineSECONDARYFACT" ).css( {"width": "0%","left":"50%","height":"100%", "top":"0%"});
+  $( "span.SecondaryFact").css( "display","none");
+  $( "span.SecondaryFact strong").css( "display","none");
+  $( "span.SecondaryFact sup").css( "display","none");
+  $( "h1.SecondaryFactx").css( "display","none");
+  $( "button.NextToCoffeeBreak").css( "display","none");
+  setTimeout(function() {
+     $( ".centerlineSECONDARYFACT" ).css( {"width": "100%","left":"0%","height":"100%", "top":"0%","background-color":"rgb(255,114,0)"});
+      }, 750);
+});
+
+function delay (URL) {
+    setTimeout( function() { window.location = URL }, 1500 );
+}
+
+
+//dash movement in architect _____________________________________________________________________________________________________________
+
+// function randomdash() {
+//     setTimeout(function() {
+//       var array = ["a","r","c","h","i","t","e","c","t"];
+//       var index= Math.floor(Math.random()*(array.length-1)+1);
+//       var index2= Math.floor(Math.random()*(array.length-1)+1);
+//       array.splice(index,0,"-")
+//        array.splice(index2,0,"-")
+//       document.getElementById("architect").innerHTML = array.join(""); 
+//       randomdash();
+//     },1500)
+// }
+
+// randomdash();
+
+
+//speach / pronunciation _____________________________________________________________________________________________________________
+// $("span.NormPronunc").mouseover(function(e){
+//       new Audio("https://dictionary.cambridge.org/us/media/english/us_pron/a/arc/archi/architect.mp3").play();
+// });
+
+$("span.pron1").mouseover(function(e){
+      new Audio("arch it ect-1.mp3").play();
+});
+
+$("span.pron2").mouseover(function(e){
+      new Audio("ar chit ect-2.mp3").play();
+});
+
+$("span.pron3").mouseover(function(e){
+      new Audio("a rch it ect-3.mp3").play();
+});
+
+$("span.pron4").mouseover(function(e){
+      new Audio("ar chi tect-4.mp3").play();
+});//NORMAL
+
+$("span.pron5").mouseover(function(e){
+      new Audio("arch itect-5.mp3").play();
+});
+
+$("span.pron6").mouseover(function(e){
+      new Audio("arc hite ct-6.mp3").play();
+});
+
+$("span.pron7").mouseover(function(e){
+      new Audio("asparagus.mp3").play();
+});
+
+
+//sound warning on page load _____________________________________________________________________________________________________________
+$(document).ready(function(){
+      setTimeout(function() {
+        $( ".centerlineSOUNDWARNING" ).css( {"width": "75%","left":"0%","height":"100%","top":"0%","bottom":"0%"});
+        setTimeout(function(){
+        $( "div.SecondaryFactContainer").fadeIn().css( "padding-right","70px");
+          $( ".centerlineSOUNDWARNING span.SecondaryFact strong").fadeIn().css( "display","inline-block");
+          $( ".centerlineSOUNDWARNING span.SecondaryFact").fadeIn().css( "display","inline-block");
+      },1000);    
+      setTimeout(function(){
+          // $( ".centerlineSOUNDWARNING h1.navx").fadeIn().css( "display","inline-block");
+          $( "#OkToSound").fadeIn().css( "display","block");
+      },1500);    
+      }, 250);
+})
+  
+
+$( ".centerlineSOUNDWARNING button#OkToSound" ).click(function() {
+        $( ".centerlineSOUNDWARNING" ).css( {"width": "0%","left":"75%"});
+        $( ".centerlineSOUNDWARNING span.SecondaryFact").css( "display","none");
+        $( ".centerlineSOUNDWARNING span.SecondaryFact strong").css( "display","none");
+        $( ".centerlineSOUNDWARNING button#OkToSound").css( "display","none");
+        setTimeout(function(){
+          	$( ".centerlineSOUNDWARNING" ).remove();
+	        $( ".centerlineSOUNDWARNING span.SecondaryFact").remove();
+	        $( ".centerlineSOUNDWARNING span.SecondaryFact strong").remove();
+	        $( ".centerlineSOUNDWARNING button#OkToSound").remove();
+      	},1500); 
+
+        
+});
+
+
+//click on arrow to auto scroll to bottom _____________________________________________________________________________________________________________
+
+
+$(".autoscroll").click(function()  // When arrow is clicked
+    {
+         $("html, body").animate({ scrollTop: $(document).height() }, 1500);
+
+    });
+
+
+//cross out wrong answer --dyslexic _____________________________________________________________________________________________________________
+function strikethroughA() {
+  $("#pronA").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(0,47,123)"});
+}
+
+function strikethroughB() {
+  $("#pronB").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(0,47,123)"});
+}
+
+function strikethroughC() {
+  $("#pronC").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(0,47,123)"});
+}
+
+function strikethroughD() {
+  $("#pronD").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(0,47,123)"});
+}
+
+function strikethroughE() {
+  $("#pronE").css( {"text-decoration-line":"line-through","text-decoration-color": "rgb(0,47,123)"});
+}
+
+
+
+//dash movement in architect _____________________________________________________________________________________________________________
+
+function randomdash() {
+    
+      var array1 = ["a","r","c","h","i"];
+      var dash1= "<span>-</span>";
+      var index= Math.floor(Math.random()*(array1.length-1)+1);
+      // var index2= Math.floor(Math.random()*(array1.length-1)+1);
+      array1.splice(index,0,dash1)
+      // array1.splice(index2,0,dash1)
+      document.getElementById("dashes").innerHTML = array1.join(""); 
+      $("#dashes span").addClass ("colordash"); 
+
+      
+  
+}
+
+
+function randomdashB() {
+    
+      var arrayB = ["t","e","c","t"];
+      var dashB= "<span>-</span>";
+      // var index= Math.floor(Math.random()*(arrayB.length-1)+1);
+      var indexB= Math.floor(Math.random()*(arrayB.length-1)+1);
+      // arrayB.splice(index,0,dashB)
+      arrayB.splice(indexB,0,dashB)
+      document.getElementById("dashesB").innerHTML = arrayB.join(""); 
+      $("#dashesB span").addClass ("colordash"); 
+
+  
+}
+
+
+(function loopDash() {
+    var randDash = Math.floor(Math.random() * (2000 - 100));
+    setTimeout(function() {
+            randomdash();
+            randomdashB();
+            loopDash();  
+    }, randDash);
+    // console.log(randDash);
+}());
+
+loopDash();
+</script>
+<script type="text/javascript">
+  var s = skrollr.init();
+  </script>
+</body>
+</html>

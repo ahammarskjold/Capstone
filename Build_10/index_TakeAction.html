@@ -1,0 +1,338 @@
+
+<html>
+<head>
+<title>CAPSTONE</title>
+<link type="text/css" rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+<body style="background-color:rgb(0,47,123);">
+	<div id="navbar"">
+    <a href="index_intro_page.html"><h1 class="nav">HOME</h1></a>
+    <a href="index_Coffee_1.html"><h1 class="nav">EXERCISES</h1></a>
+    <a href="index_NeglectedDyslexic.html"><h1 class="nav">NEGLECTED DYSLEXIC</h1></a>
+    <a href="index_EmpoweredDyslexic.html"><h1 class="nav">EMPOWERED DYSLEXIC</h1></a>
+    <a href="index_TakeAction.html"><h1 class="nav">TAKE ACTION</h1></a>
+    <a href="index_About.html"><h1 class="nav">ABOUT</h1></a>
+    <a href="index_References.html"><h1 class="nav">REFERENCES</h1></a>
+
+    <h1 class="navx">
+      <div id="xone"></div>
+      <div id="xtwo"></div>
+    </h1>
+  </div>
+
+	<div id="navbar2">
+		<div class="decodetext">
+        	<h1 id="text" class="nav"><span id="A">M</span><span id="B">E</span><span id="C">N</span><span id="D">U</span></h1>
+      	</div>  
+	</div>
+
+	<div class="movebar"></div>
+  
+<!-- <div class="autoscroll"></div>
+  <div class="arrowdown" 
+    data-180="display:inline-block;"
+    data-370="display:none;"></div>
+  <div class="arrowdown2" 
+    data-180="display:inline-block;"
+    data-370="display:none;"></div>
+
+ -->
+
+  <div class="IntroToExperience" style="margin-top: 100px; position: fixed;width:60%;">
+
+    <p class="title" style="width:100%;display: none;">TAKE ACTION<br>
+    <span class="description"><br>The references below provide information on identifying dyslexia and accomodations that can be made for dyslexic students.
+      <br><br><a class="actionLinks" href="https://www.nessy.com/us/educators/dyslexia-classroom-10-indicators/">Dyslexia: 10 Classroom Indicators</a>
+      <br><a class="actionLinks" href="http://dyslexiaassociation.org.au/identifying-dyslexia">Australian Dyslexia Association: Identifying Dyslexia</a>
+      <br><a class="actionLinks" href="https://www.dyslexia.com/about-dyslexia/signs-of-dyslexia/test-for-dyslexia-37-signs/">Test for Dyslexia: 37 Common Traits</a>
+      <br><a class="actionLinks" href="https://dyslexiaida.org/testing-and-evaluation/">International Dyslexia Association: Testing and Evaluation</a>
+      <br><a class="actionLinks" href="https://www.understood.org/en/learning-attention-issues/child-learning-disabilities/dyslexia/dyslexia-what-youre-seeing">Dyslexia: Warning Signs and Symptoms in Children by Age and Grade</a>
+      <br><a class="actionLinks" href="https://www.understood.org/en/school-learning/partnering-with-childs-school/instructional-strategies/at-a-glance-classroom-accommodations-for-dyslexia">Help in the Classroom: Accommodations for Students with Dyslexia</a>
+      <br><a class="actionLinks" href="https://dyslexiaida.org/accommodations-for-students-with-dyslexia/">International Dyslexia Association: Accommodations for Students with Dyslexia</a>
+      <br><a class="actionLinks" href="https://www.readinghorizons.com/blog/post/2013/04/12/8-dyslexia-accommodations-for-students">8 Classroom Accommodations for Dyslexia (That Benefit ALL Students)</a>
+      <br><br>
+  </span></p>
+    
+  </div>
+  
+
+<!-- 
+
+  <a href="index_References.html"><button class="startbutton"
+  data-370="display:none"
+  data-379="display:inline-block">REFERENCES</button></a> -->
+
+
+
+<a href="javascript:delay('index_About.html')"><button class="startbutton" style="display: none;">ABOUT THIS PROJECT</button></a>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="grid2"></div> -->
+  <div class="centerline"></div>
+
+  <div class="gridFull"></div>
+	
+<!-- 	<div class="grid"></div>
+ -->
+  
+
+
+  
+
+	</body>
+
+<script type="text/javascript">
+//fade in page _____________________________________________________________________________________________________________
+
+$(window).ready(function(){
+
+
+  setTimeout(function() {
+        
+          // $( "h1#text" ).fadeIn();
+          // $( "h1.pageindicator" ).fadeIn();
+          // $( ".movebar" ).fadeIn();
+          $( "p.title" ).fadeIn();
+     
+          
+  }, 500);
+   
+}); 
+//stop arrow bounce when scroll occurs _____________________________________________________________________________________________________________
+
+window.onload = function() {
+ setTimeout (function () {
+  scrollTo(0,0);
+ }, 0); //100ms for example
+ setTimeout(function() {
+            jQuery('.arrowdown').addClass("animated");
+            jQuery('.arrowdown').addClass("bounce");
+            jQuery('.arrowdown2').addClass("animated");
+            jQuery('.arrowdown2').addClass("bounce");
+      }, 3000);
+}
+
+
+    $(window).scroll(function() {
+
+      if ($(window).scrollTop() > 0) {
+          jQuery('.arrowdown').removeClass("animated");
+            jQuery('.arrowdown').removeClass("bounce");
+            jQuery('.arrowdown2').removeClass("animated");
+            jQuery('.arrowdown2').removeClass("bounce");
+        }  
+      else if
+        ($(window).scrollTop() === 0) { // this refers to window
+            setTimeout(function() {
+              jQuery('.arrowdown').addClass("animated");
+              jQuery('.arrowdown').addClass("bounce");
+              jQuery('.arrowdown2').addClass("animated");
+              jQuery('.arrowdown2').addClass("bounce");
+            }, 3000);
+        }   
+      
+    });
+
+
+// menu letter switching_____________________________________________________________________________________________________________
+// $(window).ready(function(e){
+
+// function randompar(){
+//   var thiscopy=sourcetext.clone();
+//   thiscopy.children("span").each(function(){
+//     var span=jQuery(this).text();
+//     for (var i = 0; i <= 2; i++) {
+//       var index = Math.floor(Math.random() * span.length);
+//       var Letter = span.charAt(index);
+//       span=(span.substr(0, index) + pickLetterFor(Letter) + span.substr(index+1, span.length));
+//       }
+//     $(this).text(span);
+//   })
+//   jQuery("#text").html(thiscopy.html());
+// }
+
+// function random(Letterset){
+//   return Letterset.charAt(Math.floor(Math.random() * Letterset.length));
+// }
+
+// function randomlettspac(){
+//   jQuery('#text span').each(function(){
+//     var span=jQuery(this);
+//     span.css("letter-spacing", ((Math.random() * 0.2)-0.1)+ "em");
+//   })
+//   // console.log(randomlettspac)
+// }
+
+
+// function pickLetterFor(Letter){
+//   if(Letter.toLowerCase()==="a") return random("ea");
+//   else if(Letter.toLowerCase()==="b") return random("db");
+//   else if(Letter.toLowerCase()==="c") return random("oce");
+//   else if(Letter.toLowerCase()==="d") return random("bd");
+//   else if(Letter.toLowerCase()==="e") return random("ceo");
+//   else if(Letter.toLowerCase()==="f") return random("tfl");
+//   else if(Letter.toLowerCase()==="g") return random("ygj");
+//   else if(Letter.toLowerCase()==="h") return random("nhupu");
+//   else if(Letter.toLowerCase()==="i") return random("jil");
+//   else if(Letter.toLowerCase()==="j") return random("ijl");
+//   else if(Letter.toLowerCase()==="k") return random("hky");
+//   else if(Letter.toLowerCase()==="l") return random("ijl");
+//   else if(Letter.toLowerCase()==="m") return random("nmhuwv");
+//   else if(Letter.toLowerCase()==="n") return random("unhmv");
+//   else if(Letter.toLowerCase()==="o") return random("eoc");
+//   else if(Letter.toLowerCase()==="p") return random("qp");
+//   else if(Letter.toLowerCase()==="q") return random("pq");
+//   else if(Letter.toLowerCase()==="r") return random("nrci");
+//   else if(Letter.toLowerCase()==="s") return random("scr");
+//   else if(Letter.toLowerCase()==="t") return random("ltfh");
+//   else if(Letter.toLowerCase()==="u") return random("vuhnw");
+//   else if(Letter.toLowerCase()==="v") return random("yuwv");
+//   else if(Letter.toLowerCase()==="w") return random("mwvu");
+//   else if(Letter.toLowerCase()==="x") return random("yxz");
+//   else if(Letter.toLowerCase()==="y") return random("xyz");
+//   else if(Letter.toLowerCase()==="z") return random("zx");
+//   else if(Letter.toLowerCase()===" ") return random(" ");
+//   else return random(" ");
+// }
+
+
+//   var sourcetext=jQuery("#text").clone();
+
+
+//   setInterval(randompar,800);
+//   setInterval(randomlettspac,650);
+// });
+
+
+// navbar hide and show_____________________________________________________________________________________________________________
+
+$(window).ready(function(){
+	$( "#navbar" ).hide();
+});	
+
+$( "#text" ).click(function() {
+  			$( "#text" ).addClass("hidemenu");
+  			$( "#navbar" ).show();
+});
+
+
+$( "h1.navx" ).click(function() {
+  			$( "#text" ).removeClass("hidemenu");
+  			$( "#navbar" ).hide();
+});
+
+
+//scroller indicator _____________________________________________________________________________________________________________
+
+$(document).ready(function(){
+
+    $(window).resize(function(e){
+        console.log(e);                   
+    });
+
+    $(window).scroll(function (event) {
+        var sc = $(window).scrollTop();
+        console.log(sc);
+    });
+
+});
+
+//start button white middle bar expands _____________________________________________________________________________________________________________
+
+// $( ".startbutton" ).click(function() {
+//   $( ".centerline" ).css( {"width": "100%","left":"0%"});
+  
+  
+//click on arrow to auto scroll to bottom _____________________________________________________________________________________________________________
+
+
+// $(".autoscroll").click(function()  // When arrow is clicked
+//     {
+//          $("html, body").animate({ scrollTop: $(document).height() }, 1500);
+
+//     });
+
+// nav / menu mirror effect_____________________________________________________________________________________________________________
+
+
+// function mirror() {
+//   setTimeout(function() {
+//      $("div.decodetext h1#text.nav span#A").addClass ("mirrorMenu");
+//   }, 508);
+//   setTimeout(function() {
+//      $("div.decodetext h1#text.nav span#B").addClass ("mirrorMenu");
+//   }, 594);
+//   setTimeout(function() {
+//      $("div.decodetext h1#text.nav span#C").addClass ("mirrorMenu");
+//   }, 1070);
+//   setTimeout(function() {
+//      $("div.decodetext h1#text.nav span#D").addClass ("mirrorMenu");
+//   }, 135);
+// }
+
+// mirror()
+
+function mirror() {
+     $("div.decodetext h1#text.nav span#A").addClass ("mirrorMenuA");
+     $("div.decodetext h1#text.nav span#B").addClass ("mirrorMenuB");
+     $("div.decodetext h1#text.nav span#C").addClass ("mirrorMenuC");;
+     $("div.decodetext h1#text.nav span#D").addClass ("mirrorMenuD");
+}
+
+
+
+(function loop() {
+    var rand = Math.floor(Math.random() * (1000 - 100));
+    setTimeout(function() {
+            mirror();
+            loop();  
+    }, rand);
+    console.log(rand);
+}());
+
+//movebar height change after one second _____________________________________________________________________________________________________________
+
+$(document).ready(function(){
+
+      setTimeout(function() {
+          $(".movebar").css("height","656.35px");
+      }, 2000);
+      setTimeout(function() {
+          $(".startbutton").fadeIn();
+      }, 1500);
+
+});
+
+//delay new page _____________________________________________________________________________________________________________
+function delay (URL) {
+    setTimeout( function() { window.location = URL }, 1500 );
+};
+
+$( ".startbutton" ).click(function() {
+  // $( "h1#text" ).fadeOut();
+  $( ".movebar" ).css("height","217px");
+  $( "p.title" ).fadeOut();
+  $(".startbutton").fadeOut();
+  // $(".pageindicator").fadeOut();
+
+});
+</script>
+<script type="text/javascript">
+  var s = skrollr.init();
+  </script>
+</body>
+</html>
