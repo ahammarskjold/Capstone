@@ -72,7 +72,7 @@
     
     
     
-     <a href="https://corita.myshopify.com/products/ten-rules-poster" target="blank"><sup> O</sup></a></span>
+     <a href="https://corita.myshopify.com/products/ten-rules-poster" target="blank"><sup style="color: rgb(255,114,0)"> O</sup></a></span>
   </div><br><br><br><br>
     <div class="DyslexicExerciseDescription">
         
@@ -843,10 +843,33 @@ function pickLetterForOne(LetterOne){
   else return randomOne(" ");
 }
     
-  setInterval(randomparOne,500);
-  setInterval(randomlettspacOne,2000);
-});
+  // setInterval(randomparOne,500);
+  // setInterval(randomlettspacOne,2000);
+
   
+
+      (function loopB() {
+        var randB = Math.floor(Math.random() * (5000 - 1000));
+        setTimeout(function() {
+                randomparOne();
+                // randomlettspacOne();
+                loopB();  
+        }, randB);
+        // console.log(rand);
+    }());
+
+
+      (function loopC() {
+        var randC = Math.floor(Math.random() * (4000 - 1000));
+        setTimeout(function() {
+                // randomparOne();
+                randomlettspacOne();
+                loopC();  
+        }, randC);
+        // console.log(rand);
+    }());
+
+});
 
 //click on arrow to auto scroll to bottom _____________________________________________________________________________________________________________
 
