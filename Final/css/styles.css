@@ -1,0 +1,2088 @@
+/*font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Muli', sans-serif;
+font-family: 'Varela Round', sans-serif;
+*/
+
+html {
+/*  height:100%;
+*/  background-color: ghostwhite;
+  user-select: none;
+  min-height: 100%;
+  height:auto;
+}
+
+body {
+ 	background-color: ghostwhite;
+ 	padding: 0px;
+ 	margin: 0px;
+  width:100%;
+  height: 100%;
+/*  min-height: 100%;
+  height:auto;*/
+}
+
+#background {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+/*    background-color: rgb(255,114,0);
+*/    z-index: -1;
+    transition: all 1s ease-in-out;
+}
+
+/*exercise grid*/
+div.grid{
+	height: 100%;
+	width:50%;
+	padding: 0px;
+	margin: 0px;
+    background-color: transparent;
+
+/*	background-color: rgb(255,114,0);
+*/	background-size: 20px 12px, 10% 20px;
+	
+  z-index: 5;
+  transition: all 1s ease-in-out;
+}
+
+.fadeingrid{
+  background-image:
+    -webkit-linear-gradient(rgba(41,87,161,0.1) 2px, transparent 2px);
+  background-image:
+    -moz-linear-gradient(rgba(41,87,161,0.1) 2px, transparent 2px);
+}
+
+div.DyslexicGrid{
+  height: 100%;
+  width:50%;
+  margin-left: 50%;
+  z-index: 4;
+  position: absolute;
+  top:0px;
+  transition: all 1s ease-in-out;
+  background-color:  rgb(0,47,123);
+}
+div.DyslexicGrid div{
+  height:2px;
+  background-color:#ffcb8d;
+  margin-top: 10px;
+  z-index: 4;
+  opacity: .1;
+  display: none;
+}
+
+div.gridFull{
+  height: 100%;
+  width:100%;
+  padding: 0px;
+  margin: 0px;
+  background-color: none;
+  background-size: 20px 12px, 10% 20px;
+  background-image:
+    -webkit-linear-gradient(rgba(255,255,255,0.1) 2px, transparent 2px);
+  background-image:
+    -moz-linear-gradient(rgba(255,255,255,0.1) 2px, transparent 2px);
+  z-index: 10;
+}
+
+
+/*coffee break grid*/
+div.grid2{
+  height: 100%;
+  width:100%;
+  padding: 0px;
+  margin: 0px;
+  background-color: none;
+  background-size: 20px 12px, 10% 20px;
+  background-image:
+    -webkit-linear-gradient(rgba(255,255,255,0.1) 2px, transparent 2px)/*,
+    -webkit-linear-gradient(0, rgba(216,116,104,0.1) 2px, transparent 2px)*/;
+  background-image:
+    -moz-linear-gradient(rgba(255,255,255,0.1) 2px, transparent 2px)/*,
+    -moz-linear-gradient(0, rgba(216,116,104,0.1) 2px, transparent 2px)*/;
+  z-index: 10;
+  /*display: none;*/
+  transition: all 1s ease-in-out;
+}
+
+div#navbar{
+	padding-bottom: 100px;
+	position:fixed;
+  right: 0;
+  float:right;
+  width:638px;
+  z-index: 101;
+  display: none;
+
+}
+div#navbar2{
+	padding-bottom: 100px;
+	position:fixed;
+  right: 0;
+  float:right;
+  width:65px;
+  z-index: 100;
+
+}
+
+h1.nav{
+	font-size: 10px;
+	padding-top: 17px;
+  margin-right: 5.5%;
+  float: left;
+  position: static;
+  color:white;
+  text-transform: uppercase;
+  letter-spacing: .75px;
+  padding-bottom: 5px;
+}
+
+h1.navOrange{
+  font-size: 10px;
+  padding-top: 17px;
+  margin-right: 5.5%;
+  float: left;
+  position: static;
+  color:white;
+  text-transform: uppercase;
+  letter-spacing: .75px;
+  padding-bottom: 5px;
+}
+
+h1.nav:hover{
+	border-bottom: 5px solid white;
+  cursor:pointer;
+}
+
+h1.navOrange:hover{
+  border-bottom: 5px solid white;
+  cursor:pointer;
+}
+
+div#navbar h1.navOrange:hover{
+  border-bottom: 5px solid white;
+  cursor:pointer;
+}
+
+
+
+
+h1.navx{
+	font-size: 10px;
+	padding-top: 17px;
+  float: left;
+  position: static;
+  height:20px;
+  width:20px;
+
+
+}
+
+
+h1.navCoffee{
+  font-size: 10px;
+  padding-top: 17px;
+  margin-right: 5.5%;
+  float: left;
+  position: static;
+  color:rgb(255,114,0);
+  text-transform: uppercase;
+  letter-spacing: .75px;
+  padding-bottom: 5px;
+}
+
+h1.navCoffee:hover{
+  border-bottom: 5px solid rgb(255,114,0);
+  cursor:pointer;
+}
+
+h1.navCoffeex{
+  font-size: 10px;
+  padding-top: 17px;
+  float: left;
+  position: static;
+  height:20px;
+  width:20px;
+
+}
+
+div#xone{
+	position: absolute;
+	height: 12px;
+	width: 5px;
+	transform: rotate(45deg);
+	background-color: white;
+}
+
+div#xtwo{
+	position: absolute;
+	height: 12px;
+	width: 5px;
+	transform: rotate(-45deg);
+	background-color: white;
+}
+
+h1.navx:hover #xtwo{
+	background-color: rgb(255,114,0);
+  cursor:pointer;
+}
+
+h1.navx:hover #xone{
+	background-color: rgb(255,114,0);
+  cursor:pointer;
+}
+
+.centerlineSOUNDWARNING h1.navx{
+  display: none;
+}
+
+.centerlineSOUNDWARNING h1.navx:hover #xone{
+  background-color: rgb(0,47,123);
+  cursor:pointer;
+}
+.centerlineSOUNDWARNING h1.navx:hover #xtwo{
+  background-color: rgb(0,47,123);
+  cursor:pointer;
+}
+
+div#xOrngone{
+  position: absolute;
+  height: 12px;
+  width: 5px;
+  transform: rotate(45deg);
+  background-color: white;
+}
+
+div#xOrngtwo{
+  position: absolute;
+  height: 12px;
+  width: 5px;
+  transform: rotate(-45deg);
+  background-color: white;
+}
+
+h1.navx:hover #xOrngtwo{
+  background-color: rgb(0,47,123);
+  cursor:pointer;
+}
+
+h1.navx:hover #xOrngone{
+  background-color: rgb(0,47,123);
+  cursor:pointer;
+}
+div#xthree{
+  position: absolute;
+  height: 12px;
+  width: 5px;
+  transform: rotate(45deg);
+  background-color: rgb(255,114,0);
+}
+
+div#xfour{
+  position: absolute;
+  height: 12px;
+  width: 5px;
+  transform: rotate(-45deg);
+  background-color: rgb(255,114,0);
+}
+
+h1.navCoffeex:hover #xthree{
+  background-color: white;
+  cursor:pointer;
+}
+
+h1.navCoffeex:hover #xfour{
+  background-color: white;
+  cursor:pointer;
+}
+
+
+.togglenav{
+	display: inline;
+
+}
+/*.hidemenu{
+	display: none;
+}*/
+
+div.movebar{
+  height:217px;
+  width: 5px;
+  background-color: white;
+  position: fixed;
+  left: 70px;
+  top: 97px;
+  margin-left: 0px;
+  /*z-index: 100;*/
+  transition: all 1s ease-in-out;
+
+}
+
+
+div.movebarCoffee{
+  height:217px;
+  width: 5px;
+  background-color: white;
+  position: fixed;
+  margin-left: 70px;
+  margin-top: 97px;
+  transition: all 1s ease-in-out;
+}
+
+div.arrowdown{
+  height:15px;
+  width: 5px;
+  background-color: white;
+  position: fixed;
+  margin-left: 74px;
+  transform: rotate(45deg);
+  bottom: 20px;
+  float:left;
+  display: none;
+}
+
+div.arrowdown2{
+  height:15px;
+  width: 5px;
+  background-color: white;
+  position: fixed;
+  margin-left: 67px;
+  transform: rotate(-45deg);
+  bottom: 20px;
+  float:left;
+  display: none;
+}
+
+div.arrowdown3{
+  height:15px;
+  width: 5px;
+  background-color: rgb(255,114,0);
+  position: fixed;
+  margin-left: 37px;
+  transform: rotate(45deg);
+  bottom: 20px;
+  float:left;
+}
+
+div.arrowdown4{
+  height:15px;
+  width: 5px;
+  background-color: rgb(255,114,0);
+  position: fixed;
+  margin-left: 30px;
+  transform: rotate(-45deg);
+  bottom: 20px;
+  float:left;
+}
+
+h1, h2, p{
+  font-family: 'Lato', sans-serif;
+}
+
+h1#neglectedtitle{
+  font-size: 50px;
+  position: absolute;
+  text-transform: uppercase;
+  color:white;
+  font-weight: bold;
+  margin-top: 95px;
+  margin-left: 100px;
+  letter-spacing: 11px;
+  background-color: rgb(255,114,0);
+  padding-top: 3px;
+  padding-bottom: 4px;
+  padding-left: 16px;
+  padding-right: 5px;
+
+}
+
+h1#dyslexictitle{
+  font-size: 122px;
+  line-height: 110px;
+  position: absolute;
+  text-transform: uppercase;
+  color:white;
+  font-weight: normal;
+  margin-top: 190px;
+  margin-left: 100px;
+  letter-spacing: 17px;
+  background-color: rgb(255,114,0);
+  padding-top: 5px;
+  padding-bottom:10px;
+  padding-left: 18px;
+  padding-right: 7px;
+}
+
+div.IntroToExperience{
+  position: absolute;
+  color:white;
+  margin-top: 890px;
+  margin-left: 100px;
+  display: inline-block;
+}
+div.IntroToExperience p.title{
+  position: absolute;
+  letter-spacing: 5px;
+  font-size: 35px;
+  font-weight: bold;
+  margin:0px;
+  width: max-content;
+
+}
+
+div.IntroToExperience span.description{
+  position: relative;
+  line-height: 36px;
+  font-size: 20px;
+  margin-top: 36px;
+  letter-spacing: 0px;
+  font-weight: normal;
+
+}
+div.IntroToExperience span.description a{
+  color:white;
+}
+button{
+  transition: all .25s ease-in-out;
+}
+
+button.startbutton{
+  position: fixed;
+  color:white;
+  font-family: 'Lato', sans-serif;
+  font-weight: bolder;
+  margin-left: 100px;
+  bottom: 31px;
+  float:left;
+  background-color: none;
+  border:5px solid white;
+  background: none;
+  letter-spacing: 1px;
+  font-size: 12px;
+  padding: 5px 10px 5px;
+
+}
+
+button.startbutton:hover{
+  cursor:pointer;
+  background-color: rgb(255,114,0);
+  border:5px solid white;
+}
+
+div.centerlineCoffee{
+  height:100%;
+  width:0px;
+  position:fixed;
+  background-color: white;
+  transition: all .75s ease-in-out;
+  left: 0%;
+  margin-left: -2.5px;
+  z-index: 100;
+  top:0px;
+}
+
+div.centerlineCoffeeOrng{
+  height:100%;
+  width:0px;
+  position:fixed;
+  background-color: rgb(0,47,123);
+  transition: all .75s ease-in-out;
+  left: 100%;
+  margin-left: 2.5px;
+  z-index: 100;
+  top:0px;
+}
+
+div.centerlineCoffeeWhite{
+  height:100%;
+  width:0px;
+  position:fixed;
+  background-color: white;
+/*  transition: all .25s ease-in-out;
+*/  left: 75%;
+  margin-left: -2.5px;
+  z-index: 101;
+  top:0px;
+}
+
+
+div.centerlineINTRO{
+  height:100%;
+  width:0px;
+  position:fixed;
+  background-color: white;
+  transition: all .75s ease-in-out;
+  left: 50%;
+  margin-left: -2.5px;
+  z-index: 100;
+}
+
+div.centerlineSTATIC{
+  height:100%;
+  width:5px;
+  position:fixed;
+  background-color: white;
+  left: 50%;
+  margin-left: -2.5px;
+  z-index: 80;
+  padding:0px;
+  transition: all 1s ease-in-out;
+}
+
+div.centerlineSOUNDWARNING{
+  height:10%;
+  width:0px;
+  position:fixed;
+  background-color: white;
+  transition: all .75s ease-in-out;
+  left: 75%;
+  margin-left: -2.5px;
+  z-index: 100;
+  padding:0px;
+
+}
+
+div.centerlineSECONDARYFACT{
+  height:50%;
+  width:0px;
+  position:fixed;
+  background-color: white;
+  transition: all .75s ease-in-out;
+  left: 50%;
+  margin-left: -2.5px;
+  z-index: 100;
+  padding:0px;
+}
+
+span.SecondaryFact, span.SecondaryFact strong, span.SecondaryFact sup{
+  position: relative;
+  line-height: 40px;
+  font-size: 30px;
+  margin-top: 40px;
+  letter-spacing: 0px;
+  font-family: 'Lato', sans-serif;
+  color: rgb(0,47,123);
+  display: none;
+}
+span.SecondaryFact sup{
+  font-size: 15px;
+  line-height: 50px;
+  vertical-align: baseline;
+}
+
+span.SecondaryFact strong{
+  padding-bottom: 20px;
+}
+
+button.NextToCoffeeBreak{
+  position: fixed;
+  color:rgb(255,114,0);
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bolder;
+  background-color: none;
+  border:5px solid rgb(255,114,0);  
+  background: none;
+  display: none;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding: 5px 10px 5px;
+
+}
+
+button.NextToCoffeeBreak:hover{
+  background-color: rgb(0,47,123);
+  cursor:pointer;
+}
+
+button#OkToSound{
+  position: fixed;
+  color:white;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bolder;
+  background-color: none;
+  border:5px solid white;  
+  background: none;
+  display: none;
+  margin-left: 15%;
+  padding: 5px 10px 5px;
+  text-transform: uppercase;
+}
+
+button#OkToSound:hover{
+  background-color: rgb(0,47,123);
+  cursor:pointer;
+}
+
+div.SecondaryFactContainer{
+  margin: auto;
+  display: table;
+  position: relative;
+  padding-left:50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 50px;
+}
+
+h1.pageindicator{
+  font-size: 10px;
+  padding-top: 17px;
+  padding-bottom: 5px;
+  margin-left:100px;
+  float: left;
+  position: static;
+  color:white;
+  text-transform: uppercase;
+  border-bottom: 5px solid white;
+  letter-spacing: .75px;
+  position: fixed;
+z-index: 99;
+}
+
+h1.pageindicatorBluePage{
+  font-size: 10px;
+  padding-top: 17px;
+  padding-bottom: 5px;
+  margin-left:75px;
+  float: left;
+  position: static;
+  color:rgb(255,114,0);
+  text-transform: uppercase;
+  border-bottom: 5px solid rgb(255,114,0);
+  letter-spacing: .75px;
+/*  display: none;
+*/  position: fixed;
+z-index: 99;
+}
+
+
+div.CoffeeBreak{
+  position: absolute;
+  color:white;
+  margin-top: 102px;
+  margin-left: 100px;
+  display: inline-block;
+}
+
+div.BluePage{
+  position: absolute;
+  color:white;
+  margin-top: 95px;
+  margin-left: 100px;
+  display: inline-block;
+}
+
+div.BluePage p.congrats{
+  position: absolute;
+  letter-spacing: 5px;
+  font-size: 35px;
+  font-weight: bold;
+  margin:0px;
+  width: max-content;
+  line-height: 48px;
+
+}
+div.BluePage span.description{
+  position: relative;
+  line-height: 36px;
+  font-size: 20px;
+  margin-top: 36px;
+  letter-spacing: 0px;
+  font-weight: normal;
+
+}
+
+div.CoffeeBreak p.title{
+  position: absolute;
+  letter-spacing: 5px;
+  font-size: 80px;
+  font-weight: bold;
+  margin:0px;
+  width: max-content;
+
+}
+
+div.CoffeeBreak p.complete{
+  position: fixed;
+  letter-spacing: 5px;
+  font-size: 80px;
+  font-weight: bold;
+  margin:0px;
+  width: max-content;
+
+}
+
+div.CoffeeBreak span.description{
+  position: relative;
+  line-height: 60px;
+  font-size: 50px;
+  top: 30px;
+  letter-spacing: 0px;
+  font-weight: normal;
+}
+
+div.CoffeeBreak span.description sup{
+  color: white;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+span.specifics{
+  top: 1032px;
+  position: relative;
+  line-height: 60px;
+  font-size: 50px;
+  /*top: 36px;*/
+  letter-spacing: 0px;
+  font-weight: normal;
+}
+div.CoffeeBreak span.specifics sup{
+  color: white;
+}
+.rotate{
+  display: inline-block;
+  font-size:250px;
+  transform-origin: center center;
+  animation-name: rotate;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: relative;
+  font-weight: bolder;
+}
+
+    
+@keyframes rotate{
+  0% {
+    transform: rotateZ(0deg);
+    color:rgb(0,47,123);
+    } 
+  10% {
+    transform: rotateZ(0deg);
+    color:rgb(0,47,123);}
+  40%{
+    transform: rotateZ(180deg);
+  color:rgb(255,114,0);}
+  60%{
+    transform: rotateZ(180deg);
+    color:rgb(255,114,0);}
+ 
+  90%{
+    transform: rotateZ(0deg);
+    color:rgb(0,47,123);} 
+  100%{
+    transform: rotateZ(0deg);
+    color:rgb(0,47,123);} 
+}
+
+
+.rotateMenuA{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: rotateMenu;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.rotateMenuB{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: rotateMenu;
+  animation-duration: 1700ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.rotateMenuC{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: rotateMenu;
+  animation-duration: 4000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.rotateMenuD{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: rotateMenu;
+  animation-duration: 2000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+    
+@keyframes rotateMenu{
+  0% {
+    transform: rotateZ(0deg);} 
+  10% {
+    transform: rotateZ(0deg);}
+  30%{
+    transform: rotateZ(180deg);}
+  70%{
+    transform: rotateZ(180deg);}
+ 
+  90%{
+    transform: rotateZ(0deg);} 
+  100%{
+    transform: rotateZ(0deg);} 
+}
+
+
+
+.dyslexicletters{
+/*  width:max-content;
+*/  display: inline-block;
+  width:1250px;
+  margin:auto;
+  margin-top: 700px;
+  position: absolute;
+}
+
+
+.mirror{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: mirror;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: relative;
+  font-size:250px;
+  font-weight: bolder;
+}
+
+
+@keyframes mirror{
+  0% {
+    transform: rotateY(0deg);
+    } 
+  10% {
+    transform: rotateY(0deg);}
+  24.9%{
+    color:white; 
+  }
+  25%{
+    color:rgb(0,47,123);}
+  40%{
+    transform: rotateY(180deg);}
+  60%{
+    transform: rotateY(180deg);}
+  75%{
+    color:rgb(0,47,123);
+  }
+  75.1%{
+    color:white;
+  }  
+  90%{
+    transform: rotateY(0deg);} 
+  100%{
+    transform: rotateY(0deg);} 
+}  
+
+.mirrorMenuA{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: mirrorMenu;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+
+.mirrorMenuB{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: mirrorMenu;
+  animation-duration: 1700ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+
+
+.mirrorMenuC{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: mirrorMenu;
+  animation-duration: 4000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+
+.mirrorMenuD{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: mirrorMenu;
+  animation-duration: 2000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+
+@keyframes mirrorMenu{
+  0% {
+    transform: rotateY(0deg);
+    } 
+  10% {
+    transform: rotateY(0deg);}
+  /*19.9%{
+    color:rgb(255,114,0); }
+  20%{
+    color:white;}*/
+  30%{
+    transform: rotateY(180deg);}
+  70%{
+    transform: rotateY(180deg);}
+ /* 80%{color:white;}  
+  80.1%{color:rgb(255,114,0);}*/
+  90%{
+    transform: rotateY(0deg);} 
+  100%{
+    transform: rotateY(0deg);} 
+}  
+
+
+
+
+div.LetterRotationStick{
+  /*margin-top: 700px;*/
+}
+
+button.ExerciseButton{
+  position: fixed;
+  /*color:rgb(0,47,123);*/
+  color:white;
+  /*font-size: 15px;
+  letter-spacing: 2.5px;*/
+  letter-spacing: .75px;
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  margin-left: 100px;
+  bottom: 31px;
+  float:left;
+  background: none;
+  border:5px solid white;
+  z-index: 102;
+  padding: 5px 10px 5px;
+
+
+  /*background:rgb(255,114,0) ;*/
+}
+
+button.DoneReading{
+  color:rgb(0,47,123);
+  background: none;
+  border:5px solid rgb(0,47,123);
+  z-index: 102;
+  padding: 5px 10px 5px;
+  line-height: 24px;
+  font-size: 20px;
+  letter-spacing: .5px;
+  font-weight: normal;
+}
+button.DoneReading:hover{
+  background-color: rgb(0,47,123);
+  cursor:pointer;
+  font-weight: normal;
+  color:white;
+  border:5px solid ghostwhite;
+}
+
+button.DoneReadingDys{
+  color:rgb(255,114,0);
+  background: none;
+  border:5px solid rgb(255,114,0);
+  z-index: 102;
+  padding: 5px 10px 5px;
+  line-height: 24px;
+  font-size: 20px;
+  letter-spacing: .5px;
+  font-weight: normal;
+}
+button.DoneReadingDys:hover{
+  background-color: rgb(255,114,0);
+  cursor:pointer;
+  font-weight: normal;
+  color:white;
+  border:5px solid ghostwhite;
+}
+
+button:focus {outline:0;}
+
+
+button.ExerciseButton:hover{
+  background-color: rgb(0,47,123);
+  cursor:pointer;
+}
+.NormalExercise{
+  margin: 0;
+  position: absolute;
+/*  margin-left: 75px;
+*/  margin-top: 103px;
+  padding-left: 75px;
+  margin-right: 50%;
+  color:rgb(0,47,123);
+  z-index: 30;
+/*  margin-left: 25%;
+*/}
+
+.NormalExerciseHeading{
+  /*font-size: 150px;
+  line-height: 168px;*/
+  border:none;
+  /*font-family: adobe-caslon-pro, serif;*/
+/*  font-family: 'Comfortaa', cursive;
+*/  font-family: 'Varela Round', sans-serif;
+  /*font-style: normal;*/
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 60px;
+  letter-spacing: 1.5px;
+/*  text-transform: uppercase;
+*/}
+
+.NormalExerciseDescription{
+  /*font-family: adobe-caslon-pro, serif;*/
+/*  font-family: 'Comfortaa', cursive;
+*/  font-family: 'Varela Round', sans-serif;
+  /*font-style: normal;
+  font-weight: normal;*/
+  /*font-size: 33px;*/
+  line-height: 24px;
+  border:none;
+  font-size: 20px;
+  letter-spacing: .5px;
+  font-weight: normal;
+}
+
+.NormalExerciseOptions{
+  /*font-family: adobe-caslon-pro, serif
+  font-family: 'Comfortaa', cursive;;*/
+  font-family: 'Varela Round', sans-serif;
+  font-style: normal;
+/*  font-weight: bold;
+*/  font-size: 70px;
+  border:none;
+  line-height: 72px;
+  letter-spacing: .5px;
+  /*position: fixed;
+  top:360px;*/
+  color:rgb(0,47,123);
+  width:max-content;
+  margin-top: -5px;
+  
+
+}
+
+
+.DyslexicExercise{
+  margin: 0;
+  z-index: 30;
+  position: absolute;
+  margin-top: 103px;
+/*  margin-left: 50%;
+*/  padding-left: 75px;
+  margin-right: 75px;
+  color:rgb(255,114,0);
+
+}
+
+.DyslexicExerciseHeading{
+  color:rgb(255,114,0);
+  /*font-size: 150px;
+  line-height: 168px;*/
+  border:none;
+  /*font-family: adobe-caslon-pro, serif;*/
+
+/*  font-family: 'Comfortaa', cursive;
+*/  font-family: 'Varela Round', sans-serif;
+
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 60px;
+  letter-spacing: 1.5px;
+/*  text-transform: uppercase;
+*/}
+
+.DyslexicExerciseDescription{
+  /*font-family: adobe-caslon-pro, serif;*/
+/*  font-family: 'Comfortaa', cursive;
+*/  font-family: 'Varela Round', sans-serif;
+  /*font-style: normal;
+  font-weight: normal;*/
+  color:rgb(255,114,0);
+  /*font-size: 33px;*/
+  border:none;
+  line-height: 24px;
+  font-size: 20px;
+  letter-spacing: .5px;
+  font-weight: normal;
+}
+
+  
+.DyslexicExerciseOptions{
+  font-family: 'Varela Round', sans-serif;
+  font-style: normal;
+/*  font-weight: bold;
+*/  color:rgb(255,114,0);
+  font-size: 70px;
+  border:none;
+  z-index: 20;
+  line-height: 72px;
+  letter-spacing: .5px;
+  /*position: fixed;
+  top:360px;*/
+  margin-top: -5px;
+
+}
+ul{
+  list-style-type: none;
+  margin:0px;
+  padding: 0px;
+  display: inline-block;
+}
+ul.NormalExerciseOptions{
+  border: none;
+  /*position: fixed;
+  top:415px;*/
+
+
+}
+
+ul.DyslexicExerciseOptions{
+  border: none;
+  /*position: fixed;
+  top:415px;*/
+
+}
+
+li {
+    border: none;
+    position: relative;
+    line-height: 84px;
+    /*padding-right: 17px;
+    padding-bottom: 20px;*/
+}
+
+
+
+div.coverDyslexic{
+  height: 100%;
+  width:50%;
+  position: fixed;
+  float: right;
+  right: 0px;
+  top:0px;
+  opacity: .5;
+  background-color:black;
+  z-index: 90;
+  margin-right: -2.5px;
+}
+
+div.coverNormal{
+  height: 100%;
+  width:50%;
+  position: fixed;
+  float: right;
+  left: 0px;
+  top:0px;
+  opacity: .5;
+  background-color:black;
+  z-index: 90;
+  margin-left: -2.5px;
+
+}
+
+
+h1.SecondaryFactx{
+  font-size: 10px;
+  padding-top: 17px;
+  float: left;
+  position: absolute;
+  height:20px;
+  width:20px;
+  display: none;
+  top:10px;
+  right:10px;
+
+}
+
+h1.SecondaryFactx:hover #xtwo{
+  background-color: rgb(255,114,0);
+  cursor:pointer;
+}
+
+h1.SecondaryFactx:hover #xone{
+  background-color: rgb(255,114,0);
+  cursor:pointer;
+}
+
+h1.SecondaryFactx div#xone{
+  background-color:rgb(255,114,0);
+  
+}
+
+h1.SecondaryFactx div#xtwo{
+  background-color:rgb(255,114,0);
+}
+
+
+
+p#alphabet{
+/*  font-size:250px;
+*/  /*margin-top: 800px;*/
+  font-size: 80px;
+  line-height: 100px;
+  font-weight: bolder;
+}
+
+span.month:hover{
+  cursor:pointer;
+}
+
+
+sup{
+  font-size: 15px;
+  vertical-align: baseline;
+  opacity: .5;
+  color:white;
+}
+sup:hover{
+  cursor: pointer;
+}
+
+sup.smallerRef{
+  font-size: 12px;
+  vertical-align: baseline;
+}
+
+span.speak:hover{
+  cursor:pointer;
+}
+
+span.speak{
+  margin-right: 30px;
+
+}
+
+span.NormPronunc:hover{
+  cursor:pointer;
+}
+
+p#movedash{
+  font-size:250px;
+  margin-top: 800px;
+  font-weight: bold;
+  width: 1300px;
+}
+
+p#Letrspac{
+  font-size:250px;
+  margin-top: 800px;
+  margin-bottom:0px;
+  font-weight: bold;
+  width: 400px;
+}
+
+p#saw{
+  font-size:250px;
+  margin-top: 800px;
+  margin-bottom:0px;
+  font-weight: bold;
+  width: 1300px;
+}
+
+p#threeDsolid{
+  font-size:250px;
+  margin-top: 800px;
+  margin-bottom:0px;
+  font-weight: bold;
+  width: 400px;
+}
+
+
+
+@keyframes rotate{
+  0% {
+    transform: rotateZ(0deg);
+    color:white;
+    } 
+  10% {
+    transform: rotateZ(0deg);
+    color:white;}
+  40%{
+    transform: rotateZ(180deg);
+  color:rgb(0,47,123);}
+  60%{
+    transform: rotateZ(180deg);
+    color:rgb(0,47,123);}
+ 
+  90%{
+    transform: rotateZ(0deg);
+    color:white;} 
+  100%{
+    transform: rotateZ(0deg);
+    color:white;} 
+}
+
+span#SpaceBtwLet{
+  animation-name: spacingchange;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes spacingchange {
+    0% {color:white;}
+    10% {letter-spacing: 0;color:white;}
+    40% {letter-spacing: 25px;color:rgb(0,47,123);}
+    60% {letter-spacing: 25px;color:rgb(0,47,123);}
+    90% {letter-spacing: 0;color:white;}
+    100% {color:white;}
+}
+
+span#yes:hover{
+/*  font-weight: bolder;
+*/  cursor:pointer;
+}
+
+span#no:hover{
+/*  font-weight: bolder;
+*/  cursor:pointer;
+}
+
+#noprompt{
+  display: none;
+}
+
+#noprompt2{
+  display: none;
+}
+
+#NormalAnsw:hover{
+  font-weight: bolder;
+  cursor:pointer;
+/*background-color: rgb(0,47,123);
+color:white;
+font-weight: bold;*/
+}
+
+span#letS{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: flip;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: absolute;
+
+}
+
+@keyframes flip{
+  0% {
+    margin-left: 90px;
+    color:rgb(0,47,123); }
+  10% {
+    margin-left: 90px;
+    color:rgb(0,47,123); }
+  40%{
+    margin-left: 319px;
+    color:white; }
+  60%{
+    margin-left: 319px;
+    color:white; }
+  90%{
+    margin-left: 90px;
+    color:rgb(0,47,123); } 
+  100%{
+    margin-left: 90px;
+    color:rgb(0,47,123); } 
+}     
+span#letW{
+  display: inline-block;
+  transform-origin: center center;
+  animation-name: flip2;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  position: absolute;
+}
+@keyframes flip2{
+  0% {
+    margin-left: 315px;
+    color:rgb(0,47,123); }
+  10% {
+    margin-left: 315px;
+    color:rgb(0,47,123); }
+  40%{
+    margin-left: 0px;
+    color:white; } 
+  60%{
+    margin-left: 0px;
+    color:white; }  
+  90%{
+    margin-left: 315px;
+    color:rgb(0,47,123); } 
+  100%{
+    margin-left: 315px;
+    color:rgb(0,47,123); } 
+}  
+span#letA{
+  position: absolute;
+  margin-left: 195px;
+  animation-name: flip3;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+@keyframes flip3{
+  0% {color:rgb(0,47,123); }
+  10% {color:rgb(0,47,123); }
+  40%{color:white; } 
+  60%{color:white; }  
+  90%{color:rgb(0,47,123); } 
+  100%{color:rgb(0,47,123); } 
+}  
+
+.blurry{
+  filter: blur(13px);
+  transition: .5s ease-in-out;
+}
+span.blurry:hover{
+  filter: blur(0px);
+  transition: .5s ease-in-out;
+}
+
+span.blurryMenu{
+  filter: blur(2px);
+  transition: .25s ease-in-out;
+}
+h1#text.navOrange:hover span.blurryMenu{
+  filter: blur(0px);
+  transition: .25s ease-in-out;
+}
+
+h1#text.navCoffee:hover span.blurryMenu{
+  filter: blur(0px);
+  transition: .25s ease-in-out;
+}
+
+h1#text.nav:hover span.blurryMenu{
+  filter: blur(0px);
+  transition: .25s ease-in-out;
+}
+
+span.threeD{
+  animation-name: threeD;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  
+}
+@keyframes threeD{
+  0% {text-shadow: 0px -0px rgb(0,47,123);}
+  40% {text-shadow: 
+    1px -1px rgb(0,47,123),
+    2px -2px rgb(0,47,123),
+    3px -3px rgb(0,47,123),
+    4px -4px rgb(0,47,123),
+    5px -5px rgb(0,47,123),
+    6px -6px rgb(0,47,123),
+    7px -7px rgb(0,47,123),
+    8px -8px rgb(0,47,123),
+    9px -9px rgb(0,47,123),
+    10px -10px rgb(0,47,123),
+    11px -11px rgb(0,47,123);}
+  60% {text-shadow: 
+    1px -1px rgb(0,47,123),
+    2px -2px rgb(0,47,123),
+    3px -3px rgb(0,47,123),
+    4px -4px rgb(0,47,123),
+    5px -5px rgb(0,47,123),
+    6px -6px rgb(0,47,123),
+    7px -7px rgb(0,47,123),
+    8px -8px rgb(0,47,123),
+    9px -9px rgb(0,47,123),
+    10px -10px rgb(0,47,123),
+    11px -11px rgb(0,47,123);}
+
+  100% {text-shadow: 0px -0px rgb(0,47,123);}
+}  
+
+span.threeDMenu{
+  animation-name: threeDMenu;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  
+}
+@keyframes threeDMenu{
+  0% {text-shadow: 0px -0px rgb(0,47,123);}
+  40% {text-shadow: 
+    1px -1px rgb(0,47,123),
+    1.5px -1.5px rgb(0,47,123),
+    2px -2px rgb(0,47,123),
+    2.5px -2.5px rgb(0,47,123);}
+  60% {text-shadow: 
+    1px -1px rgb(0,47,123),
+    1.5px -1.5px rgb(0,47,123),
+    2px -2px rgb(0,47,123),
+    2.5px -2.5px rgb(0,47,123);}
+
+  100% {text-shadow: 0px -0px rgb(0,47,123);}
+}  
+
+
+span.threeDMenuEx{
+  animation-name: threeDMenuEx;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  
+}
+@keyframes threeDMenuEx{
+  0% {text-shadow: 0px -0px white;}
+  40% {text-shadow: 
+    1px -1px white,
+    1.5px -1.5px white,
+    2px -2px white,
+    2.5px -2.5px white;}
+  60% {text-shadow: 
+    1px -1px white,
+    1.5px -1.5px white,
+    2px -2px white,
+    2.5px -2.5px white;}
+
+  100% {text-shadow: 0px -0px white;}
+}  
+
+span.threeDMenuEx2{
+  animation-name: threeDMenuEx2;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  
+}
+@keyframes threeDMenuEx2{
+  0% {text-shadow: 0px -0px rgb(255,114,0);}
+  40% {text-shadow: 
+    1px -1px rgb(255,114,0),
+    1.5px -1.5px rgb(255,114,0),
+    2px -2px rgb(255,114,0),
+    2.5px -2.5px rgb(255,114,0);}
+  60% {text-shadow: 
+    1px -1px rgb(255,114,0),
+    1.5px -1.5px rgb(255,114,0),
+    2px -2px rgb(255,114,0),
+    2.5px -2.5px rgb(255,114,0);}
+
+  100% {text-shadow: 0px -0px rgb(255,114,0);}
+}  
+
+
+span.threeDMenuEx3{
+  animation-name: threeDMenuEx3;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  
+}
+@keyframes threeDMenuEx3{
+  0% {text-shadow: 0px -0px rgb(0,47,123);}
+  40% {text-shadow: 
+    1px -1px rgb(0,47,123),
+    1.5px -1.5px rgb(0,47,123),
+    2px -2px rgb(0,47,123),
+    2.5px -2.5px rgb(0,47,123);}
+  60% {text-shadow: 
+    1px -1px rgb(0,47,123),
+    1.5px -1.5px rgb(0,47,123),
+    2px -2px rgb(0,47,123),
+    2.5px -2.5px rgb(0,47,123);}
+
+  100% {text-shadow: 0px -0px rgb(0,47,123);}
+}  
+
+
+span.threeDMenuNeg{
+  animation-name: threeDMenuNeg;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  
+}
+@keyframes threeDMenuNeg{
+  0% {text-shadow: 0px -0px rgb(255,114,0);}
+  40% {text-shadow: 
+    1px -1px rgb(255,114,0),
+    1.5px -1.5px rgb(255,114,0),
+    2px -2px rgb(255,114,0),
+    2.5px -2.5px rgb(255,114,0);}
+  60% {text-shadow: 
+    1px -1px rgb(255,114,0),
+    1.5px -1.5px rgb(255,114,0),
+    2px -2px rgb(255,114,0),
+    2.5px -2.5px rgb(255,114,0);}
+
+  100% {text-shadow: 0px -0px rgb(255,114,0);}
+}  
+
+span.statistics{
+  font-weight: normal;
+  color:white;
+  background-color: rgb(255,114,0);
+  font-size: 35px;
+  line-height: 48px;
+  padding:3px;
+}
+
+span.alphabetspace{
+  width:100px;
+  display: inline-block;
+  text-align: center;
+  color:white;
+
+}
+
+span.alphabetspace span{
+  color:rgb(0,47,123);
+
+}
+
+
+span.alphabetspace::after {
+    display: block;
+     content: attr(title);
+    overflow: hidden;
+    visibility: hidden;
+}
+
+
+.colordash{
+  color:rgb(0,47,123);
+}
+
+span.stay1{
+  position: absolute;
+  left: 270px;
+  font-size: 70px;
+  line-height: 60px;
+   margin-top: 2px;
+/*  font-weight: bold;
+*/}
+
+span.stay2{
+  position: absolute;
+  left: 270px;
+  font-size: 70px;
+  line-height: 60px;
+  margin-top: 2px;
+/*  font-weight: bold;
+*/}
+
+span#Dreplace{
+  position: absolute;
+  font-size: 70px;
+  line-height: 60px;
+/*  font-weight: bold;
+*/}
+span#replace{
+  position: absolute;
+  font-size: 70px;
+  line-height: 60px;
+/*  font-weight: bold;
+*/}
+
+
+td{
+  padding-right:60px;
+  padding-bottom: 20px;
+}
+/*.BlueHighlight{
+  font-weight: bold;
+  color:white;
+  background-color: rgb(0,47,123);
+}
+.OrangeHighlight{
+  font-weight: bold;
+  color:white;
+  background-color: rgb(255,114,0);
+}*/
+
+td:hover span{
+  font-weight: bold;
+}
+
+
+.NormalExerciseOptions li span:hover{
+  /*background-color: rgb(0,47,123);
+  color:white;*/
+  font-weight: bold;
+}
+
+.DyslexicExerciseOptions li span:hover{
+  /*background-color: rgb(255,114,0);
+  color:white;*/
+  font-weight: bold;
+}
+
+.NormalExerciseOptions span.pron4:hover{
+  /*background-color: rgb(0,47,123);
+  color:white;*/
+  font-weight: bold;
+}
+
+.DyslexicExerciseOptions span.speak:hover{
+  /*background-color: rgb(255,114,0);
+   color:white;*/
+   font-weight: bold;
+}
+
+.NormalExerciseOptions span#no:hover{
+  /*background-color: rgb(0,47,123);
+   color:white;*/
+   font-weight: bold;
+}
+
+.DyslexicExerciseOptions span#yes:hover{
+ /* background-color: rgb(255,114,0);
+   color:white;*/
+   font-weight: bold;
+}
+
+.DyslexicExerciseOptions span#no:hover{
+  /*background-color: rgb(255,114,0);
+   color:white;*/
+   font-weight: bold;
+}
+
+
+div.autoscroll{
+  position: fixed;
+  margin-left:50px;
+  bottom:5px;
+  height:50px;
+  width:50px; 
+  z-index: 211;
+}
+div.up{
+  position: fixed;
+  margin-left:50px;
+  bottom:5px;
+  height:50px;
+  width:50px; 
+  z-index: 211;
+}
+
+div.autoscrollB{
+  position: fixed;
+  margin-left:50px;
+  bottom:5px;
+  height:50px;
+  width:50px; 
+  z-index: 211;
+}
+
+
+div.autoscrollC{
+  position: fixed;
+  margin-left:50px;
+  bottom:5px;
+  height:50px;
+  width:50px; 
+  z-index: 211;
+}
+
+
+div.autoscroll2{
+  position: fixed;
+  margin-left:10px;
+  bottom:5px;
+  height:50px;
+  width:50px; 
+  z-index: 211;
+}
+
+div.autoscroll:hover{
+  cursor: pointer;
+}
+div.up:hover{
+  cursor: pointer;
+}
+div.autoscrollB:hover{
+  cursor: pointer;
+}
+div.autoscrollC:hover{
+  cursor: pointer;
+}
+
+
+div.autoscroll2:hover{
+  cursor: pointer;
+}
+
+li span{
+  text-decoration-line: none;
+
+}
+
+
+
+h1.SecondaryFactx:hover div#xone{
+  background-color: rgb(0,47,123);
+
+}
+h1.SecondaryFactx:hover div#xtwo{
+  background-color: rgb(0,47,123);
+
+}
+
+
+span.blurry a sup{
+  color:rgb(255,114,0);
+}
+
+.NormalExerciseDescription a sup{
+  color:rgb(0,47,123);
+}
+
+
+h3{
+  display: inline-block;
+  font-size: 35px;
+  margin: 0px;
+  position: fixed;
+ /* top:20px;*/
+  top:714px;
+  margin-left: 400px;
+}
+
+h4{
+  display: inline-block;
+  font-size: 35px;
+  margin: 0px;
+  position: fixed;
+  /*top:20px;*/
+  top:714px;
+  margin-left: 400px;
+
+}
+
+
+.animated {
+  -webkit-animation-duration: .9s;
+  animation-duration: .9s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  transition: .9s ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    bottom: 20px;
+  }
+  50% {
+    bottom: 25px;
+  }
+}
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
+ div.IntroToExperience span.description a.actionLinks:hover{
+  color:rgb(255,114,0);
+ }
+
+a.actionLinks{
+  color: white;
+}
+a.actionLinks:hover{
+  color:rgb(255,114,0);
+ }
+
+span#timeReading{
+  font-size: 30px;
+}
+
+
+div.textscroll{
+  height:15px;
+  width: 5px;
+  position: fixed;
+  margin-left: 57px;
+  bottom: 45px;
+  float:left;
+  color:white;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+
+div#extrahelp{
+  position: fixed;
+  margin-left: 78%;
+  bottom: 20px;
+  width:20%;
+  color:white;
+  z-index: 100;
+  transition: 1s ease-in-out;
+}
+
+div#help2{
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  width: 20px;
+  color:rgb(0,47,123);
+  margin-left: 88%;
+  /*transition: 1s ease-in-out;*/
+
+}
+
+div#help2:hover{
+  color:white;
+  cursor: pointer;
+}
+
+div#help{
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  width: 20px;
+  color:white;
+/*  transition: 1s ease-in-out;
+*/  
+
+}
+div#help:hover{
+  color:rgb(255,114,0);
+  cursor: pointer;
+}
+
+
+div#helpanswer{
+  margin-bottom: 48px;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+div#xfive{
+  position: absolute;
+  height: 20px;
+  width: 5px;
+  transform: rotate(45deg);
+  background-color: rgb(0,47,123);
+  bottom:1px;
+}
+
+div#xsix{
+  position: absolute;
+  height: 20px;
+  width: 5px;
+  transform: rotate(-45deg);
+  background-color: rgb(0,47,123);
+  bottom:1px;
+
+}
+
+div#xseven{
+  position: absolute;
+  height: 20px;
+  width: 5px;
+  transform: rotate(45deg);
+  background-color: white;
+  bottom:1px;
+}
+
+div#xeight{
+  position: absolute;
+  height: 20px;
+  width: 5px;
+  transform: rotate(-45deg);
+  background-color: white;
+  bottom:1px;
+
+}
+
+
+div.questionX{
+  position: fixed;
+  bottom: 20px;
+  float:right;
+  color:rgb(0,47,123);
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-weight: bold;
+
+}
+
+div.questionX:hover #xfive{
+  background-color: white;
+}
+
+div.questionX:hover #xsix{
+  background-color: white;
+}
+
+div.questionX:hover #xseven{
+  background-color: rgb(255,114,0);
+}
+
+div.questionX:hover #xeight{
+  background-color: rgb(255,114,0);
+}
+
+
+.hidemenu{
+  display: none;
+}
+
+
+
+
+
+

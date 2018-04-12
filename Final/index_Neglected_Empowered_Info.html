@@ -1,0 +1,211 @@
+
+<html>
+<head>
+<title>CAPSTONE</title>
+<link type="text/css" rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+<body style="background-color:rgb(0,47,123);">
+  <div id="navbar"">
+    <a href="index_intro_page.html"><h1 class="nav">HOME</h1></a>
+    <a href="index_Coffee_1.html"><h1 class="nav">EXERCISES</h1></a>
+    <a href="index_Neglected_Empowered_Info.html"><h1 class="nav">DYSLEXIC FUTURES</h1></a>
+    <a href="index_About.html"><h1 class="nav">ABOUT</h1></a>
+    <a href="index_TakeAction.html"><h1 class="nav">TAKE ACTION</h1></a>
+    <a href="index_References.html"><h1 class="nav">REFERENCES</h1></a>
+    <h1 class="navx">
+      <div id="xone"></div>
+      <div id="xtwo"></div>
+    </h1>
+  </div>
+
+  <div id="navbar2">
+    <div class="decodetext">
+          <h1 id="text" class="nav"><span class="threeDMenuNeg">MENU</span></h1>
+        </div>  
+  </div>
+
+
+  <div class="movebar"
+  data-763="height:217px;"
+  data-768="height:656.35px;"></div>
+  
+<div class="autoscroll"></div>
+  <div class="arrowdown" 
+    data-0="display:inline-block;"
+    data-758="display:none;"></div>
+  <div class="arrowdown2" 
+    data-0="display:inline-block;"
+    data-758="display:none;"></div>
+
+
+  <h1 class="pageindicator" style="display: none;">DYSLEXIC FUTURES</h1>
+
+  <div class="BluePage">
+
+    <p class="congrats" style="display: none;">WHAT HAPPENS WHEN DYSLEXIC <br>CHILDREN ARE <span style="font-weight: normal;font-style: italic;">NEGLECTED</span> AND <br>REMAIN UNDIAGNOSED?<br>
+    <span class="description"><br>Undiagnosed children and adolescents with dyslexia often leave school without any formal <br>qualifications resulting in job opportunities being generally limited to unskilled work. <a href="https://www.omicsonline.org/open-access/the-schools-role-in-creating-successful-and-unsuccessful-dyslexics-2161-0487-1000238.php?aid=69181&view=mobile" target="blank"><sup> F</sup></a><br><br>Gaining an interview for most jobs in the current market requires many skills which adults with <br>dyslexia find extremely challenging: registering for unemployment benefit by completing forms <br>and attending job centres on specific days and at specific times, reading hundreds of job <br>advertisements, requesting and completing application forms, and writing personal statements. <a href="https://www.omicsonline.org/open-access/the-schools-role-in-creating-successful-and-unsuccessful-dyslexics-2161-0487-1000238.php?aid=69181&view=mobile" target="blank"><sup> F</sup></a><br><br>Frequently, adults with dyslexia find they lack not only adequate academic and emotional skills <br>but also inter-personal communication and social skills as well&mdash;putting them in a greater risk of <br>a continual cycle of failure. <a href="https://www.omicsonline.org/open-access/the-schools-role-in-creating-successful-and-unsuccessful-dyslexics-2161-0487-1000238.php?aid=69181&view=mobile" target="blank"><sup> F</sup></a></span><br><br><br><br><br>
+    
+    WHAT HAPPENS WHEN DYSLEXIC <br>CHILDREN ARE <span style="font-weight: normal;font-style: italic;">EMPOWERED?</span><br>
+    <span class="description"><br>They can look at a situation and identify seemingly disparate pieces of information and blend <br>those into a narrative or tapestry that most people can’t see. This translates into an exceptional <br>level of success in four major vocational paths: entrepreneurship, engineering, architecture, <br>and the arts. <a href="https://www.youtube.com/watch?v=_dPyzFFcG7A" target="blank"><sup>A</sup></a><br><br>Successful men and women with dyslexia (e.g. doctors, lawyers, educationalists, filmmakers, <br>computer programmers, writers, administrators) were able to attain prestigious careers whilst <br>battling literacy problems. They pursued passionate interests, subjects they were happy to <br>read about and thus engage with, developing persistence in the face of setbacks and empathy <br>for others facing similar struggles. They were aware that mentors can serve as important <br>role models and support systems in difficult times.<a href="https://www.omicsonline.org/open-access/the-schools-role-in-creating-successful-and-unsuccessful-dyslexics-2161-0487-1000238.php?aid=69181&view=mobile" target="blank"><sup> F</sup></a></span></p>
+    
+
+  </div>
+  
+  <a href="javascript:delay('index_About.html')"><button class="startbutton"
+  style="display:none;"
+  data-748="display:none;"
+  data-758="display:inline-block">ABOUT THIS PROJECT</button></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--   <div class="grid2"></div>
+ -->  <div class="centerline"></div>
+  <div class="gridFull"></div>
+<!--  <div class="grid"></div>
+ -->
+  
+
+
+  
+
+  </body>
+
+<script type="text/javascript">
+//fade in page _____________________________________________________________________________________________________________
+
+$(window).ready(function(){
+
+
+  setTimeout(function() {
+        
+         
+          $( "h1.pageindicator" ).fadeIn();
+          $( ".movebar" ).fadeIn();
+          $( "p.congrats" ).fadeIn();
+     
+          
+  }, 500);
+   
+}); 
+
+
+//stop arrow bounce when scroll occurs _____________________________________________________________________________________________________________
+
+window.onload = function() {
+ setTimeout (function () {
+  scrollTo(0,0);
+ }, 0); //100ms for example
+ setTimeout(function() {
+            jQuery('.arrowdown').addClass("animated");
+            jQuery('.arrowdown').addClass("bounce");
+            jQuery('.arrowdown2').addClass("animated");
+            jQuery('.arrowdown2').addClass("bounce");
+      }, 3000);
+}
+
+
+    $(window).scroll(function() {
+
+      if ($(window).scrollTop() > 0) {
+          jQuery('.arrowdown').removeClass("animated");
+            jQuery('.arrowdown').removeClass("bounce");
+            jQuery('.arrowdown2').removeClass("animated");
+            jQuery('.arrowdown2').removeClass("bounce");
+        }  
+      else if
+        ($(window).scrollTop() === 0) { // this refers to window
+            setTimeout(function() {
+              jQuery('.arrowdown').addClass("animated");
+              jQuery('.arrowdown').addClass("bounce");
+              jQuery('.arrowdown2').addClass("animated");
+              jQuery('.arrowdown2').addClass("bounce");
+            }, 3000);
+        }   
+      
+    });
+
+
+
+
+
+// navbar hide and show_____________________________________________________________________________________________________________
+
+$(window).ready(function(){
+  $( "#navbar" ).fadeOut();
+}); 
+
+$( "#text" ).click(function() {
+        $( "#text" ).addClass("hidemenu");
+        $( "#navbar" ).fadeIn();
+});
+
+
+$( "h1.navx" ).click(function() {
+        $( "#text" ).removeClass("hidemenu");
+        $( "#navbar" ).fadeOut();
+});
+
+
+//scroller indicator _____________________________________________________________________________________________________________
+
+$(document).ready(function(){
+
+    $(window).resize(function(e){
+        console.log(e);                   
+    });
+
+    $(window).scroll(function (event) {
+        var sc = $(window).scrollTop();
+        console.log(sc);
+    });
+
+});
+
+  
+//click on arrow to auto scroll to bottom _____________________________________________________________________________________________________________
+
+
+$(".autoscroll").click(function()  // When arrow is clicked
+    {
+         $("html, body").animate({ scrollTop: $(document).height() }, 1500);
+
+    }); 
+
+
+//delay new page _____________________________________________________________________________________________________________
+function delay (URL) {
+    setTimeout( function() { window.location = URL }, 1500 );
+};
+
+$( ".startbutton" ).click(function() {
+  
+  $( ".movebar" ).css("height","217px");
+  $( "p.congrats" ).fadeOut();
+  $(".startbutton").fadeOut();
+
+  $(".pageindicator").fadeOut();
+
+});
+</script>
+<script type="text/javascript">
+  var s = skrollr.init();
+  </script>
+</body>
+</html>
