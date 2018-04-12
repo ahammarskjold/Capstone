@@ -113,7 +113,7 @@ div#navbar{
 	position:fixed;
   right: 0;
   float:right;
-  width:615px;
+  width:638px;
   z-index: 101;
   display: none;
 
@@ -131,7 +131,7 @@ div#navbar2{
 h1.nav{
 	font-size: 10px;
 	padding-top: 17px;
-  margin-right: 5%;
+  margin-right: 5.5%;
   float: left;
   position: static;
   color:white;
@@ -143,7 +143,7 @@ h1.nav{
 h1.navOrange{
   font-size: 10px;
   padding-top: 17px;
-  margin-right: 5%;
+  margin-right: 5.5%;
   float: left;
   position: static;
   color:white;
@@ -185,7 +185,7 @@ h1.navx{
 h1.navCoffee{
   font-size: 10px;
   padding-top: 17px;
-  margin-right: 5%;
+  margin-right: 5.5%;
   float: left;
   position: static;
   color:rgb(255,114,0);
@@ -1798,6 +1798,34 @@ div.autoscroll{
   width:50px; 
   z-index: 211;
 }
+div.up{
+  position: fixed;
+  margin-left:50px;
+  bottom:5px;
+  height:50px;
+  width:50px; 
+  z-index: 211;
+}
+
+div.autoscrollB{
+  position: fixed;
+  margin-left:50px;
+  bottom:5px;
+  height:50px;
+  width:50px; 
+  z-index: 211;
+}
+
+
+div.autoscrollC{
+  position: fixed;
+  margin-left:50px;
+  bottom:5px;
+  height:50px;
+  width:50px; 
+  z-index: 211;
+}
+
 
 div.autoscroll2{
   position: fixed;
@@ -1811,6 +1839,16 @@ div.autoscroll2{
 div.autoscroll:hover{
   cursor: pointer;
 }
+div.up:hover{
+  cursor: pointer;
+}
+div.autoscrollB:hover{
+  cursor: pointer;
+}
+div.autoscrollC:hover{
+  cursor: pointer;
+}
+
 
 div.autoscroll2:hover{
   cursor: pointer;

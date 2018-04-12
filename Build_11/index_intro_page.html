@@ -37,13 +37,13 @@
 
     <div class="autoscroll"></div>
   <div class="arrowdown" style="display: inline-block;"
-    data-700="display:inline-block;"
-    data-715="display:none;"></div>
+   data-2280="display:inline-block;"
+    data-2290="display:none;"></div>
   <div class="arrowdown2" style="display: inline-block;"
-    data-700="display:inline-block;"
-    data-715="display:none;"></div>
+  data-2280="display:inline-block;"
+    data-2290="display:none;"></div>
    
-
+ 
 <div class="textscroll"
     data-40="display:inline-block;"
     data-50="display:none;">Scroll</div>
@@ -55,7 +55,7 @@
   
   <div class="IntroToExperience" style="width:70%;" 
     style="position:absolute;">
-    <p class="congrats">
+    <p class="congrats" id="sectionone">
       <span class="description"
       data-00="position:absolute; top:60px; ">
 
@@ -79,26 +79,27 @@
         data-880="margin-left:0px;">&nbsp;have dyslexia <a href="https://www.noticeability.org/" target="blank"><sup>B</sup></a>&nbsp;</span> </span></p>
     
      
-    <p class="title" style="width:100%;margin-top: 808px; margin-bottom: 140px;">BUT, <i style="font-weight: normal;">EMPOWERING</i> DYSLEXICS CAN CREATE A DRASTICALLY DIFFERENT OUTCOME...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p class="title" style="width:100%;margin-top: 808px; margin-bottom: 140px;">BUT, <i style="font-weight: normal;">EMPOWERING</i> DYSLEXICS CAN CREATE A DRASTICALLY DIFFERENT OUTCOME...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
     <span>AN EDUCATIONAL EXPERIENCE</span><br>
-    <span class="description"><br>The following experience demonstrates the difficulties that dyslexic children face during their education when learning to read and write. Exercises are framed from the perspecive of a non-dyslexic as well as a dyslexic student. Moments to learn about dyslexic perception appear before each interactive exercise.</span></p>
+    <span class="description"><br>The following experience demonstrates the difficulties that dyslexic children face during their education when learning to read and write. Exercises are framed from the perspecive of a non-dyslexic as well as a dyslexic student. Information about common dyslexic perceptions appear before each interactive exercise.</span></p>
     <p class="congrats">
       <span class="description"
       data-00="position:absolute; top:930px;">
 
       <span class="statistics"
-        data-1100="margin-left:-1100px;"
-        data-1300="margin-left:0px;">&nbsp;35% of all entrepreneurs have dyslexia <a href="https://www.noticeability.org/" target="blank"><sup>B</sup></a>&nbsp;</span>
+        data-1000="margin-left:-1100px;"
+        data-1200="margin-left:0px;">&nbsp;35% of all entrepreneurs have dyslexia <a href="https://www.noticeability.org/" target="blank"><sup>B</sup></a>&nbsp;</span>
       <br><br>
 
       <span class="statistics"
-        data-1300="margin-left:-1100px;"
-        data-1500="margin-left:0px;">&nbsp;40% of all self made millionaires are dyslexic <a href="https://www.noticeability.org/" target="blank"><sup>B</sup></a>&nbsp;</span>
+        data-1200="margin-left:-1100px;"
+        data-1400="margin-left:0px;">&nbsp;40% of all self made millionaires are dyslexic <a href="https://www.noticeability.org/" target="blank"><sup>B</sup></a>&nbsp;</span>
       <br><br>
 
       <span class="statistics"
-        data-1500="margin-left:-1100px;"
-        data-1700="margin-left:0px;">&nbsp;Dyslexia is known as the MIT disease <a href="https://www.youtube.com/watch?v=_dPyzFFcG7A" target="blank"><sup>A</sup></a>&nbsp;</span></p>
+        data-1400="margin-left:-1100px;"
+        data-1600="margin-left:0px;">&nbsp;Dyslexia is known as the MIT disease <a href="https://www.youtube.com/watch?v=_dPyzFFcG7A" target="blank"><sup>A</sup></a>&nbsp;</span></p>
     </span>
     
   </div>
@@ -196,12 +197,12 @@ $( "h1.navx" ).click(function() {
 $(document).ready(function(){
 
     $(window).resize(function(e){
-        console.log(e);                   
+        // console.log(e);                   
     });
 
     $(window).scroll(function (event) {
         var sc = $(window).scrollTop();
-        console.log(sc);
+        // console.log(sc);
     });
 
 });
@@ -226,13 +227,33 @@ function delay (URL) {
 
 //click on arrow to auto scroll to bottom _____________________________________________________________________________________________________________
 
+var position = 880;
+var counter = 0;
 
-$(".autoscroll").click(function()  // When arrow is clicked
-    {
-         $("html, body").animate({ scrollTop: $(document).height() }, 1500);
+$(".autoscroll").click(function(){
+  console.log(counter);
+  $("html, body").animate({ scrollTop: position + counter*727 }, 1500);
+  counter = counter + 1;
+  // if (counter==3){
+  //   setTimeout(function(){
+  //     $("div.arrowdown").css("margin-left","67px");
+  //     $("div.arrowdown2").css("margin-left","74px");
+  //   },2500);
+  // };
+  // if (counter==4){
+  //   $("html, body").animate({ scrollTop: 0 }, 2500);
+    
+  //   counter=0;
+  //   setTimeout(function(){
+  //     $("div.arrowdown2").css("margin-left","67px");
+  //     $("div.arrowdown").css("margin-left","74px");
+  //   },2500);
+  // };
+
+});
 
 
-    });
+    
 
 
 //subtle dyslexic effect on title _____________________________________________________________________________________________________________

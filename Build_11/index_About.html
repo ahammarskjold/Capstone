@@ -28,17 +28,15 @@
       	</div>  
 	</div>
 
-	<div class="movebar"
-  data-375="height:217px;"
-  data-380="height:656.35px;"></div>
+	<div class="movebar"></div>
   
-<div class="autoscroll"></div>
+<!-- <div class="autoscroll"></div>
   <div class="arrowdown" 
     data-180="display:inline-block;"
     data-370="display:none;"></div>
   <div class="arrowdown2" 
     data-180="display:inline-block;"
-    data-370="display:none;"></div>
+    data-370="display:none;"></div> -->
 
 
 
@@ -47,20 +45,16 @@
     <p class="title" style="width:100%;display: none;">ABOUT<br>
     <span class="description"><br>Created in the spring of 2018, this interactive web project features an educational experience meant to teach executives in education about the struggles that dyslexic children face in school. The experience aims to spark thought and conversation about the current state of the American education system. <br><br>
         <span class="statistics" 
-        data-20="margin-left:-950px;"
-        data-380="margin-left:0px;">&nbsp;How can we improve American education system in&nbsp;</span><br>
+        style="margin-left:-950px;transition: all 1s ease-in-out;">&nbsp;How can we improve American education system in&nbsp;</span><br>
         
         <span class="statistics" 
-        data-20="margin-left:-950px;"
-        data-380="margin-left:0px;">&nbsp;order to better prepare dyslexic students for their&nbsp;</span><br>
+        style="margin-left:-950px;transition: all 1s ease-in-out;">&nbsp;order to better prepare dyslexic students for their&nbsp;</span><br>
 
         <span class="statistics" 
-        data-20="margin-left:-950px;"
-        data-380="margin-left:0px;">&nbsp;future and remedy the unjust consequences created&nbsp;</span><br>
+        style="margin-left:-950px;transition: all 1s ease-in-out;">&nbsp;future and remedy the unjust consequences created&nbsp;</span><br>
 
         <span class="statistics" 
-        data-20="margin-left:-950px;"
-        data-380="margin-left:0px;">&nbsp;by the system's neglect of dyslexic students?&nbsp;</span></span></p>
+        style="margin-left:-950px;transition: all 1s ease-in-out;">&nbsp;by the system's neglect of dyslexic students?&nbsp;</span></span></p>
       
     
 
@@ -70,9 +64,7 @@
 
 
   <a href="javascript:delay('index_TakeAction.html')"><button class="startbutton"
-  style="display:none;"
-  data-370="display:none"
-  data-379="display:inline-block">TAKE ACTION</button></a>
+  style="display:none;">TAKE ACTION</button></a>
 
 
 
@@ -308,6 +300,22 @@ $( ".startbutton" ).click(function() {
   $( "p.title" ).fadeOut();
   $(".startbutton").fadeOut();
   // $(".pageindicator").fadeOut();
+
+});
+
+
+//movebar height change after one second _____________________________________________________________________________________________________________
+
+$(document).ready(function(){
+      setTimeout(function() {
+          $("span.statistics").css("margin-left","0px");
+      }, 5000);
+      setTimeout(function() {
+          $(".movebar").css("height","656.35px");
+      }, 6000);
+      setTimeout(function() {
+          $(".startbutton").fadeIn();
+      }, 7000);
 
 });
 </script>
